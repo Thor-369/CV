@@ -1,11 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+  <%- include('fragmentos/head'); %> 
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+
+  <%- include('fragmentos/navbar'); %> 
+  <div class="card col-md-5 mx-auto bg-dark">
+  <div class="text-center">
+  	<h4>Los datos recopilados acontinuación están basados de fuentes como:</h4><br/>
+  	<a class="" href="https://www.who.int/es">Organización Mundial de la Salud </a><br/>
+  	<a class="" href="https://www.salud.gob.ec/">Ministerio de Salud Pública (Ecuador)</a><br/>
+  	<a class="" href="https://www.gestionderiesgos.gob.ec/">Sistema Nacional de Gestión de Riesgos</a><br/>
+  	<a class="" href="https://www.jhu.edu/">Johns Hopkins University</a><br/>
+  	<a class="" href="https://www.worldometers.info/coronavirus/">WorldoMeter</a>
+  </div>
+ </div>
+
+    <div class="card col-md-8 mx-auto">
+    	<h1><%= title %></h1>
+        <p></p>
+        <div id="graph" class="graph"></div>
+        <a href="">Autor: Pablo Torres</a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+    	/* data stolen from http://howmanyleft.co.uk/vehicle/jaguar_e_type */
+
+var quarter_data = [
+  {"period": "2010 Q1", "casos": 111, "muertes": 2},
+  {"period": "2009 Q4", "casos": 58, "muertes": 1},
+  {"period": "2009 Q3", "casos": 38, "muertes": 1},
+  {"period": "2009 Q2", "casos": 21, "muertes": 1},
+  {"period": "2009 Q1", "casos": 9, "muertes": null},
+  {"period": "2008 Q4", "casos": 5, "muertes": null},
+  {"period": "2008 Q3", "casos": 3, "muertes": null},
+  {"period": "2007 Q4", "casos": 2, "muertes": null},
+  {"period": "2006 Q4", "casos": 1, "muertes": null},
+];
+Morris.Line({
+  element: 'graph',
+  data: quarter_data,
+  xkey: 'period',
+  ykeys: ['casos', 'muertes'],
+  labels: ['Casos', 'Muertes']
+});
+    </script>
   </body>
 </html>
