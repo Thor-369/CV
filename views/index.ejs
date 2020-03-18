@@ -5,14 +5,28 @@
   <%- include('fragmentos/navbar'); %> 
 
 
-    <div class="card col-md-8 mx-auto">
     	<h2 class="text-center"><%= title %></h2>
-        <p></p>
+    <div class="card col-md-8 mx-auto">
+        
+        <form class="text-center" >
+        <h4>Casos por provincia </h4>
+        <div id="graphb" class="img-fluid"></div>
+        </form>
+        
+        <div id="graph" class="img-fluid bg-dark"></div>
 
-        <div id="graphb" class="img-fluid,card"></div>
-        <h4>Casos confirmados: 155</h4>
-        <div id="graph" class="img-fluid"></div>
-        <div id="total" class="img-fluid"></div>
+<br>
+        <div class="row text-center"> 
+        <form class="col-md-6 mx-auto">
+        <a>Hasta el momento, el Instituto Nacional de Investigación en Salud Pública (INSPI) ha tomado 668 muestras de las cuales 155 son positivas para COVID-19.</a>
+        <br>
+        <br>
+        <br>
+        <h4 class="text-center">Estado de infectados</h4>
+        <div id="extra" class="img-fluid mx-auto" style="width: 60%"></div>
+        </form>
+        
+        </div>
         <div id="grapha" class="img-fluid"></div>
 
 
@@ -58,6 +72,7 @@
     	Morris.Donut({
   element: 'graphb',
   data: [
+    {value: 155, label: 'Ecuador', formatted: '155 Casos' },
     {value: 119, label: 'Guayas', formatted: '119 Casos' },
     {value: 10, label: 'Los Rios', formatted: '10 Casos' },
     {value: 8, label: 'Pichincha', formatted: '8 Casos' },
@@ -70,6 +85,19 @@
   ],
   formatter: function (x, data) { return data.formatted; }
 });
+
+    	Morris.Donut({
+  element: 'extra',
+  lineColors: ["#1885FF","#FF3333","green"],
+  data: [
+    {value: 139, label: 'En Aislamiento', formatted: '139' },
+    {value: 9, label: 'Hospitalizados Estables', formatted: '9' },
+    {value: 5, label: 'Pronóstico reservado', formatted: '5' },
+    {value: 2, label: 'Fallecidos', formatted: '2' }
+  ],
+  formatter: function (x, data) { return data.formatted; }
+});
+
 
 
 
