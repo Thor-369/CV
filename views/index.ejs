@@ -25,6 +25,13 @@
         <h4 class="text-center">Estado de infectados</h4>
         <div id="extra" class="img-fluid mx-auto" style="width: 60%"></div>
         </form>
+        <form class="col-md-6 mx-auto">
+
+        <br>
+        <br>
+        <h4 class="text-center">Sospechosos</h4>
+        <div id="extra2" class="img-fluid mx-auto" style="width: 60%"></div>
+        </form>
         
         </div>
         <div id="grapha" class="img-fluid"></div>
@@ -93,6 +100,17 @@
     {value: 9, label: 'Hospitalizados estables', formatted: '9' },
     {value: 5, label: 'Pronóstico reservado', formatted: '5' },
     {value: 2, label: 'Fallecidos', formatted: '2' }
+  ],
+  formatter: function (x, data) { return data.formatted; }
+});
+
+    	Morris.Donut({
+  element: 'extra2',
+  colors: ["#A418FF","#1BE55B","#FF1849"],
+  data: [
+    {value: 235, label: 'Sospechosos', formatted: '235' },
+    {value: 278, label: 'Descartados', formatted: '278' },
+    {value: 155, label: 'Confirmados', formatted: '155' }
   ],
   formatter: function (x, data) { return data.formatted; }
 });
