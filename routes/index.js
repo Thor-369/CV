@@ -6,7 +6,7 @@ var roots = new rootsController();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Datos Covid-19' });
+  res.render('index', { title: 'Datos Covid-19 Ecuador' });
 });
 
 router.get('/datos',roots.datos);
