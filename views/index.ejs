@@ -4,22 +4,60 @@
   <body>
   <%- include('fragmentos/navbar'); %> 
 
+<script type="text/javascript">
 
+	var casos="333";
+	 document.getElementById("casos").innerHTML = casos;
+
+	var recuperados="";
+	 document.getElementById("recuperados").innerHTML = recuperados;
+
+	var fallecidos="155";
+	 document.getElementById("fallecidos").innerHTML = fallecidos;
+
+
+	var sospechosos="";
+	 document.getElementById("sospechosos").innerHTML = sospechosos;
+
+	var descartados="";
+	 document.getElementById("descartados").innerHTML = descartados;
+</script>
     	<h2 class="text-center"><%= title %></h2>
     <div class="card col-md-8 mx-auto">
         
-        <form class="text-center" >
+        
+        
+        <div id="graph" class="img-fluid resize bg-dark"></div>
+
+<br>
+        	<table class="card col-md-3 mx-auto">
+        		<tr>
+        			<td>
+        				<form>
+        	          <h6>Total de casos </h6>
+        	          <h4 style="color: #1885FF " class="mr-auto">155</h4>
+        			</form>
+        		</td>
+        			<td>
+        			
+        		    </td>
+        			<td style="margin-left: 120px">
+        			 <form>
+        	          <h6>Fallecidos </h6>
+        	          <h4 style="color: red " id="fallecidos">2</h4>
+                     </form>
+        			</td>
+        		</tr>
+        	</table>
+<form class="text-center" >
         <h4>Casos por provincia </h4>
         <div id="graphb" class="img-fluid"></div>
         </form>
-        
-        <div id="graph" class="img-fluid bg-dark"></div>
-
-<br>
         <div class="row text-center"> 
-        <form class="col-md-6 mx-auto">
         <a>Hasta el momento, el Instituto Nacional de Investigación en Salud Pública (INSPI) ha tomado 668 muestras de las cuales 155 son positivas para COVID-19.</a>
+
         <br>
+        <form class="col-md-6 mx-auto">
         <br>
         <br>
         <h4 class="text-center">Estado de infectados</h4>
