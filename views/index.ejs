@@ -6,21 +6,7 @@
 
 <script type="text/javascript">
 
-	var casos="333";
-	 document.getElementById("casos").innerHTML = casos;
-
-	var recuperados="";
-	 document.getElementById("recuperados").innerHTML = recuperados;
-
-	var fallecidos="155";
-	 document.getElementById("fallecidos").innerHTML = fallecidos;
-
-
-	var sospechosos="";
-	 document.getElementById("sospechosos").innerHTML = sospechosos;
-
-	var descartados="";
-	 document.getElementById("descartados").innerHTML = descartados;
+	
 </script>
     	<h2 class="text-center"><%= title %></h2>
     <div class="card col-md-8 mx-auto">
@@ -35,7 +21,7 @@
         			<td>
         				<form>
         	          <h6>Total de casos </h6>
-        	          <h4 style="color: #1885FF " class="mr-auto">155</h4>
+        	          <h4 style="color: #1885FF " class="mr-auto">168</h4>
         			</form>
         		</td>
         			<td>
@@ -44,7 +30,7 @@
         			<td style="margin-left: 120px">
         			 <form>
         	          <h6>Fallecidos </h6>
-        	          <h4 style="color: red " id="fallecidos">2</h4>
+        	          <h4 style="color: red " id="fallecidos">3</h4>
                      </form>
         			</td>
         		</tr>
@@ -114,12 +100,14 @@
 
 
     <script type="text/javascript">
+    	
+
     	Morris.Donut({
   element: 'graphb',
   data: [
-    {value: 119, label: 'Guayas', formatted: '119 Casos' },
+    {value: 128, label: 'Guayas', formatted: '128 Casos' },
+    {value: 12, label: 'Pichincha', formatted: '12 Casos' },
     {value: 10, label: 'Los Rios', formatted: '10 Casos' },
-    {value: 8, label: 'Pichincha', formatted: '8 Casos' },
     {value: 8, label: 'Manabí', formatted: '8 Casos' },
     {value: 5, label: 'Azuay', formatted: '5 Casos' },
     {value: 2, label: 'Bolívar', formatted: '2 Casos' },
@@ -146,9 +134,9 @@
   element: 'extra2',
   colors: ["#A418FF","#1BE55B","#FF1849"],
   data: [
-    {value: 235, label: 'Sospechosos', formatted: '235' },
-    {value: 278, label: 'Descartados', formatted: '278' },
-    {value: 155, label: 'Confirmados', formatted: '155' }
+    {value: 235, label: 'Sospechosos', formatted: "283" },
+    {value: 278, label: 'Descartados', formatted: '312' },
+    {value: 155, label: 'Confirmados', formatted: '168' }
   ],
   formatter: function (x, data) { return data.formatted; }
 });
@@ -188,6 +176,22 @@ new Morris.Line({
   ykeys: ['casos', 'muertes', 'recuperados'],
   labels: ['Casos', 'Muertes', "Recuperados"],
 });
+
+var casos="155";
+	 document.getElementById("casos").innerHTML = casos;
+
+	var recuperados="0";
+	 document.getElementById("recuperados").innerHTML = recuperados;
+
+	var fallecidos="2";
+	 document.getElementById("fallecidos").innerHTML = fallecidos;
+
+
+	var sosp="235";
+
+	var descartados="278";
+	 document.getElementById("descartados").innerHTML = descartados;
+
     </script>
   </body>
 </html>
