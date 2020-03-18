@@ -3,42 +3,39 @@
   <%- include('fragmentos/head'); %> 
   <body>
   <%- include('fragmentos/navbar'); %> 
-
 <script type="text/javascript">
-
-	
 </script>
     	<h2 class="text-center"><%= title %></h2>
     <div class="card col-md-8 mx-auto">
-        
-        
-        
-        <div id="graph" class="img-fluid resize bg-dark"></div>
 
-<br>
-        	<table class="card col-md-3 mx-auto">
-        		<tr>
-        			<td>
-        				<form>
-        	          <h6>Total de casos </h6>
-        	          <h4 style="color: #1885FF " class="mr-auto">168</h4>
-        			</form>
-        		</td>
-        			<td>
+              <!--  GRAFICO 1 - LINEAS   -->
+       <div id="graph" class="img-fluid resize bg-dark"></div>
+       <br> 
+       <div class="card bg-dark col-md-3 mx-auto text-center">
+
+
+
+
+
+
+ <!-- CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///NEXT///NEXT///NEXT///NEXT///NEXT///NEXT///NEXT -->
+        	          <h6 class="mx-auto">Total de casos </h6>
+        	          <h4 style="color: #1885FF " class="mx-auto">168</h4>
         			
-        		    </td>
-        			<td style="margin-left: 120px">
-        			 <form>
-        	          <h6>Fallecidos </h6>
-        	          <h4 style="color: red " id="fallecidos">3</h4>
-                     </form>
-        			</td>
-        		</tr>
-        	</table>
+        	          <h6 class="mx-auto">Fallecidos </h6>
+        	          <h4 class="mx-auto" style="color: red " id="fallecidos">3</h4>
+ <!-- CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///BEFORE///BEFORE///BEFORE///BEFORE///BEFORE///BEFORE -->
+       </div>
+        	
+
 <form class="text-center" >
+              <!--  GRAFICO 2 - PROVINCIAS   -->
         <h4>Casos por provincia </h4>
         <div id="graphb" class="img-fluid"></div>
         </form>
+         <!--  
+CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///NEXT///NEXT///NEXT///NEXT///NEXT///NEXT///NEXT
+        -->
         <div class="row text-center"> 
         <a>Hasta el momento, el Instituto Nacional de Investigación en Salud Pública (INSPI) ha tomado 762 muestras de las cuales 168 son positivas para COVID-19.</a>
 
@@ -97,7 +94,9 @@
 
 
 
-
+ <!--  
+CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///NEXT///NEXT///NEXT///NEXT///NEXT///NEXT///NEXT
+        -->
 
     <script type="text/javascript">
     	
@@ -140,6 +139,7 @@
   ],
   formatter: function (x, data) { return data.formatted; }
 });
+
 
 
 
