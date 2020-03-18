@@ -43,20 +43,21 @@
     	/* data stolen from http://howmanyleft.co.uk/vehicle/jaguar_e_type */
 
 var quarter_data = [
-  {"period": "2010 Q1", "casos": 111, "muertes": 2},
-  {"period": "2009 Q4", "casos": 58, "muertes": 1},
-  {"period": "2009 Q3", "casos": 38, "muertes": 1},
-  {"period": "2009 Q2", "casos": 21, "muertes": 1},
-  {"period": "2009 Q1", "casos": 9, "muertes": null},
-  {"period": "2008 Q4", "casos": 5, "muertes": null},
-  {"period": "2008 Q3", "casos": 3, "muertes": null},
-  {"period": "2007 Q4", "casos": 2, "muertes": null},
-  {"period": "2006 Q4", "casos": 1, "muertes": null},
+  {"period": "2010 Q1","dia":"18 de Marzo", "casos": 111, "muertes": 2},
+  {"period": "2010 Q1","dia":"17 de Marzo", "casos": 111, "muertes": 2},
+  {"period": "2009 Q4","dia":"16 de Marzo", "casos": 58, "muertes": 1},
+  {"period": "2009 Q3","dia":"15 de Marzo", "casos": 38, "muertes": 1},
+  {"period": "2009 Q2","dia":"14 de Marzo", "casos": 21, "muertes": 1},
+  {"period": "2009 Q1","dia":"13 de Marzo", "casos": 9, "muertes": null},
+  {"period": "2008 Q4","dia":"12 de Marzo", "casos": 5, "muertes": null},
+  {"period": "2008 Q3","dia":"11 de Marzo", "casos": 3, "muertes": null},
+  {"period": "2007 Q4","dia":"10 de Marzo", "casos": 2, "muertes": null},
+  {"period": "2006 Q4","dia":"9 de Marzo", "casos": 1, "muertes": null},
 ];
 Morris.Line({
   element: 'graph',
   data: quarter_data,
-  xkey: 'period',
+  xkey: 'dia',
   ykeys: ['casos', 'muertes'],
   labels: ['Casos', 'Muertes']
 });
