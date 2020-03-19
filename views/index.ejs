@@ -30,7 +30,7 @@
 
 <form class="text-center" >
               <!--  GRAFICO 2 - PROVINCIAS   -->
-        <h4>Casos por provincia </h4>
+        <h5>Casos por provincia </h5>
         <div id="graphb" class="img-fluid"></div>
         </form>
          <!--  
@@ -43,16 +43,23 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
         <form class="col-md-6 mx-auto">
         <br>
         <br>
-        <h4 class="text-center">Estado de infectados</h4>
+        <h5 class="text-center">Estado de los infectados</h5>
         <div id="extra" class="img-fluid mx-auto" style="width: 60%"></div>
         </form>
         <form class="col-md-6 mx-auto">
-
         <br>
         <br>
-        <h4 class="text-center">Sospechosos</h4>
+        <h5 class="text-center">Sospechosos</h5>
         <div id="extra2" class="img-fluid mx-auto" style="width: 60%"></div>
         </form>
+        <form class="col-md-6 mx-auto">
+        <br>
+        <br>
+        <h6 class="text-center">Población total comparada con los casos confirmados</h6>
+        <div id="extra3" class="img-fluid mx-auto" style="width: 60%"></div>
+        <a href="https://countrymeters.info/es/Ecuador">Fuente</a>
+        </form>
+        
         
         </div>
         <div id="grapha" class="img-fluid"></div>
@@ -73,10 +80,10 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
     <form class="text-center">
    	<a class="text-center">Autor:</a>
   	<a class="text-center">Pablo Torres</a>
-  	<a rel="tooltip" title="Síganme en Instagram" data-placement="bottom" href="https://www.instagram.com/jpablo_torres23/" target="_blank">
+  	<a rel="tooltip" title="Sígeme en Instagram" data-placement="bottom" href="https://www.instagram.com/jpablo_torres23/" target="_blank">
     <img src="./images/icons/insta.png" style="width: 3%">
     </a>
-    <a rel="tooltip" title="Síganme en Instagram" data-placement="bottom" href="https://www.facebook.com/369Torres" target="_blank">
+    <a rel="tooltip" title="Facebook" data-placement="bottom" href="https://www.facebook.com/369Torres" target="_blank">
     <img src="./images/icons/facebook.png" style="width: 3%">
     </a>
     </form>
@@ -120,6 +127,8 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
   formatter: function (x, data) { return data.formatted; }
 });
 
+
+
     	Morris.Donut({
   element: 'extra',
   colors: ["#A418FF","#18A4FF","#FF1849","#4C0A0A"],
@@ -132,19 +141,30 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
   formatter: function (x, data) { return data.formatted; }
 });
 
+
+
     	Morris.Donut({
   element: 'extra2',
-  colors: ["#A418FF","#1BE55B","#FF1849"],
+  colors: ["#A418FF","#1BE55B","#1BD9E5"],
   data: [
     {value: 235, label: 'Sospechosos', formatted: "283" },
     {value: 278, label: 'Descartados', formatted: '312' },
-    {value: 155, label: 'Confirmados', formatted: '168' }
+    {value: 762, label: 'Pruebas realizadas', formatted: '762' }
   ],
   formatter: function (x, data) { return data.formatted; }
 });
 
 
 
+    	Morris.Donut({
+  element: 'extra3',
+  colors: ["#A418FF","#1BD9E5"],
+  data: [
+    {value: 168, label: 'Casos confirmados', formatted: "168" },
+    {value: 17367156, label: 'Resto de la Población', formatted: '17 367 300 aprox' }
+  ],
+  formatter: function (x, data) { return data.formatted; }
+});
 
 
 
@@ -180,7 +200,29 @@ new Morris.Line({
   labels: ['Casos', 'Muertes', "Recuperados"],
 });
 
-var casos="155";
+
+
+
+
+
+
+
+var timestamp_data = [
+  {"period": "2020-03-13", "Dato": "tal cosa", "sorned": 0},
+  {"period": "2020-03-11", "Dato":"tal cosa", "sorned": 0},
+  {"period": "2020-02-29", "Dato": "tal cosa", "sorned": 0}
+];
+Morris.Line({
+  element: 'extra4',
+  data: timestamp_data,
+  xkey: 'period',
+  ykeys: [ 'period'],
+  labels: ['Dato'],
+  dateFormat: function (x) { return new Date(x).toDateString(); }
+});
+
+
+    var casos="155";
 	 document.getElementById("casos").innerHTML = casos;
 
 	var recuperados="0";
