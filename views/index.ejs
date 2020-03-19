@@ -123,40 +123,40 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
     <script type="text/javascript">
     	
 
+
+
+
+
     	Morris.Donut({
   element: 'graphb',
   data: [
-    {value: 187, label: 'Guayas', formatted: '187 Casos' },
+    {value: <%=  guayas%> , label: 'Guayas', formatted: <%=  guayas%>  },
 
-    {value: 16, label: 'Pichincha', formatted: '16 Casos' },
+    {value: <%=  pichincha%> , label: 'Pichincha', formatted: <%=  pichincha%> },
 
-    {value: 16, label: 'Los Rios', formatted: '16 Casos' },
+    {value: <%=  rios%> , label: 'Los Rios', formatted: <%=  rios%> },
 
-    {value: 14, label: 'Azuay', formatted: '14 Casos' },
+    {value: <%= azuay %> , label: 'Azuay', formatted: <%= azuay %>},
 
-    {value: 8, label: 'Manabí', formatted: '8 Casos' },
+    {value: <%= manabí %> , label: 'Manabí', formatted: <%= manabí %>  },
 
-    {value: 4, label: 'Loja', formatted: '4 Casos' },
+    {value: <%= loja %> , label: 'Loja', formatted: <%= loja %>},
 
-    {value: 3, label: 'Cañar', formatted: '3 Casos' },
+    {value: <%= cañar %> , label: 'Cañar', formatted:<%= cañar %> },
 
+    {value: <%= morona %> , label: 'Morona Santiago', formatted:  <%= morona %>  },
 
-    {value: 3, label: 'Morona Santiago', formatted: '3 Casos' },
+    {value: <%=  chimborazo%> , label: 'Chimborazo', formatted: <%=  chimborazo%> },
 
-    {value: 2, label: 'Chimborazo', formatted: '2 Casos' },
-
-
-    {value: 2, label: 'Sucumbios', formatted: '2 Casos' },
+    {value: <%= sucumbios %> , label: 'Sucumbios', formatted:<%= sucumbios %> },
     
+    {value: <%=  bolívar%> , label: 'Bolívar', formatted: <%=  bolívar%>  },
 
-    {value: 2, label: 'Bolívar', formatted: '2 Casos' },
+    {value: <%= oro %> , label: 'El Oro', formatted: <%=  oro%>  },
 
-
-    {value: 1, label: 'El Oro', formatted: '1 Caso' },
-
-    {value: 1, label: 'Imbabura', formatted: '1 Casos' },
+    {value: <%= imbabura %> , label: 'Imbabura', formatted: <%= imbabura %>},
     
-    {value: 1, label: 'Sto Domingo Tsáchilas', formatted: '1 Caso' },
+    {value: <%= tsachilas %> , label: 'Sto Domingo Tsáchilas', formatted:  <%= tsachilas %>  },
   ],
   formatter: function (x, data) { return data.formatted; }
 });

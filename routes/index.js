@@ -16,6 +16,22 @@ router.get('/', function(req, res, next) {
   	aislamiento:"236",
   	estables:"12",
   	reservado:"5",
+
+  	guayas:"187",
+  	pichincha:"16",
+  	rios:"16",
+  	azuay:"14",
+  	manabí:"8",
+  	loja:"4",
+  	cañar:"3",
+  	morona:"3",
+  	chimborazo:"2",
+  	sucumbios:"2",
+  	bolívar:"2",
+  	oro:"1",
+  	imbabura:"1",
+  	tsachilas:"1",
+  	
   	 });
 });
 
