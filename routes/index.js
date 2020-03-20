@@ -31,6 +31,19 @@ router.get('/', function(req, res, next) {
   	oro:"1",
   	imbabura:"1",
   	tsachilas:"1",
+
+
+  	
+  	carchi:"0",
+  	cotopaxi:"0",
+  	tungurahua:"0",
+  	galapagos:"0",
+  	esmeraldas:"0",
+  	elena:"0",
+  	napo:"0",
+  	orellana:"0",
+  	pastaza:"0",
+  	zamora:"0",
   	
   	 });
 });
