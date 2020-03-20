@@ -165,12 +165,13 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
 
     	Morris.Donut({
   element: 'extra',
-  colors: ["#A418FF","#18A4FF","#FF1849","#4C0A0A"],
+  colors: ["#A418FF","#18A4FF","#FF1849","#4C0A0A", "green"],
   data: [
     {value: <%= aislamiento %>, label: 'Aislamiento domiciliario', formatted: <%= aislamiento %> },
     {value: <%= estables %>, label: 'Hospitalizados estables', formatted: <%= estables %> },
     {value: <%= reservado %>, label: 'Pronóstico reservado', formatted: <%= reservado %> },
-    {value: <%= muertos %>, label: 'Fallecidos', formatted: <%= muertos %> }
+    {value: <%= muertos %>, label: 'Fallecidos', formatted: <%= muertos %> },
+    {value: <%= recuperados %>, label: 'Recuperados', formatted: <%= recuperados %> }
   ],
   formatter: function (x, data) { return data.formatted; }
 });
