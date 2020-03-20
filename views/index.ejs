@@ -5,14 +5,14 @@
   <%- include('fragmentos/navbar'); %> 
 <script type="text/javascript">
 </script>
-    	<h2 class="text-center h2"><%= title %></h2>
-     
-    <div class="card col-md-8 mx-auto">
+    <div class="col-md-6 mx-auto text-center">
+	   <h2 class="text-center "><%= title %></h2>
 
-              <!--  GRAFICO 1 - LINEAS   -->
-       <div id="graph" class="img-fluid resize bg-dark"></div>
+        <a class="text-center mx-auto">Hasta el momento, el Instituto Nacional de Investigación en Salud Pública (INSPI) ha tomado <%= pruebas %> muestras de las cuales <%= casos %> son positivas para COVID-19.</a>
 
-       <div class="card bg-dark col-md-3 mx-auto text-center">
+    </div>
+    
+      <div class="card bg-dark col-md-3 mx-auto text-center">
 
  <!-- CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///NEXT///NEXT///NEXT///NEXT///NEXT///NEXT///NEXT -->
         	          <h6 class="mx-auto">Total de casos </h6>
@@ -24,13 +24,19 @@
         	          <h6 class="mx-auto">Recuperados </h6>
         	          <h4 class="mx-auto" style="color: green "><%= recuperados %></h4>
        </div>
+    <div class="card col-md-8 mx-auto">
+              <!--  GRAFICO 1 - LINEAS   -->
+       <div id="graph" class="img-fluid resize bg-dark"></div>
+
+      
 <form class="text-center" >
               <!--  GRAFICO 2 - PROVINCIAS   -->
         <h5>Casos por provincia </h5>
         <div id="graphb" class="img-fluid"></div>
+        <h5 class="text-center">Timelapse Provincias</h5>
+        <div id="provincias" class="img-fluid resize mx-auto" style="width: 100%"></div>
         </form>
         <div class="row text-center"> 
-        <a>Hasta el momento, el Instituto Nacional de Investigación en Salud Pública (INSPI) ha tomado <%= pruebas %> muestras de las cuales <%= casos %> son positivas para COVID-19.</a>
 
         <br>
         <form class="col-md-6 mx-auto">
@@ -48,20 +54,20 @@
         <form class="col-md-6 mx-auto">
         <br>
         <br>
-        <h6 class="text-center">Población total comparada con los casos confirmados</h6>
+        <h6 class="text-center">Población total comparada con los casos confirmados</h6><a href="https://countrymeters.info/es/Ecuador">Fuente</a>
         <div id="extra3" class="img-fluid mx-auto" style="width: 100%"></div>
-        <a href="https://countrymeters.info/es/Ecuador">Fuente</a>
+        
         </form>
 
 
         
         </div>
-        	<h5 class="text-center">Timelapse Provincias</h5>
-        <div id="provincias" class="img-fluid resize mx-auto" style="width: 100%"></div>
+        	
 
         <div id="grapha" class="img-fluid"></div>
-    <div  style="margin-left: 0px" class=" col-md-1 mx-auto">
-    	<a class="button btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//datos-stats.herokuapp.com/">Compartir en Facebook
+        <form class="row text-center mx-auto col-md-5">
+    <div  style="margin-left: 0px"  class="mx-auto">
+    	<a class="button btn " href="https://www.facebook.com/sharer/sharer.php?u=https%3A//datos-stats.herokuapp.com/">Compartir en Facebook
     		<img style="width: 12%; background-color:000" src="./images/icons/facebook.png"></a>
         <a class="button btn" href="whatsapp://send?text=http://covid19-ecuador.herokuapp.com">Compartir en Whatsapp
     		<img style="width: 12%; background-color:000" src="./images/icons/whatsapp.png"></a>
@@ -70,7 +76,7 @@
     	</a>
     </div>
 
-         <div class="card col-md-5 mx-auto bg-dark">
+         <div class="card mx-auto bg-dark">
   	<a class="text-center">Fuentes:</a>
       <div class="text-center">
   	<a class="" href="https://www.who.int/es">Organización Mundial de la Salud </a><br/>
@@ -84,6 +90,8 @@ https://twitter.com/Riesgos_Ec" target="_blank">
   	
       </div>
     </div>
+</form>
+
     <form class="text-center">
    	<a class="text-center">Autor:</a>
   	<a class="text-center">Pablo Torres</a>
