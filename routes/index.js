@@ -7,15 +7,15 @@ var roots = new rootsController();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Datos actualizados del Covid-19 Ecuador',
-  	casos:"367", 
-  	muertos:"5",
+  	casos:"426", 
+  	muertos:"7",
   	recuperados:"3",
-  	descartados:"483",
-  	sospechosos:"582",
-  	pruebas:"1432",
-  	aislamiento:"345",
-  	estables:"9",
-  	reservado:"5",
+  	descartados:"533",
+  	sospechosos:"711",
+  	pruebas:"1670",
+  	aislamiento:"399",
+  	estables:"10",
+  	reservado:"7",
 
   	guayas:"273",
   	pichincha:"32",
