@@ -101,32 +101,13 @@ https://twitter.com/Riesgos_Ec" target="_blank">
     </form>
     </div>
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  <!--  
 CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///NEXT///NEXT///NEXT///NEXT///NEXT///NEXT///NEXT
         -->
 
+
     <script type="text/javascript">
     	
-
-
-
-
-
     	Morris.Donut({
   element: 'graphb',
   data: [
@@ -134,7 +115,7 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
 
     {value: <%=  pichincha%> , label: 'Pichincha', formatted: <%=  pichincha%> },
 
-    {value: <%=  rios%> , label: 'Los Rios', formatted: <%=  rios%> },
+    {value: <%=  rios%> , label: 'Los Ríos', formatted: <%=  rios%> },
 
     {value: <%= azuay %> , label: 'Azuay', formatted: <%= azuay %>},
 
@@ -196,7 +177,7 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
   colors: ["#A418FF","#1BD9E5"],
   data: [
     {value: <%= casos %>, label: 'Casos confirmados', formatted: <%= casos %> },
-    {value: 17367156, label: 'Resto de la Población', formatted: '17 368 000 aprox' }
+    {value: 17368000, label: 'Resto de la Población', formatted: '17 368 000 aprox' }
   ],
   formatter: function (x, data) { return data.formatted; }
 });
@@ -226,14 +207,6 @@ var q_data = [
   {"dia":"2020-02-29", "casos": 1, "muertes": null, "recuperados": null, counter:1},
 
 ];
-
-
-
-
-
-
-
-
 new Morris.Line({
   element: 'graph',
   lineColors: ["#1885FF","#FF3333","green"],
@@ -242,22 +215,6 @@ new Morris.Line({
   ykeys: ['casos', 'muertes', 'recuperados'],
   labels: ['Casos', 'Muertes', "Recuperados"],
 });
-
-
-    var casos="199";
-	 document.getElementById("casos").innerHTML = casos;
-
-	var recuperados="0";
-	 document.getElementById("recuperados").innerHTML = recuperados;
-
-	var fallecidos="2";
-	 document.getElementById("fallecidos").innerHTML = fallecidos;
-
-	var sosp="235";
-
-	var descartados="278";
-	 document.getElementById("descartados").innerHTML = descartados;
-
     </script>
   </body>
 </html>
