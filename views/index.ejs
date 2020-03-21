@@ -68,11 +68,11 @@
         <div id="grapha" class="img-fluid"></div>
         <form class="row text-center mx-auto col-md-5">
     <div  style="margin-left: 0px"  class="mx-auto">
-    	<a class="button btn " href="https://www.facebook.com/sharer/sharer.php?u=https%3A//datos-stats.herokuapp.com/">Compartir en Facebook
+    	<a class="button btn " href="https://www.facebook.com/sharer/sharer.php?u=https://bit.ly/2UncAvC">Compartir en Facebook
     		<img style="width: 12%; background-color:000" src="./images/icons/facebook.png"></a>
         <a class="button btn" href="whatsapp://send?text=https://bit.ly/2UncAvC">Compartir en Whatsapp
     		<img style="width: 12%; background-color:000" src="./images/icons/whatsapp.png"></a>
-    	<a class="button btn" href="https://twitter.com/intent/tweet?text=https%3A//bit.ly/2UncAvC">Compartir en Twitter
+    	<a class="button btn" href="https://twitter.com/intent/tweet?text=https://bit.ly/2UncAvC">Compartir en Twitter
     		<img style="width: 12%; background-color:000" src="./images/icons/twiter.png"></a>
     	</a>
     </div>
@@ -108,7 +108,7 @@ https://twitter.com/Riesgos_Ec" target="_blank">
     <form class="text-center mx-auto">
 
 <a>Visitas:</a>
-<center><a href="https://covid19-ecuador.herokuapp.com/" title="Contador De Visitas web1">
+<center><a href="https://bit.ly/2UncAvC" title="Contador De Visitas web1">
 <img style="border: 0px solid; display: inline; width: 150%" alt="contador de visitas" src="http://www.websmultimedia.com/contador-de-visitas.php?id=279433"></a></center>
 
 </form>
@@ -127,7 +127,8 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
 
 
   var q_data = [
-  {"dia":"2020-03-20", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:21},
+  {"dia":"2020-03-21", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:22},
+  {"dia":"2020-03-20", "casos": 426, "muertes": 7, "recuperados": 3, counter:21},
   {"dia":"2020-03-19", "casos": 260, "muertes": 4, "recuperados": 3, counter:20},
   {"dia":"2020-03-18", "casos": 168, "muertes": 3, "recuperados": null, counter:19},
   {"dia":"2020-03-17", "casos": 111, "muertes": 2, "recuperados": null, counter:18},
@@ -247,7 +248,7 @@ new Morris.Line({
   colors: ["#A418FF","#1BD9E5"],
   data: [
     {value: <%= casos %>, label: 'Casos confirmados', formatted: <%= casos %> },
-    {value: 17368000, label: 'Resto de la Población', formatted: '17 368 000 aprox' }
+    {value: 17369000, label: 'Resto de la Población', formatted: '17 369 000 aprox' }
   ],
   formatter: function (x, data) { return data.formatted; }
 });
@@ -257,11 +258,16 @@ new Morris.Line({
 
 
  var q_data = [
-  {"dia":"2020-03-20", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
+  {"dia":"2020-03-21", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
   "Loja": <%= loja %>,"Bolívar": <%= bolívar %>,"Cañar": <%= cañar %>,"Morona Santiago": <%= morona %>,"Chimborazo": <%= chimborazo %>,"Sucumbios": <%= sucumbios %>,"El Oro": <%= oro %>,
    "Imbabura": <%= imbabura %>, "Sto Domingo de los Tsáchilas": <%= tsachilas %>,"Santa Elena": <%= elena %>,"Cotopaxi": <%= cotopaxi %>,"Tungurahua": <%= tungurahua %>,
    "Galápagos": <%= galapagos %>,"Esmeraldas": <%= esmeraldas %>,"Carchi": <%= carchi %>,"Napo": <%= napo %>,"Orellana": <%= orellana %>,"Pastaza": <%= pastaza %>,"Zamora Chinchipe": <%= zamora %>, counter:21},
    
+{"dia":"2020-03-20", "Guayas": 318,"Pichincha": 35,"Los Ríos": 19,"Azuay": 18,"Manabí": 9,
+  "Loja": 5,"Cañar": 3,"Morona Santiago": 3,"Chimborazo": 3,"Sucumbios": 3,"Bolívar": 4,"El Oro": 2,
+   "Imbabura": 2, "Sto Domingo de los Tsáchilas": 1,"Carchi": null,"Cotopaxi": null,"Tungurahua": null,
+   "Galápagos": null,"Esmeraldas": null,"Santa Elena": 1,"Napo": null,"Orellana": null,"Pastaza": null,"Zamora Chinchipe": null, counter:21},
+
 {"dia":"2020-03-19", "Guayas": 187,"Pichincha": 16,"Los Ríos": 16,"Azuay": 14,"Manabí": 8,
   "Loja": 4,"Cañar": 3,"Morona Santiago": 3,"Chimborazo": 2,"Sucumbios": 2,"Bolívar": 2,"El Oro": 1,
    "Imbabura": 1, "Sto Domingo de los Tsáchilas": 1,"Carchi": null,"Cotopaxi": null,"Tungurahua": null,
