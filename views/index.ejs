@@ -248,17 +248,18 @@ new Morris.Line({
   ];
 new Morris.Line({
   element: 'provincias',
-  lineColors: ["#1B95E5","#AC21DF","green","#DF8C21","#43AF17","#25BBC4","#C4254C","#7CD820","#B120D8","#A9D861","#E61919","#E3E619","#19E679","#00A44D","#1D2DCA","#","#","#","#","#","#","#","#","#"],
+  lineColors: ["#1B95E5","#AC21DF","green","#DF8C21","#43AF17","#25BBC4","#C4254C","#7CD820","#B120D8","#A9D861","#E61919","#E3E619","#19E679","#00A44D","#0B9C8A","#0B9C0D","#","#","#","#","#","#","#","#"],
   data: q_data,
   xkey: 'dia',
-  ykeys: ['Guayas', 'Pichincha', 'Los Ríos', 'Azuay', 'Manabí', 'Loja', 'Bolívar', 'Cañar', 'Morona Santiago', 'Chimborazo', 'Sucumbios', 'El Oro', 'Imbabura', 'Sto Domingo de los Tsáchilas','Santa Elena', 'Esmeraldas'],
-  labels: ['Guayas', 'Pichincha', 'Los Ríos', 'Azuay', 'Manabí', 'Loja', 'Bolívar', 'Cañar', 'Morona Santiago', 'Chimborazo', 'Sucumbios', 'El Oro', 'Imbabura', 'Sto Domingo de los Tsáchilas', "Santa Elena", 'Esmeraldas'],
+  ykeys: ['Guayas', 'Pichincha', 'Los Ríos', 'Azuay', 'Manabí', 'Loja', 'Bolívar', 'Chimborazo', 'Cañar', 'Sucumbios','Morona Santiago', 'Imbabura', 'Sto Domingo de los Tsáchilas', 'Esmeraldas', 'El Oro',  "Santa Elena"],
+  labels: ['Guayas', 'Pichincha', 'Los Ríos', 'Azuay', 'Manabí', 'Loja', 'Bolívar', 'Chimborazo', 'Cañar', 'Sucumbios','Morona Santiago', 'Imbabura', 'Sto Domingo de los Tsáchilas', 'Esmeraldas', 'El Oro',  "Santa Elena"],
 });
 
 
     	
     	Morris.Donut({
   element: 'graphb',
+  colors:["#1B95E5","#AC21DF","green","#DF8C21","#43AF17","#25BBC4","#C4254C","#7CD820","#B120D8","#A9D861","#E61919","#E3E619","#19E679","#00A44D","#0B9C8A","#0B9C0D","#","#","#","#","#","#","#","#"],
   data: [
     {value: <%=  guayas%> , label: 'Guayas', formatted: <%=  guayas%>  },
 
@@ -274,19 +275,28 @@ new Morris.Line({
     
     {value: <%=  bolívar%> , label: 'Bolívar', formatted: <%=  bolívar%>  },
 
-    {value: <%= cañar %> , label: 'Cañar', formatted:<%= cañar %> },
-
-    {value: <%= morona %> , label: 'Morona Santiago', formatted:  <%= morona %>  },
-
     {value: <%=  chimborazo%> , label: 'Chimborazo', formatted: <%=  chimborazo%> },
+
+    {value: <%= cañar %> , label: 'Cañar', formatted:<%= cañar %> },
 
     {value: <%= sucumbios %> , label: 'Sucumbios', formatted:<%= sucumbios %> },
 
-    {value: <%= oro %> , label: 'El Oro', formatted: <%=  oro%>  },
+    {value: <%= morona %> , label: 'Morona Santiago', formatted:  <%= morona %>  },
+
+
 
     {value: <%= imbabura %> , label: 'Imbabura', formatted: <%= imbabura %>},
 
     {value: <%= tsachilas %> , label: 'Sto Domingo Tsáchilas', formatted:  <%= tsachilas %>  },
+
+
+    {value: <%= esmeraldas %> , label: 'Esmeraldas', formatted:  <%= esmeraldas %>  },
+
+
+    {value: <%= oro %> , label: 'El Oro', formatted: <%=  oro%>  },
+    
+    {value: <%= elena %> , label: 'Santa Elena', formatted:  <%= elena %>  },
+
     
  //   {value: <%= carchi %> , label: 'Carchi', formatted:  <%= carchi %>  },
 
@@ -295,10 +305,6 @@ new Morris.Line({
 //    {value: <%= tungurahua %> , label: 'Tungurahua', formatted:  <%= tungurahua %>  },
 
     //{value: <%= galapagos %> , label: 'Galápagos', formatted:  <%= galapagos %>  },
-
-    {value: <%= esmeraldas %> , label: 'Esmeraldas', formatted:  <%= esmeraldas %>  },
-
-    {value: <%= elena %> , label: 'Santa Elena', formatted:  <%= elena %>  },
 
   //  {value: <%= napo %> , label: 'Napo', formatted:  <%= napo %>  },
 
@@ -315,7 +321,7 @@ new Morris.Line({
 </html>
 
  <!--  
- 'Carchi', 'Cotopaxi', 'Tungurahua', 'Galápagos', 'Santa Elena', 'Napo', 'Orellana', 'Pastaza', 'Zamora Chinchipe'
+ 'Carchi', 'Cotopaxi', 'Tungurahua', 'Galápagos', 'Napo', 'Orellana', 'Pastaza', 'Zamora Chinchipe'
 
 
 
