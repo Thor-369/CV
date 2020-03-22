@@ -155,11 +155,11 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
   {"dia":"2020-02-29", "casos": 1, "muertes": null, "recuperados": null, counter:1},];
 new Morris.Line({
   element: 'graph',
-  lineColors: ["#1885FF","#FF3333","green"],
+  lineColors: ["#1885FF","green","#FF3333"],
   data: q_data,
   xkey: 'dia',
-  ykeys: ['casos', 'muertes', 'recuperados'],
-  labels: ['Casos', 'Muertes', "Recuperados"],
+  ykeys: ['casos', 'recuperados','muertes'],
+  labels: ['Casos', "Recuperados", 'Muertes'],
 });
 
 
@@ -284,6 +284,9 @@ new Morris.Line({
     
     {value: <%=  bolívar%> , label: 'Bolívar', formatted: <%=  bolívar%>  },
 
+    
+    {value: <%= tsachilas %> , label: 'Sto Domingo Tsáchilas', formatted:  <%= tsachilas %>  },
+
     {value: <%=  chimborazo%> , label: 'Chimborazo', formatted: <%=  chimborazo%> },
 
     {value: <%= cañar %> , label: 'Cañar', formatted:<%= cañar %> },
@@ -293,10 +296,7 @@ new Morris.Line({
     {value: <%= morona %> , label: 'Morona Santiago', formatted:  <%= morona %>  },
 
 
-
     {value: <%= imbabura %> , label: 'Imbabura', formatted: <%= imbabura %>},
-
-    {value: <%= tsachilas %> , label: 'Sto Domingo Tsáchilas', formatted:  <%= tsachilas %>  },
 
 
     {value: <%= esmeraldas %> , label: 'Esmeraldas', formatted:  <%= esmeraldas %>  },
