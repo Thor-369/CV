@@ -266,8 +266,8 @@ new Morris.Line({
   lineColors: ["#1B95E5","#AC21DF","green","#43AF17","#DF8C21","#25BBC4","#C4254C","#7CD820","#B120D8","#A9D861","#E61919","#E3E619","#19E679","#00A44D","#0B9C8A","#0B9C0D","#230B9C","#9C0B0B","#","#","#","#","#","#"],
   data: q_data,
   xkey: 'dia',
-  ykeys: ['Guayas', 'Pichincha', 'Los Ríos','Manabí', 'Azuay', 'Chimborazo',  'Bolívar' ,'El Oro','Sucumbios','Loja', 'Cañar',  'Imbabura', 'Sto Domingo de los Tsáchilas','Morona Santiago', 'Esmeraldas',   "Santa Elena", 'Cotopaxi', 'Tungurahua',],
-  labels: ['Guayas', 'Pichincha', 'Los Ríos','Manabí', 'Azuay', 'Chimborazo',  'Bolívar' ,'El Oro','Sucumbios','Loja', 'Cañar', 'Imbabura', 'Sto Domingo de los Tsáchilas','Morona Santiago', 'Esmeraldas',   "Santa Elena", 'Cotopaxi', 'Tungurahua',],
+  ykeys: ['Guayas', 'Pichincha', 'Los Ríos','Manabí', 'Azuay', 'Chimborazo',  'Bolívar' ,'El Oro','Sto Domingo de los Tsáchilas','Morona Santiago','Sucumbios','Loja', 'Cañar',  'Imbabura',  "Santa Elena",'Esmeraldas',  'Cotopaxi', 'Tungurahua',],
+  labels: ['Guayas', 'Pichincha', 'Los Ríos','Manabí', 'Azuay', 'Chimborazo',  'Bolívar' ,'El Oro','Sto Domingo de los Tsáchilas','Morona Santiago','Sucumbios','Loja', 'Cañar', 'Imbabura',   "Santa Elena",'Esmeraldas',  'Cotopaxi', 'Tungurahua',],
 });
 
 
@@ -292,8 +292,11 @@ new Morris.Line({
 
     {value: <%= oro %> , label: 'El Oro', formatted: <%=  oro%>  },
 
+    {value: <%= tsachilas %> , label: 'Sto Domingo Tsáchilas', formatted:  <%= tsachilas %>  },
+
+    {value: <%= morona %> , label: 'Morona Santiago', formatted:  <%= morona %>  },
+
     {value: <%= sucumbios %> , label: 'Sucumbios', formatted:<%= sucumbios %> },
-    
 
     {value: <%= loja %> , label: 'Loja', formatted: <%= loja %>},
     
@@ -301,10 +304,6 @@ new Morris.Line({
     
     {value: <%= imbabura %> , label: 'Imbabura', formatted: <%= imbabura %>},
     
-    {value: <%= tsachilas %> , label: 'Sto Domingo Tsáchilas', formatted:  <%= tsachilas %>  },
-
-    {value: <%= morona %> , label: 'Morona Santiago', formatted:  <%= morona %>  },
-
     {value: <%= esmeraldas %> , label: 'Esmeraldas', formatted:  <%= esmeraldas %>  },
 
     {value: <%= elena %> , label: 'Santa Elena', formatted:  <%= elena %>  },
