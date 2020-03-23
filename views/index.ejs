@@ -130,7 +130,8 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
 
 
   var q_data = [
-  {"dia":"2020-03-22", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:22},
+  {"dia":"2020-03-23", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:22},
+  {"dia":"2020-03-22", "casos": 789, "muertes": 14, "recuperados": 3, counter:22},
   {"dia":"2020-03-21", "casos": 532, "muertes": 7, "recuperados": 3, counter:22},
   {"dia":"2020-03-20", "casos": 426, "muertes": 7, "recuperados": 3, counter:21},
   {"dia":"2020-03-19", "casos": 260, "muertes": 4, "recuperados": 3, counter:20},
@@ -209,12 +210,17 @@ new Morris.Line({
 
 
  var q_data = [
-  {"dia":"2020-03-22", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
+  {"dia":"2020-03-23", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
   "Loja": <%= loja %>,"Bolívar": <%= bolívar %>,"Cañar": <%= cañar %>,"Morona Santiago": <%= morona %>,"Chimborazo": <%= chimborazo %>,"Sucumbios": <%= sucumbios %>,"El Oro": <%= oro %>,
    "Imbabura": <%= imbabura %>, "Sto Domingo de los Tsáchilas": <%= tsachilas %>,"Santa Elena": <%= elena %>,"Cotopaxi": <%= cotopaxi %>,"Tungurahua": <%= tungurahua %>,
    "Galápagos": <%= galapagos %>,"Esmeraldas": <%= esmeraldas %>,"Carchi": <%= carchi %>,"Napo": <%= napo %>,"Orellana": <%= orellana %>,"Pastaza": <%= pastaza %>,"Zamora Chinchipe": <%= zamora %>, counter:21},
    
-{"dia":"2020-03-21", "Guayas": 397,"Pichincha": 50,"Los Ríos": 22,"Azuay": 19,"Manabí": 9,
+{"dia":"2020-03-22", "Guayas": 607,"Pichincha": 60,"Los Ríos": 25,"Azuay": 19,"Manabí": 9,
+  "Loja": 5,"Cañar": 4,"Morona Santiago": 3,"Chimborazo": 9,"Sucumbios": 6,"Bolívar": 8,"El Oro": 6,
+   "Imbabura": 4, "Sto Domingo de los Tsáchilas": 4,"Carchi": null,"Cotopaxi": null,"Tungurahua": null,
+   "Galápagos": null,"Esmeraldas": 2,"Santa Elena": 2,"Napo": null,"Orellana": null,"Pastaza": null,"Zamora Chinchipe": null, counter:21},
+
+   {"dia":"2020-03-21", "Guayas": 397,"Pichincha": 50,"Los Ríos": 22,"Azuay": 19,"Manabí": 9,
   "Loja": 5,"Cañar": 3,"Morona Santiago": 3,"Chimborazo": 4,"Sucumbios": 3,"Bolívar": 5,"El Oro": 2,
    "Imbabura": 3, "Sto Domingo de los Tsáchilas": 4,"Carchi": null,"Cotopaxi": null,"Tungurahua": null,
    "Galápagos": null,"Esmeraldas": 2,"Santa Elena": 1,"Napo": null,"Orellana": null,"Pastaza": null,"Zamora Chinchipe": null, counter:21},
