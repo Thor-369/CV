@@ -37,11 +37,10 @@ router.get('/', function(req, res, next) {
   	elena:"6",
     cotopaxi:"1",
   	tungurahua:"2",
-
+  	galapagos:"0",
 
 
   	carchi:"0",
-  	galapagos:"0",
   	napo:"0",
   	orellana:"0",
   	pastaza:"0",
