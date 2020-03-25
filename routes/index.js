@@ -39,11 +39,11 @@ router.get('/', function(req, res, next) {
   	tungurahua:"2",
   	galapagos:"4",
   	carchi:"2",
+  	pastaza:"1",
 
 
   	napo:"0",
   	orellana:"0",
-  	pastaza:"0",
   	zamora:"0",
   	
   	 });
