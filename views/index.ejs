@@ -275,18 +275,18 @@ new Morris.Line({
   ];
 new Morris.Line({
   element: 'provincias',
-  lineColors: ["#1B95E5","#AC21DF","green","#43AF17","#DF8C21","#25BBC4","#C4254C","#7CD820","#B120D8","#A9D861","#E61919","#E3E619","#19E679","#00A44D","#0B9C8A","#0B9C0D","#230B9C","#9C0B0B","#9C0B4D","#0B9C43","#","#","#","#"],
+  lineColors: ["#1B95E5","#AC21DF","green","#43AF17","#DF8C21","#25BBC4","#C4254C","#7CD820","#B120D8","#A9D861","#E61919","#E3E619","#19E679","#00A44D","#0B9C8A","#0B9C0D","#230B9C","#9C0B0B","#9C0B4D","#0B9C43","#6C9C0B","#","#","#"],
   data: q_data,
   xkey: 'dia',
-  ykeys: ['Guayas', 'Pichincha', 'Los Ríos','Manabí', 'Azuay','El Oro', 'Chimborazo',  'Bolívar' ,'Sto Domingo de los Tsáchilas','Loja', 'Cañar','Morona Santiago','Sucumbios', "Santa Elena", 'Imbabura', 'Galápagos','Esmeraldas', 'Tungurahua', 'Cotopaxi','Carchi', ],
-  labels: ['Guayas', 'Pichincha', 'Los Ríos','Manabí', 'Azuay','El Oro', 'Chimborazo',  'Bolívar' ,'Sto Domingo de los Tsáchilas','Loja', 'Cañar','Morona Santiago','Sucumbios', "Santa Elena", 'Imbabura','Galápagos', 'Esmeraldas', 'Tungurahua', 'Cotopaxi','Carchi' ],
+  ykeys: ['Guayas', 'Pichincha', 'Los Ríos','Manabí', 'Azuay','El Oro', 'Chimborazo',  'Bolívar' ,'Sto Domingo de los Tsáchilas','Loja', 'Cañar','Morona Santiago','Sucumbios', "Santa Elena", 'Imbabura', 'Galápagos','Esmeraldas', 'Tungurahua', 'Cotopaxi','Carchi','Pastaza', ],
+  labels: ['Guayas', 'Pichincha', 'Los Ríos','Manabí', 'Azuay','El Oro', 'Chimborazo',  'Bolívar' ,'Sto Domingo de los Tsáchilas','Loja', 'Cañar','Morona Santiago','Sucumbios', "Santa Elena", 'Imbabura','Galápagos', 'Esmeraldas', 'Tungurahua', 'Cotopaxi','Carchi','Pastaza', ],
 });
 
 
     	
     	Morris.Donut({
   element: 'graphb',
-  colors: ["#1B95E5","#AC21DF","green","#43AF17","#DF8C21","#25BBC4","#C4254C","#7CD820","#B120D8","#A9D861","#E61919","#E3E619","#19E679","#00A44D","#0B9C8A","#0B9C0D","#230B9C","#9C0B0B","#9C0B4D","#0B9C43","#","#","#","#"],
+  colors: ["#1B95E5","#AC21DF","green","#43AF17","#DF8C21","#25BBC4","#C4254C","#7CD820","#B120D8","#A9D861","#E61919","#E3E619","#19E679","#00A44D","#0B9C8A","#0B9C0D","#230B9C","#9C0B0B","#9C0B4D","#0B9C43","#6C9C0B","#","#","#"],
   data: [
     {value: <%=  guayas%> , label: 'Guayas', formatted: <%=  guayas%>  },
 
@@ -332,7 +332,7 @@ new Morris.Line({
 
    // {value: <%= orellana %> , label: 'Orellana', formatted:  <%= orellana %>  },
 
-   // {value: <%= pastaza %> , label: 'Pastaza', formatted:  <%= pastaza %>  },
+    {value: <%= pastaza %> , label: 'Pastaza', formatted:  <%= pastaza %>  },
 
  //   {value: <%= zamora %> , label: 'Zamora', formatted:  <%= zamora %>  },
   ],
@@ -343,7 +343,7 @@ new Morris.Line({
 </html>
 
  <!--  
-  'Napo', 'Orellana', 'Pastaza', 'Zamora Chinchipe'
+  'Napo', 'Orellana',  'Zamora Chinchipe'
 
 
 
