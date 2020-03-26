@@ -130,7 +130,9 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
 
 
   var q_data = [
-  {"dia":"2020-03-25", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:22},
+  {"dia":"2020-03-26", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:22},
+  {"dia":"2020-03-25", "casos": 1211, "muertes": 29, "recuperados": 3, counter:26},
+
   {"dia":"2020-03-24", "casos": 1082, "muertes": 27, "recuperados": 3, counter:25},
   {"dia":"2020-03-23", "casos": 981, "muertes": 18, "recuperados": 3, counter:24},
   {"dia":"2020-03-22", "casos": 789, "muertes": 14, "recuperados": 3, counter:23},
@@ -212,12 +214,17 @@ new Morris.Line({
 
 
  var q_data = [
-  {"dia":"2020-03-25", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
+  {"dia":"2020-03-26", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
   "Loja": <%= loja %>,"Bolívar": <%= bolívar %>,"Cañar": <%= cañar %>,"Morona Santiago": <%= morona %>,"Chimborazo": <%= chimborazo %>,"Sucumbios": <%= sucumbios %>,"El Oro": <%= oro %>,
    "Imbabura": <%= imbabura %>, "Sto Domingo de los Tsáchilas": <%= tsachilas %>,"Santa Elena": <%= elena %>,"Cotopaxi": <%= cotopaxi %>,"Tungurahua": <%= tungurahua %>,
    "Galápagos": <%= galapagos %>,"Esmeraldas": <%= esmeraldas %>,"Carchi": <%= carchi %>,"Napo": <%= napo %>,"Orellana": <%= orellana %>,"Pastaza": <%= pastaza %>,"Zamora Chinchipe": <%= zamora %>, counter:21},
    
-{"dia":"2020-03-24", "Guayas": 827,"Pichincha": 72,"Los Ríos": 37,"Azuay": 28,"Manabí": 32,
+{"dia":"2020-03-25", "Guayas": 885,"Pichincha": 108,"Los Ríos": 40,"Azuay": 31,"Manabí": 38,
+  "Loja": 8,"Cañar": 12,"Morona Santiago": 7,"Chimborazo": 11,"Sucumbios": 6,"Bolívar": 11,"El Oro": 17,
+   "Imbabura": 8, "Sto Domingo de los Tsáchilas": 7,"Carchi": 2,"Cotopaxi": 2,"Tungurahua": 3,
+   "Galápagos": 4,"Esmeraldas": 4,"Santa Elena": 6,"Napo": null,"Orellana": null,"Pastaza": 1,"Zamora Chinchipe": null, counter:21},
+
+   {"dia":"2020-03-24", "Guayas": 827,"Pichincha": 72,"Los Ríos": 37,"Azuay": 28,"Manabí": 32,
   "Loja": 7,"Cañar": 7,"Morona Santiago": 6,"Chimborazo": 11,"Sucumbios": 6,"Bolívar": 9,"El Oro": 14,
    "Imbabura": 4, "Sto Domingo de los Tsáchilas": 7,"Carchi": null,"Cotopaxi": 1,"Tungurahua": 2,
    "Galápagos": 4,"Esmeraldas": 3,"Santa Elena": 6,"Napo": null,"Orellana": null,"Pastaza": null,"Zamora Chinchipe": null, counter:21},
@@ -275,18 +282,18 @@ new Morris.Line({
   ];
 new Morris.Line({
   element: 'provincias',
-  lineColors: ["#1B95E5","#AC21DF","green","#43AF17","#DF8C21","#25BBC4","#C4254C","#7CD820","#B120D8","#A9D861","#E61919","#E3E619","#19E679","#00A44D","#0B9C8A","#0B9C0D","#230B9C","#9C0B0B","#9C0B4D","#0B9C43","#6C9C0B","#","#","#"],
+  lineColors: ["#1B95E5","#AC21DF","green","#43AF17","#DF8C21","#25BBC4","#C4254C","#7CD820","#B120D8","#A9D861","#E61919","#E3E619","#19E679","#00A44D","#0B9C8A","#0B9C0D","#230B9C","#9C0B0B","#9C0B4D","#0B9C43","#6C9C0B","#DD0400","#","#"],
   data: q_data,
   xkey: 'dia',
-  ykeys: ['Guayas', 'Pichincha', 'Los Ríos','Manabí', 'Azuay','El Oro', 'Cañar', 'Chimborazo',  'Bolívar' ,'Loja', 'Imbabura','Sto Domingo de los Tsáchilas','Morona Santiago','Sucumbios', "Santa Elena",'Galápagos', 'Esmeraldas', 'Tungurahua', 'Cotopaxi','Carchi','Pastaza', ],
-  labels: ['Guayas', 'Pichincha', 'Los Ríos','Manabí', 'Azuay','El Oro', 'Cañar', 'Chimborazo',  'Bolívar' ,'Loja', 'Imbabura','Sto Domingo de los Tsáchilas','Morona Santiago','Sucumbios', "Santa Elena",'Galápagos', 'Esmeraldas', 'Tungurahua', 'Cotopaxi','Carchi','Pastaza', ],
+  ykeys: ['Guayas', 'Pichincha', 'Los Ríos','Manabí', 'Azuay','El Oro', 'Cañar', 'Chimborazo',  'Bolívar' ,'Loja', 'Imbabura','Sto Domingo de los Tsáchilas','Morona Santiago','Sucumbios', "Santa Elena",'Galápagos', 'Esmeraldas', 'Tungurahua', 'Cotopaxi','Carchi','Pastaza','Zamora Chinchipe' ],
+  labels: ['Guayas', 'Pichincha', 'Los Ríos','Manabí', 'Azuay','El Oro', 'Cañar', 'Chimborazo',  'Bolívar' ,'Loja', 'Imbabura','Sto Domingo de los Tsáchilas','Morona Santiago','Sucumbios', "Santa Elena",'Galápagos', 'Esmeraldas', 'Tungurahua', 'Cotopaxi','Carchi','Pastaza', 'Zamora Chinchipe'],
 });
 
 
     	
     	Morris.Donut({
   element: 'graphb',
-  colors: ["#1B95E5","#AC21DF","green","#43AF17","#DF8C21","#25BBC4","#C4254C","#7CD820","#B120D8","#A9D861","#E61919","#E3E619","#19E679","#00A44D","#0B9C8A","#0B9C0D","#230B9C","#9C0B0B","#9C0B4D","#0B9C43","#6C9C0B","#","#","#"],
+  colors: ["#1B95E5","#AC21DF","green","#43AF17","#DF8C21","#25BBC4","#C4254C","#7CD820","#B120D8","#A9D861","#E61919","#E3E619","#19E679","#00A44D","#0B9C8A","#0B9C0D","#230B9C","#9C0B0B","#9C0B4D","#0B9C43","#6C9C0B","#DD0400","#","#"],
   data: [
     {value: <%=  guayas%> , label: 'Guayas', formatted: <%=  guayas%>  },
 
@@ -334,7 +341,7 @@ new Morris.Line({
 
     {value: <%= pastaza %> , label: 'Pastaza', formatted:  <%= pastaza %>  },
 
- //   {value: <%= zamora %> , label: 'Zamora', formatted:  <%= zamora %>  },
+    {value: <%= zamora %> , label: 'Zamora', formatted:  <%= zamora %>  },
   ],
   formatter: function (x, data) { return data.formatted; }
 });
@@ -343,7 +350,7 @@ new Morris.Line({
 </html>
 
  <!--  
-  'Napo', 'Orellana',  'Zamora Chinchipe'
+  'Napo', 'Orellana',  
 
 
 
