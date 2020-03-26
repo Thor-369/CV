@@ -9,17 +9,17 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Datos actualizados del Covid-19 Ecuador',
   	
 
-  	casos:"1382", 
+  	casos:"1403", 
   	muertos:"34",
   	recuperados:"3",
-  	descartados:"1676",
-  	sospechosos:"1778",
-  	pruebas:"4290",
-  	aislamiento:"1028",
-  	estables:"87",
-  	reservado:"64",
+  	descartados:"1722",
+  	sospechosos:"1965",
+  	pruebas:"5090",
+  	aislamiento:"1214",
+  	estables:"71",
+  	reservado:"81",
 
-  	guayas:"1000",
+  	guayas:"1021",
   	pichincha:"121",
   	rios:"52",
   	azuay:"37",
@@ -29,7 +29,7 @@ router.get('/', function(req, res, next) {
   	bolívar:"11",
   	cañar:"15",
   	morona:"8",
-  	sucumbios:"8",
+  	sucumbios:"18",
   	imbabura:"8",
   	tsachilas:"8",
   	oro:"20",
@@ -39,7 +39,7 @@ router.get('/', function(req, res, next) {
   	tungurahua:"3",
   	galapagos:"4",
   	carchi:"3",
-  	pastaza:"1",
+  	pastaza:"2",
   	zamora:"1",
 
 
