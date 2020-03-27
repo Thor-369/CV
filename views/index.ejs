@@ -248,11 +248,11 @@ new Morris.Line({
   ];
 new Morris.Line({
   element: 'provincias',
-  lineColors: ["#1B95E5","#AC21DF","green","#43AF17","#DF8C21","#25BBC4","#C4254C","#7CD820","#B120D8","#A9D861","#E61919","#E3E619","#19E679","#00A44D","#0B9C8A","#0B9C0D","#230B9C","#9C0B0B","#9C0B4D","#0B9C43","#6C9C0B","#DD0400","#","#"],
+  lineColors: ["#1B95E5","#AC21DF","green","#DF8C21","#43AF17","#25BBC4","#C4254C","#7CD820","#B120D8","#A9D861","#E61919","#E3E619","#19E679","#00A44D","#0B9C8A","#0B9C0D","#230B9C","#9C0B0B","#9C0B4D","#0B9C43","#6C9C0B","#DD0400","#","#"],
   data: q_data,
   xkey: 'dia',
-  ykeys: ['Guayas', 'Pichincha', 'Los Ríos','Manabí', 'Azuay','El Oro', 'Cañar', 'Chimborazo',  'Bolívar' ,'Loja', 'Imbabura','Sto Domingo de los Tsáchilas','Morona Santiago','Sucumbios', "Santa Elena",'Galápagos', 'Esmeraldas', 'Tungurahua', 'Cotopaxi','Carchi','Pastaza','Zamora Chinchipe' ],
-  labels: ['Guayas', 'Pichincha', 'Los Ríos','Manabí', 'Azuay','El Oro', 'Cañar', 'Chimborazo',  'Bolívar' ,'Loja', 'Imbabura','Sto Domingo de los Tsáchilas','Morona Santiago','Sucumbios', "Santa Elena",'Galápagos', 'Esmeraldas', 'Tungurahua', 'Cotopaxi','Carchi','Pastaza', 'Zamora Chinchipe'],
+  ykeys: ['Guayas', 'Pichincha', 'Los Ríos', 'Azuay','Manabí','El Oro','Sucumbios', 'Cañar', 'Bolívar' ,'Loja','Chimborazo', "Santa Elena", 'Imbabura','Sto Domingo de los Tsáchilas','Morona Santiago','Galápagos', 'Esmeraldas', 'Tungurahua', 'Cotopaxi','Carchi','Pastaza','Zamora Chinchipe' ],
+  labels:  ['Guayas', 'Pichincha', 'Los Ríos', 'Azuay','Manabí','El Oro','Sucumbios', 'Cañar', 'Bolívar' ,'Loja','Chimborazo', "Santa Elena", 'Imbabura','Sto Domingo de los Tsáchilas','Morona Santiago','Galápagos', 'Esmeraldas', 'Tungurahua', 'Cotopaxi','Carchi','Pastaza','Zamora Chinchipe' ],
 });
 
 
@@ -298,7 +298,7 @@ new Morris.Line({
     	
     	Morris.Donut({
   element: 'graphb',
-  colors: ["#1B95E5","#AC21DF","green","#43AF17","#DF8C21","#25BBC4","#C4254C","#7CD820","#B120D8","#A9D861","#E61919","#E3E619","#19E679","#00A44D","#0B9C8A","#0B9C0D","#230B9C","#9C0B0B","#9C0B4D","#0B9C43","#6C9C0B","#DD0400","#","#"],
+  colors:  ["#1B95E5","#AC21DF","green","#DF8C21","#43AF17","#25BBC4","#C4254C","#7CD820","#B120D8","#A9D861","#E61919","#E3E619","#19E679","#00A44D","#0B9C8A","#0B9C0D","#230B9C","#9C0B0B","#9C0B4D","#0B9C43","#6C9C0B","#DD0400","#","#"],
   data: [
     {value: <%=  guayas%> , label: 'Guayas', formatted: <%=  guayas%>  },
 
@@ -306,29 +306,29 @@ new Morris.Line({
 
     {value: <%=  rios%> , label: 'Los Ríos', formatted: <%=  rios%> },
 
-    {value: <%= manabí %> , label: 'Manabí', formatted: <%= manabí %>  },
-
     {value: <%= azuay %> , label: 'Azuay', formatted: <%= azuay %>},
 
+    {value: <%= manabí %> , label: 'Manabí', formatted: <%= manabí %>  },
+
     {value: <%= oro %> , label: 'El Oro', formatted: <%=  oro%>  },
+
+    {value: <%= sucumbios %> , label: 'Sucumbios', formatted:<%= sucumbios %> },
     
     {value: <%= cañar %> , label: 'Cañar', formatted:<%= cañar %> },
-
-    {value: <%=  chimborazo%> , label: 'Chimborazo', formatted: <%=  chimborazo%> },
 
     {value: <%=  bolívar%> , label: 'Bolívar', formatted: <%=  bolívar%>  },
 
     {value: <%= loja %> , label: 'Loja', formatted: <%= loja %>},
+
+    {value: <%=  chimborazo%> , label: 'Chimborazo', formatted: <%=  chimborazo%> },
+
+    {value: <%= elena %> , label: 'Santa Elena', formatted:  <%= elena %>  },
     
     {value: <%= imbabura %> , label: 'Imbabura', formatted: <%= imbabura %>},
 
     {value: <%= tsachilas %> , label: 'Sto Domingo Tsáchilas', formatted:  <%= tsachilas %>  },
 
     {value: <%= morona %> , label: 'Morona Santiago', formatted:  <%= morona %>  },
-
-    {value: <%= sucumbios %> , label: 'Sucumbios', formatted:<%= sucumbios %> },
-
-    {value: <%= elena %> , label: 'Santa Elena', formatted:  <%= elena %>  },
 
     {value: <%= galapagos %> , label: 'Galápagos', formatted:  <%= galapagos %>  },
     
@@ -346,7 +346,7 @@ new Morris.Line({
 
     {value: <%= pastaza %> , label: 'Pastaza', formatted:  <%= pastaza %>  },
 
-    {value: <%= zamora %> , label: 'Zamora', formatted:  <%= zamora %>  },
+    {value: <%= zamora %> , label: 'Zamora Ch.', formatted:  <%= zamora %>  },
   ],
   formatter: function (x, data) { return data.formatted; }
 });
