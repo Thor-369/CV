@@ -130,9 +130,9 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
 
 
   var q_data = [
-  {"dia":"2020-03-26", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:22},
+  {"dia":"2020-03-27", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:28},
+  {"dia":"2020-03-26", "casos": 1403, "muertes": 34, "recuperados": 3, counter:27},
   {"dia":"2020-03-25", "casos": 1211, "muertes": 29, "recuperados": 3, counter:26},
-
   {"dia":"2020-03-24", "casos": 1082, "muertes": 27, "recuperados": 3, counter:25},
   {"dia":"2020-03-23", "casos": 981, "muertes": 18, "recuperados": 3, counter:24},
   {"dia":"2020-03-22", "casos": 789, "muertes": 14, "recuperados": 3, counter:23},
@@ -171,55 +171,21 @@ new Morris.Line({
 
 
 
-    	Morris.Donut({
-  element: 'extra',
-  colors: ["#A418FF","#18A4FF","#FF1849","#4C0A0A", "green"],
-  data: [
-    {value: <%= aislamiento %>, label: 'Aislamiento domiciliario', formatted: <%= aislamiento %> },
-    {value: <%= estables %>, label: 'Hospitalizados estables', formatted: <%= estables %> },
-    {value: <%= reservado %>, label: 'Pronóstico reservado', formatted: <%= reservado %> },
-    {value: <%= muertos %>, label: 'Fallecidos', formatted: <%= muertos %> },
-    {value: <%= recuperados %>, label: 'Recuperados', formatted: <%= recuperados %> }
-  ],
-  formatter: function (x, data) { return data.formatted; }
-});
-
-
-
-    	Morris.Donut({
-  element: 'extra2',
-  colors: ["#A418FF","#1BE55B","#1BD9E5"],
-  data: [
-    {value: <%= sospechosos %>, label: 'Sospechosos', formatted: <%= sospechosos %> },
-    {value: <%= descartados %>, label: 'Descartados', formatted: <%= descartados %> },
-    {value: <%= pruebas %>, label: 'Pruebas realizadas', formatted: <%= pruebas %> }
-  ],
-  formatter: function (x, data) { return data.formatted; }
-});
-
-
-
-    	Morris.Donut({
-  element: 'extra3',
-  colors: ["#A418FF","#1BD9E5"],
-  data: [
-    {value: <%= casos %>, label: 'Casos confirmados', formatted: <%= casos %> },
-    {value: 17369000, label: 'Resto de la Población', formatted: '17 371 500 aprox' }
-  ],
-  formatter: function (x, data) { return data.formatted; }
-});
-
-
 
 
 
  var q_data = [
-  {"dia":"2020-03-26", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
+  {"dia":"2020-03-27", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
   "Loja": <%= loja %>,"Bolívar": <%= bolívar %>,"Cañar": <%= cañar %>,"Morona Santiago": <%= morona %>,"Chimborazo": <%= chimborazo %>,"Sucumbios": <%= sucumbios %>,"El Oro": <%= oro %>,
    "Imbabura": <%= imbabura %>, "Sto Domingo de los Tsáchilas": <%= tsachilas %>,"Santa Elena": <%= elena %>,"Cotopaxi": <%= cotopaxi %>,"Tungurahua": <%= tungurahua %>,
    "Galápagos": <%= galapagos %>,"Esmeraldas": <%= esmeraldas %>,"Carchi": <%= carchi %>,"Napo": <%= napo %>,"Orellana": <%= orellana %>,"Pastaza": <%= pastaza %>,"Zamora Chinchipe": <%= zamora %>, counter:21},
    
-{"dia":"2020-03-25", "Guayas": 885,"Pichincha": 108,"Los Ríos": 40,"Azuay": 31,"Manabí": 38,
+{"dia":"2020-03-26", "Guayas": 1021,"Pichincha": 121,"Los Ríos": 52,"Azuay": 37,"Manabí": 38,
+  "Loja": 9,"Cañar": 15,"Morona Santiago": 8,"Chimborazo": 11,"Sucumbios": 18,"Bolívar": 11,"El Oro": 20,
+   "Imbabura": 8, "Sto Domingo de los Tsáchilas": 8,"Carchi": 3,"Cotopaxi": 2,"Tungurahua": 3,
+   "Galápagos": 4,"Esmeraldas": 4,"Santa Elena": 7,"Napo": null,"Orellana": null,"Pastaza": 2,"Zamora Chinchipe": 1, counter:21},
+
+   {"dia":"2020-03-25", "Guayas": 885,"Pichincha": 108,"Los Ríos": 40,"Azuay": 31,"Manabí": 38,
   "Loja": 8,"Cañar": 12,"Morona Santiago": 7,"Chimborazo": 11,"Sucumbios": 6,"Bolívar": 11,"El Oro": 17,
    "Imbabura": 8, "Sto Domingo de los Tsáchilas": 7,"Carchi": 2,"Cotopaxi": 2,"Tungurahua": 3,
    "Galápagos": 4,"Esmeraldas": 4,"Santa Elena": 6,"Napo": null,"Orellana": null,"Pastaza": 1,"Zamora Chinchipe": null, counter:21},
@@ -287,6 +253,45 @@ new Morris.Line({
   xkey: 'dia',
   ykeys: ['Guayas', 'Pichincha', 'Los Ríos','Manabí', 'Azuay','El Oro', 'Cañar', 'Chimborazo',  'Bolívar' ,'Loja', 'Imbabura','Sto Domingo de los Tsáchilas','Morona Santiago','Sucumbios', "Santa Elena",'Galápagos', 'Esmeraldas', 'Tungurahua', 'Cotopaxi','Carchi','Pastaza','Zamora Chinchipe' ],
   labels: ['Guayas', 'Pichincha', 'Los Ríos','Manabí', 'Azuay','El Oro', 'Cañar', 'Chimborazo',  'Bolívar' ,'Loja', 'Imbabura','Sto Domingo de los Tsáchilas','Morona Santiago','Sucumbios', "Santa Elena",'Galápagos', 'Esmeraldas', 'Tungurahua', 'Cotopaxi','Carchi','Pastaza', 'Zamora Chinchipe'],
+});
+
+
+    	Morris.Donut({
+  element: 'extra',
+  colors: ["#A418FF","#18A4FF","#FF1849","#4C0A0A", "green"],
+  data: [
+    {value: <%= aislamiento %>, label: 'Aislamiento domiciliario', formatted: <%= aislamiento %> },
+    {value: <%= estables %>, label: 'Hospitalizados estables', formatted: <%= estables %> },
+    {value: <%= reservado %>, label: 'Pronóstico reservado', formatted: <%= reservado %> },
+    {value: <%= muertos %>, label: 'Fallecidos', formatted: <%= muertos %> },
+    {value: <%= recuperados %>, label: 'Recuperados', formatted: <%= recuperados %> }
+  ],
+  formatter: function (x, data) { return data.formatted; }
+});
+
+
+
+    	Morris.Donut({
+  element: 'extra2',
+  colors: ["#A418FF","#1BE55B","#1BD9E5"],
+  data: [
+    {value: <%= sospechosos %>, label: 'Sospechosos', formatted: <%= sospechosos %> },
+    {value: <%= descartados %>, label: 'Descartados', formatted: <%= descartados %> },
+    {value: <%= pruebas %>, label: 'Pruebas realizadas', formatted: <%= pruebas %> }
+  ],
+  formatter: function (x, data) { return data.formatted; }
+});
+
+
+
+    	Morris.Donut({
+  element: 'extra3',
+  colors: ["#A418FF","#1BD9E5"],
+  data: [
+    {value: <%= casos %>, label: 'Casos confirmados', formatted: <%= casos %> },
+    {value: 17369000, label: 'Resto de la Población', formatted: '17 371 500 aprox' }
+  ],
+  formatter: function (x, data) { return data.formatted; }
 });
 
 
