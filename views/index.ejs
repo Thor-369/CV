@@ -130,7 +130,8 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
 
 
   var q_data = [
-  {"dia":"2020-03-28", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:28},
+  {"dia":"2020-03-29", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:28},
+  {"dia":"2020-03-28", "casos": 1835, "muertes": 48, "recuperados": 3, counter:28},
   {"dia":"2020-03-27", "casos": 1627, "muertes": 41, "recuperados": 3, counter:28},
   {"dia":"2020-03-26", "casos": 1403, "muertes": 34, "recuperados": 3, counter:27},
   {"dia":"2020-03-25", "casos": 1211, "muertes": 29, "recuperados": 3, counter:26},
@@ -176,11 +177,16 @@ new Morris.Line({
 
 
  var q_data = [
-  {"dia":"2020-03-28", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
+  {"dia":"2020-03-29", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
   "Loja": <%= loja %>,"Bolívar": <%= bolívar %>,"Cañar": <%= cañar %>,"Morona Santiago": <%= morona %>,"Chimborazo": <%= chimborazo %>,"Sucumbios": <%= sucumbios %>,"El Oro": <%= oro %>,
    "Imbabura": <%= imbabura %>, "Sto Domingo de los Tsáchilas": <%= tsachilas %>,"Santa Elena": <%= elena %>,"Cotopaxi": <%= cotopaxi %>,"Tungurahua": <%= tungurahua %>,
    "Galápagos": <%= galapagos %>,"Esmeraldas": <%= esmeraldas %>,"Carchi": <%= carchi %>,"Napo": <%= napo %>,"Orellana": <%= orellana %>,"Pastaza": <%= pastaza %>,"Zamora Chinchipe": <%= zamora %>, counter:21},
    
+{"dia":"2020-03-28", "Guayas": 1345,"Pichincha": 171,"Los Ríos": 60,"Azuay": 42,"Manabí": 44,
+  "Loja": 13,"Cañar": 19,"Morona Santiago": 8,"Chimborazo": 15,"Sucumbios": 18,"Bolívar": 14,"El Oro": 23,
+   "Imbabura": 9, "Sto Domingo de los Tsáchilas": 15,"Carchi": 5,"Cotopaxi": 5,"Tungurahua": 4,
+   "Galápagos": 4,"Esmeraldas": 4,"Santa Elena": 10,"Napo": null,"Orellana": null,"Pastaza": 5,"Zamora Chinchipe": 1, counter:21},
+
 {"dia":"2020-03-27", "Guayas": 1202,"Pichincha": 137,"Los Ríos": 58,"Azuay": 42,"Manabí": 40,
   "Loja": 12,"Cañar": 16,"Morona Santiago": 8,"Chimborazo": 11,"Sucumbios": 18,"Bolívar": 12,"El Oro": 21,
    "Imbabura": 9, "Sto Domingo de los Tsáchilas": 9,"Carchi": 3,"Cotopaxi": 4,"Tungurahua": 4,
