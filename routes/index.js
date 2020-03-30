@@ -23,36 +23,36 @@ router.post("/subscription", (req, res)=> {
 
 var rootsController = require('../controller/Roots');
 var roots = new rootsController();
-var cases= "1924";
+var cases= "1962";
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: cases+' casos de Covid-19 Ecuador',
   	
 
   	casos:cases, 
-  	muertos:"58",
+  	muertos:"60",
   	recuperados:"3",
-  	descartados:"2199",
-  	sospechosos:"2869",
-  	pruebas:"6992",
+  	descartados:"2223",
+  	sospechosos:"3083",
+  	pruebas:"7268",
   	aislamiento:"1562",
   	estables:"191",
   	reservado:"110",
 
-  	guayas:"1377",
+  	guayas:"1396",
   	pichincha:"188",
   	rios:"60",
-  	azuay:"53",
+  	azuay:"57",
   	manabí:"50",
-  	loja:"15",
+  	loja:"21",
   	chimborazo:"15",
   	bolívar:"14",
-  	cañar:"26",
-  	morona:"9",
+  	cañar:"28",
+  	morona:"10",
   	sucumbios:"25",
   	imbabura:"9",
   	tsachilas:"15",
-  	oro:"25",
+  	oro:"30",
   	esmeraldas:"7",
   	elena:"10",
     cotopaxi:"5",
@@ -60,7 +60,7 @@ router.get('/', function(req, res, next) {
   	galapagos:"4",
   	carchi:"6",
   	pastaza:"5",
-  	zamora:"1",
+  	zamora:"2",
 
 
   	napo:"0",
