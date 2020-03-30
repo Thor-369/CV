@@ -1,13 +1,38 @@
+require("dotenv").config();
+
 var createError = require('http-errors');
 var express = require('express');
+const morgan = require("morgan");
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose = require("mongoose");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
+
+
+/*MIDDLEWARES//
+app.use(morgan('dev'))
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
+*/
+
+// database//
+const  database  = {
+    URI: 'mongodb+srv://thordevman:uGrRyuEp8,g$4jK@cluster0-e1gsp.mongodb.net/test?retryWrites=true&w=majority'
+}
+  
+mongoose.connect(database.URI, {
+  useNewUrlParser: true    
+})
+  .then(db => console.log('base de datos conectada'))
+  .catch(err => console.log(err));
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
