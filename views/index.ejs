@@ -19,7 +19,7 @@
         	          <h6 class="mx-auto">Fallecidos </h6>
         	          <h4 class="mx-auto" style="color: red " ><%= muertos %></h4>
 
-        	          <h6 class="mx-auto">Recuperados </h6>
+        	          <h6 class="mx-auto">Alta Hospitalaria </h6>
         	          <h4 class="mx-auto" style="color: green "><%= recuperados %></h4>
        </div>
     <div class="card  col-md-8 mx-auto">
@@ -126,7 +126,8 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
 
 
   var q_data = [
-  {"dia":"2020-03-30", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:28},
+  {"dia":"2020-03-31", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:28},
+  {"dia":"2020-03-30", "casos": 1966, "muertes": 62, "recuperados": 3, counter:30},  
   {"dia":"2020-03-29", "casos": 1924, "muertes": 58, "recuperados": 3, counter:30},  
   {"dia":"2020-03-28", "casos": 1835, "muertes": 48, "recuperados": 3, counter:29},
   {"dia":"2020-03-27", "casos": 1627, "muertes": 41, "recuperados": 3, counter:28},
@@ -163,7 +164,7 @@ new Morris.Line({
   data: q_data,
   xkey: 'dia',
   ykeys: ['casos', 'recuperados','muertes'],
-  labels: ['Casos', "Recuperados", 'Muertes'],
+  labels: ['Casos', "Alta Hospitalaria", 'Muertes'],
 });
 
 
@@ -174,10 +175,15 @@ new Morris.Line({
 
 
  var q_data = [
-  {"dia":"2020-03-30", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
+  {"dia":"2020-03-31", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
   "Loja": <%= loja %>,"Bolívar": <%= bolívar %>,"Cañar": <%= cañar %>,"Morona Santiago": <%= morona %>,"Chimborazo": <%= chimborazo %>,"Sucumbios": <%= sucumbios %>,"El Oro": <%= oro %>,
    "Imbabura": <%= imbabura %>, "Sto Domingo de los Tsáchilas": <%= tsachilas %>,"Santa Elena": <%= elena %>,"Cotopaxi": <%= cotopaxi %>,"Tungurahua": <%= tungurahua %>,
    "Galápagos": <%= galapagos %>,"Esmeraldas": <%= esmeraldas %>,"Carchi": <%= carchi %>,"Napo": <%= napo %>,"Orellana": <%= orellana %>,"Pastaza": <%= pastaza %>,"Zamora Chinchipe": <%= zamora %>, counter:21},
+   
+{"dia":"2020-03-30", "Guayas": 1397,"Pichincha": 191,"Los Ríos": 60,"Azuay": 57,"Manabí": 50,
+  "Loja": 21,"Cañar": 28,"Morona Santiago": 10,"Chimborazo": 15,"Sucumbios": 25,"Bolívar": 14,"El Oro": 30,
+   "Imbabura": 9, "Sto Domingo de los Tsáchilas": 15,"Carchi": 6,"Cotopaxi": 5,"Tungurahua": 4,
+   "Galápagos": 4,"Esmeraldas": 7,"Santa Elena": 10,"Napo": null,"Orellana": null,"Pastaza": 5,"Zamora Chinchipe": 2, counter:21},
    
 {"dia":"2020-03-29", "Guayas": 1377,"Pichincha": 188,"Los Ríos": 60,"Azuay": 53,"Manabí": 50,
   "Loja": 15,"Cañar": 26,"Morona Santiago": 9,"Chimborazo": 15,"Sucumbios": 25,"Bolívar": 14,"El Oro": 25,
@@ -278,7 +284,7 @@ new Morris.Line({
     {value: <%= estables %>, label: 'Hospitalizados estables', formatted: <%= estables %> },
     {value: <%= reservado %>, label: 'Pronóstico reservado', formatted: <%= reservado %> },
     {value: <%= muertos %>, label: 'Fallecidos', formatted: <%= muertos %> },
-    {value: <%= recuperados %>, label: 'Recuperados', formatted: <%= recuperados %> }
+    {value: <%= recuperados %>, label: 'Alta Hospitalaria', formatted: <%= recuperados %> }
   ],
   formatter: function (x, data) { return data.formatted; }
 });
