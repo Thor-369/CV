@@ -6,21 +6,23 @@
     <div class="col-md-6 mx-auto text-center">
 	   <h2 class="text-center "><%= title %></h2>
 
-        <a class="text-center mx-auto">Hasta el momento, el Instituto Nacional de Investigación en Salud Pública (INSPI) ha tomado <%= pruebas %> muestras de las cuales <%= casos %> son positivas para COVID-19.</a>
+        <h4 class="text-center mx-auto">Hasta el momento, el Instituto Nacional de Investigación en Salud Pública (INSPI) ha tomado <%= pruebas %> muestras de las cuales <%= casos %> son positivas para COVID-19.</h4>
 
     </div>
     
       <div class="card bg-dark col-md-3 mx-auto text-center">
 
  <!-- CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///NEXT///NEXT///NEXT///NEXT///NEXT///NEXT///NEXT -->
-        	          <h6 class="mx-auto">Total de casos </h6>
-        	          <h4 style="color: #1885FF " class="mx-auto"><%= casos %></h4>
+ <form class="">
+        	          <h4 class="mx-auto">Total de casos </h6>
+        	          <h3 style="color: #1885FF " class="mx-auto"><%= casos %></h4>
         			
-        	          <h6 class="mx-auto">Fallecidos </h6>
-        	          <h4 class="mx-auto" style="color: red " ><%= muertos %></h4>
+        	          <h4 class="mx-auto">Fallecidos </h6>
+        	          <h3 class="mx-auto" style="color: red " ><%= muertos %></h4>
 
-        	          <h6 class="mx-auto">Alta Hospitalaria </h6>
-        	          <h4 class="mx-auto" style="color: green "><%= recuperados %></h4>
+        	          <h4 class="mx-auto">Alta Hospitalaria </h6>
+        	          <h3 class="mx-auto" style="color: green "><%= recuperados %></h4>
+        	          	</form>
        </div>
     <div class="card  col-md-8 mx-auto">
               <!--  GRAFICO 1 - LINEAS   -->
@@ -41,19 +43,19 @@
         <form class="col-md-6 mx-auto">
         <br>
         <br>
-        <h5 class="text-center">Estado de los infectados</h5>
+        <h4 class="text-center">Estado de los infectados</h5>
         <div id="extra" class="img-fluid text-white mx-auto text-white" style="width: 100%"></div>
         </form>
         <form class="col-md-6 mx-auto">
         <br>
         <br>
-        <h5 class="text-center">Sospechosos</h5>
+        <h4 class="text-center">Sospechosos</h5>
         <div id="extra2" class="img-fluid mx-auto" style="width: 100%"></div>
         </form>
         <form class="col-md-6 mx-auto">
         <br>
         <br>
-        <h6 class="text-center">Población total comparada con los casos confirmados</h6><a href="https://countrymeters.info/es/Ecuador">Fuente</a>
+        <h4 class="text-center">Población total comparada con los casos confirmados</h6><a href="https://countrymeters.info/es/Ecuador">Fuente</a>
         <div id="extra3" class="img-fluid mx-auto" style="width: 100%"></div>
         
         </form>
