@@ -1,20 +1,22 @@
 
 const Public_V_Key="BJ7mU7u4wZY1E87vlMKjX5D6isUWw0qFsEv1sGh-kpWMOrt9xS5cONGAqe4B3nXYh_EZ0KZ6RUdNPYbALDOpmEw";
 
+const subscription= async () => {
 
-const subscription= async ()=>{
-
- const register = await navigator.serviceWorker.register("Service worker",{
-    scope: "/"
- });
+const register = await navigator.serviceWorker.register("/worker.js"{
+	scope :"/"
+});
+console.log("new service worker");
 
  register.pushManager.subscribe({
  	userVisibleOnly: true,
  	applicationServerKey: Public_V_Key
  });
-	await fetch("/subscription",{
+
+
+await fetch("/subscription",{
 	  method:"POST",
-	  body:{},
+	  body: JSON.stringify(subscription),
 	  headers:{
 		"Content-Type":"application/json"
 	  }

@@ -68,11 +68,11 @@
         <div id="grapha" class="img-fluid"></div>
         <form class="row text-center mx-auto col-md-5">
     <div  style="margin-left: 0px"  class="mx-auto">
-    	<a class="button btn " href="https://www.facebook.com/sharer/sharer.php?u=https://bit.ly/2UncAvC">Compartir en Facebook
+    	<a class="button btn bg-dark " href="https://www.facebook.com/sharer/sharer.php?u=https://bit.ly/2UncAvC">Compartir en Facebook
     		<img style="width: 12%; background-color:000" src="./images/icons/facebook.png"></a>
-        <a class="button btn" href="whatsapp://send?text=https://bit.ly/2UncAvC">Compartir en Whatsapp
+        <a class="button btn bg-dark" href="whatsapp://send?text=https://bit.ly/2UncAvC">Compartir en Whatsapp
     		<img style="width: 12%; background-color:000" src="./images/icons/whatsapp.png"></a>
-    	<a class="button btn" href="https://twitter.com/intent/tweet?text=https://bit.ly/2UncAvC">Compartir en Twitter
+    	<a class="button btn bg-dark" href="https://twitter.com/intent/tweet?text=https://bit.ly/2UncAvC">Compartir en Twitter
     		<img style="width: 12%; background-color:000" src="./images/icons/twiter.png"></a>
     	</a>
     </div>
@@ -128,7 +128,8 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
 
 
   var q_data = [
-  {"dia":"2020-03-31", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:28},
+  {"dia":"2020-04-01", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:28},
+  {"dia":"2020-03-31", "casos": 2302, "muertes": 79, "recuperados": 58, counter:30},  
   {"dia":"2020-03-30", "casos": 1966, "muertes": 62, "recuperados": 3, counter:30},  
   {"dia":"2020-03-29", "casos": 1924, "muertes": 58, "recuperados": 3, counter:30},  
   {"dia":"2020-03-28", "casos": 1835, "muertes": 48, "recuperados": 3, counter:29},
@@ -177,10 +178,15 @@ new Morris.Line({
 
 
  var q_data = [
-  {"dia":"2020-03-31", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
+  {"dia":"2020-04-01", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
   "Loja": <%= loja %>,"Bolívar": <%= bolívar %>,"Cañar": <%= cañar %>,"Morona Santiago": <%= morona %>,"Chimborazo": <%= chimborazo %>,"Sucumbios": <%= sucumbios %>,"El Oro": <%= oro %>,
    "Imbabura": <%= imbabura %>, "Sto Domingo de los Tsáchilas": <%= tsachilas %>,"Santa Elena": <%= elena %>,"Cotopaxi": <%= cotopaxi %>,"Tungurahua": <%= tungurahua %>,
    "Galápagos": <%= galapagos %>,"Esmeraldas": <%= esmeraldas %>,"Carchi": <%= carchi %>,"Napo": <%= napo %>,"Orellana": <%= orellana %>,"Pastaza": <%= pastaza %>,"Zamora Chinchipe": <%= zamora %>, counter:21},
+   
+{"dia":"2020-03-31", "Guayas": 1615,"Pichincha": 219,"Los Ríos": 80,"Azuay": 78,"Manabí": 54,
+  "Loja": 22,"Cañar": 39,"Morona Santiago": 10,"Chimborazo": 17,"Sucumbios": 27,"Bolívar": 15,"El Oro": 34,
+   "Imbabura": 10, "Sto Domingo de los Tsáchilas": 18,"Carchi": 6,"Cotopaxi": 8,"Tungurahua": 9,
+   "Galápagos": 5,"Esmeraldas": 10,"Santa Elena": 10,"Napo": null,"Orellana": null,"Pastaza": 5,"Zamora Chinchipe": 2, counter:21},
    
 {"dia":"2020-03-30", "Guayas": 1397,"Pichincha": 191,"Los Ríos": 60,"Azuay": 57,"Manabí": 50,
   "Loja": 21,"Cañar": 28,"Morona Santiago": 10,"Chimborazo": 15,"Sucumbios": 25,"Bolívar": 14,"El Oro": 30,
@@ -277,7 +283,6 @@ new Morris.Line({
   labels:  ['Guayas', 'Pichincha', 'Los Ríos', 'Azuay','Manabí','El Oro','Sucumbios', 'Cañar', 'Bolívar' ,'Loja','Chimborazo', "Santa Elena", 'Imbabura','Sto Domingo de los Tsáchilas','Morona Santiago','Galápagos', 'Esmeraldas', 'Tungurahua', 'Cotopaxi','Carchi','Pastaza','Zamora Chinchipe' ],
 });
 
-
     	Morris.Donut({
   element: 'extra',
   colors: ["#A418FF","#18A4FF","#FF1849","#4C0A0A", "green"],
@@ -291,8 +296,6 @@ new Morris.Line({
   formatter: function (x, data) { return data.formatted; }
 });
 
-
-
     	Morris.Donut({
   element: 'extra2',
   colors: ["#A418FF","#1BE55B","#1BD9E5"],
@@ -304,8 +307,6 @@ new Morris.Line({
   formatter: function (x, data) { return data.formatted; }
 });
 
-
-
     	Morris.Donut({
   element: 'extra3',
   colors: ["#A418FF","#1BD9E5"],
@@ -316,8 +317,6 @@ new Morris.Line({
   formatter: function (x, data) { return data.formatted; }
 });
 
-
-    	
     	Morris.Donut({
   element: 'graphb',
   colors:  ["#1B95E5","#AC21DF","green","#DF8C21","#43AF17","#25BBC4","#C4254C","#7CD820","#B120D8","#A9D861","#E61919","#E3E619","#19E679","#00A44D","#0B9C8A","#0B9C0D","#230B9C","#9C0B0B","#9C0B4D","#0B9C43","#6C9C0B","#DD0400","#","#"],
@@ -373,58 +372,8 @@ new Morris.Line({
   formatter: function (x, data) { return data.formatted; }
 });
     </script>
-
-
-
-
-
-
-<script type="text/javascript">
-
-function urlBase64ToUint8Array(base64String) {
-  const padding = '='.repeat((4 - base64String.length % 4) % 4);
-  const base64 = (base64String + padding)
-    .replace(/-/g, '+')
-    .replace(/_/g, '/');
- 
-  const rawData = window.atob(base64);
-  const outputArray = new Uint8Array(rawData.length);
- 
-  for (let i = 0; i < rawData.length; ++i) {
-    outputArray[i] = rawData.charCodeAt(i);
-  }
-  return outputArray;
-}
-
-const Public_V_Key="BJ7mU7u4wZY1E87vlMKjX5D6isUWw0qFsEv1sGh-kpWMOrt9xS5cONGAqe4B3nXYh_EZ0KZ6RUdNPYbALDOpmEw";
-const subscription= async ()=>{
-
- const register = await navigator.serviceWorker.register("worker.js",{
-    scope: "/"
- });
-
- register.pushManager.subscribe({
- 	userVisibleOnly: true,
- 	applicationServerKey: urlBase64ToUint8Array(Public_V_Key)
- });
-
-	await fetch("/subscription",{
-	  method:"POST",
-	  headers:{
-		"Content-Type":"application/json"
-	  }
-	});
-	console.log("Subscrito");
-}
-subscription();
-</script>
   </body>
 </html>
-
  <!--  
   'Napo', 'Orellana',  
-
-
-
         -->
-
