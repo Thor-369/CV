@@ -28,11 +28,15 @@
               <!--  GRAFICO 1 - LINEAS   -->
        <div id="graph" class=" img-fluid resize bg-dark"></div>
 
-      
+      <br><br><br>
 <form class="text-center" >
               <!--  GRAFICO 2 - PROVINCIAS   -->
         <h5>Casos por provincia </h5>
         <div id="provincias" class="bg-dark img-fluid resize mx-auto" style="width: 100%"></div>
+        <br>
+        <br>
+        <br>
+        <br>
         <div id="graphb" class="img-fluid"></div>
         </form>
         <br>
@@ -128,7 +132,8 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
 
 
   var q_data = [
-  {"dia":"2020-04-02", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:28},
+  {"dia":"2020-04-03", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:28},
+  {"dia":"2020-04-02", "casos": 3163, "muertes": 120, "recuperados": 65, counter:30},  
   {"dia":"2020-04-01", "casos": 2758, "muertes": 98, "recuperados": 58, counter:30},  
   {"dia":"2020-03-31", "casos": 2302, "muertes": 79, "recuperados": 58, counter:30},  
   {"dia":"2020-03-30", "casos": 1966, "muertes": 62, "recuperados": 3, counter:30},  
@@ -179,10 +184,15 @@ new Morris.Line({
 
 
  var q_data = [
-  {"dia":"2020-04-02", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
+  {"dia":"2020-04-03", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
   "Loja": <%= loja %>,"Bolívar": <%= bolívar %>,"Cañar": <%= cañar %>,"Morona Santiago": <%= morona %>,"Chimborazo": <%= chimborazo %>,"Sucumbios": <%= sucumbios %>,"El Oro": <%= oro %>,
    "Imbabura": <%= imbabura %>, "Sto Domingo de los Tsáchilas": <%= tsachilas %>,"Santa Elena": <%= elena %>,"Cotopaxi": <%= cotopaxi %>,"Tungurahua": <%= tungurahua %>,
    "Galápagos": <%= galapagos %>,"Esmeraldas": <%= esmeraldas %>,"Carchi": <%= carchi %>,"Napo": <%= napo %>,"Orellana": <%= orellana %>,"Pastaza": <%= pastaza %>,"Zamora Chinchipe": <%= zamora %>, counter:21},
+   
+{"dia":"2020-04-02", "Guayas": 2243,"Pichincha": 259,"Los Ríos": 131,"Azuay": 99,"Manabí": 61,
+  "Loja": 27,"Cañar": 53,"Morona Santiago": 10,"Chimborazo": 24,"Sucumbios": 27,"Bolívar": 26,"El Oro": 56,
+   "Imbabura": 16, "Sto Domingo de los Tsáchilas": 24,"Carchi": 7,"Cotopaxi": 12,"Tungurahua": 12,
+   "Galápagos": 10,"Esmeraldas": 11,"Santa Elena": 44,"Napo": 1,"Orellana": 1,"Pastaza": 7,"Zamora Chinchipe": 2, counter:21},
    
 {"dia":"2020-04-01", "Guayas": 1941,"Pichincha": 248,"Los Ríos": 100,"Azuay": 94,"Manabí": 56,
   "Loja": 27,"Cañar": 49,"Morona Santiago": 10,"Chimborazo": 18,"Sucumbios": 27,"Bolívar": 20,"El Oro": 52,
@@ -370,7 +380,7 @@ new Morris.Line({
     {value: <%= pastaza %> , label: 'Pastaza', formatted:  <%= pastaza %>  },
 
     {value: <%= zamora %> , label: 'Zamora Ch.', formatted:  <%= zamora %>  },
-    
+
     {value: <%= napo %> , label: 'Napo', formatted:  <%= napo %>  },
 
     {value: <%= orellana %> , label: 'Orellana', formatted:  <%= orellana %>  },
