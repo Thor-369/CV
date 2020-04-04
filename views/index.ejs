@@ -24,15 +24,22 @@
         	          <h3 class="mx-auto" style="color: green "><%= recuperados %></h4>
         	          	</form>
        </div>
-    <div class="card  col-md-8 mx-auto">
+    <div class="card  col-md-8 mx-auto" >
               <!--  GRAFICO 1 - LINEAS   -->
-       <div id="graph" class=" img-fluid resize bg-dark"></div>
+
+<div class="card bg-transparent" >
+              <h4 class="mx-auto text-dark" style=" margin-bottom: -20px">Total de casos:</h5>
+       <div id="graph" class="img-fluid resize bg-transparent"></div></div>
+
+<div class="card bg-transparent">
+       <form class="row  mx-auto" style=" margin-bottom: -20px"><h5 style="color: green; margin-left: 3px">Recuperados</h5><h5 style="margin-left: 3px;color: black "> y </h5><h5 style="color: red;margin-left: 3px">fallecidos:</h4></form>
+       <div id="deaths" class="img-fluid resize bg-transparent"></div></div>
 
       <br><br><br>
-<form class="text-center" >
+        <form class="card  bg-transparent text-center" >
               <!--  GRAFICO 2 - PROVINCIAS   -->
-        <h5>Casos por provincia </h5>
-        <div id="provincias" class="bg-dark img-fluid resize mx-auto" style="width: 100%"></div>
+        <h5 class="text-dark">Casos por provincia: </h5>
+        <div id="provincias" class="bg-transparent img-fluid resize mx-auto" style="width: 100%"></div>
         <br>
         <br>
         <br>
@@ -47,20 +54,24 @@
         <form class="col-md-6 mx-auto">
         <br>
         <br>
-        <h4 class="text-center">Estado de los infectados</h5>
-        <div id="extra" class="img-fluid text-white mx-auto text-white" style="width: 100%"></div>
+        <div class="card bg-transparent">
+        <h4 class="text-center text-dark">Estado de los infectados</h5>
+        <div id="extra" class=" img-fluid text-white mx-auto text-white" style="width: 100%"></div></div>
         </form>
         <form class="col-md-6 mx-auto">
         <br>
         <br>
-        <h4 class="text-center">Sospechosos</h5>
-        <div id="extra2" class="img-fluid mx-auto" style="width: 100%"></div>
+        <div class="card bg-transparent">
+        <h4 class="text-center text-dark">Sospechosos</h5>
+        <div id="extra2" class="img-fluid mx-auto" style="width: 100%"></div></div>
         </form>
         <form class="col-md-6 mx-auto">
         <br>
         <br>
-        <h4 class="text-center">Población total comparada con los casos confirmados</h6><a href="https://countrymeters.info/es/Ecuador">Fuente</a>
-        <div id="extra3" class="img-fluid mx-auto" style="width: 100%"></div>
+
+        <div class="card bg-transparent">
+        <h4 class="text-center text-dark">Población total comparada con los casos confirmados</h6>
+        <div id="extra3" class="img-fluid mx-auto" style="width: 100%"></div><a href="https://countrymeters.info/es/Ecuador">Fuente</a></div>
         
         </form>
 
@@ -70,6 +81,7 @@
         	
 
         <div id="grapha" class="img-fluid"></div>
+<div style="background-image: url('https://i.pinimg.com/564x/38/b6/01/38b601a8267162db8ae58938ac4cfbd8.jpg');background-repeat: no-repeat; background-position: center center; ">
         <form class="row text-center mx-auto col-md-5">
     <div  style="margin-left: 0px"  class="mx-auto">
     	<a class="button btn bg-dark " href="https://www.facebook.com/sharer/sharer.php?u=https://bit.ly/2UncAvC">Compartir en Facebook
@@ -81,7 +93,7 @@
     	</a>
     </div>
 
-         <div class="card mx-auto bg-dark">
+         <div class="card mx-auto text-dark">
   	<a class="text-center">Fuentes:</a>
       <div class="text-center">
 
@@ -95,7 +107,6 @@ https://twitter.com/Riesgos_Ec" target="_blank">
     <br/>
   	
       </div>
-    </div>
 </form>
 
     <form class="text-center">
@@ -107,7 +118,9 @@ https://twitter.com/Riesgos_Ec" target="_blank">
     <a rel="tooltip" title="Facebook" data-placement="bottom" href="https://www.facebook.com/369Torres" target="_blank">
     <img src="./images/icons/facebook.png" style="width: 3%">
     </a>
+</div>
 
+    </div>
     </form>
     <form class="text-center mx-auto">
 <center><a href="https://bit.ly/2UncAvC" title="Contador De Visitas web1">
@@ -132,7 +145,57 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
 
 
   var q_data = [
-  {"dia":"2020-04-03", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:28},
+  {"dia":"2020-04-04", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:28},
+  {"dia":"2020-04-03", "casos": null, "muertes": 145, "recuperados": 71, counter:30},  
+  {"dia":"2020-04-02", "casos": 3163, "muertes": 120, "recuperados": 65, counter:30},  
+  {"dia":"2020-04-01", "casos": 2758, "muertes": 98, "recuperados": 58, counter:30},  
+  {"dia":"2020-03-31", "casos": 2302, "muertes": 79, "recuperados": 58, counter:30},  
+  {"dia":"2020-03-30", "casos": 1966, "muertes": 62, "recuperados": 3, counter:30},  
+  {"dia":"2020-03-29", "casos": 1924, "muertes": 58, "recuperados": 3, counter:30},  
+  {"dia":"2020-03-28", "casos": 1835, "muertes": 48, "recuperados": 3, counter:29},
+  {"dia":"2020-03-27", "casos": 1627, "muertes": 41, "recuperados": 3, counter:28},
+  {"dia":"2020-03-26", "casos": 1403, "muertes": 34, "recuperados": 3, counter:27},
+  {"dia":"2020-03-25", "casos": 1211, "muertes": 29, "recuperados": 3, counter:26},
+  {"dia":"2020-03-24", "casos": 1082, "muertes": 27, "recuperados": 3, counter:25},
+  {"dia":"2020-03-23", "casos": 981, "muertes": 18, "recuperados": 3, counter:24},
+  {"dia":"2020-03-22", "casos": 789, "muertes": 14, "recuperados": 3, counter:23},
+  {"dia":"2020-03-21", "casos": 532, "muertes": 7, "recuperados": 3, counter:22},
+  {"dia":"2020-03-20", "casos": 426, "muertes": 7, "recuperados": 3, counter:21},
+  {"dia":"2020-03-19", "casos": 260, "muertes": 4, "recuperados": 3, counter:20},
+  {"dia":"2020-03-18", "casos": 168, "muertes": 3, "recuperados": null, counter:19},
+  {"dia":"2020-03-17", "casos": 111, "muertes": 2, "recuperados": null, counter:18},
+  {"dia":"2020-03-16", "casos": 58, "muertes": 2, "recuperados": null, counter:17},
+  {"dia":"2020-03-15", "casos": 37, "muertes": 2, "recuperados": null, counter:16},
+  {"dia":"2020-03-14", "casos": 28, "muertes": 2, "recuperados": null, counter:15},
+  {"dia":"2020-03-13", "casos": 20, "muertes": 1, "recuperados":null, counter:14},
+  {"dia":"2020-03-12", "casos": 19, "muertes": null, "recuperados": null, counter:13},
+  {"dia":"2020-03-11", "casos": 17, "muertes": null, "recuperados": null, counter:12},
+  {"dia":"2020-03-10", "casos": 17, "muertes": null, "recuperados": null, counter:11},
+  {"dia":"2020-03-09", "casos": 15, "muertes": null, "recuperados": null, counter:10},
+  {"dia":"2020-03-08", "casos": 15, "muertes": null, "recuperados": null, counter:9},
+  {"dia":"2020-03-07", "casos": 14, "muertes": null, "recuperados": null, counter:8},
+  {"dia":"2020-03-06", "casos": 14, "muertes": null, "recuperados": null, counter:7},
+  {"dia":"2020-03-05", "casos": 13, "muertes": null, "recuperados": null, counter:6},
+  {"dia":"2020-03-04", "casos": 10, "muertes": null, "recuperados": null, counter:5},
+  {"dia":"2020-03-03", "casos": 7, "muertes": null, "recuperados": null, counter:4},
+  {"dia":"2020-03-02", "casos": 7, "muertes": null, "recuperados": null, counter:3},
+  {"dia":"2020-03-01", "casos": 6, "muertes": null, "recuperados": null, counter:2},
+  {"dia":"2020-02-29", "casos": 1, "muertes": null, "recuperados": null, counter:1},];
+new Morris.Line({
+  element: 'deaths',
+  lineColors: ["#FF3333","green"],
+  data: q_data,
+  xkey: 'dia',
+  ykeys: ['muertes','recuperados'],
+  labels: [ 'Muertes',"Alta Hospitalaria"],
+
+});
+
+
+
+  var q_data = [
+  {"dia":"2020-04-04", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:28},
+  {"dia":"2020-04-03", "casos": 3368, "muertes": 145, "recuperados": 71, counter:30},  
   {"dia":"2020-04-02", "casos": 3163, "muertes": 120, "recuperados": 65, counter:30},  
   {"dia":"2020-04-01", "casos": 2758, "muertes": 98, "recuperados": 58, counter:30},  
   {"dia":"2020-03-31", "casos": 2302, "muertes": 79, "recuperados": 58, counter:30},  
@@ -184,10 +247,15 @@ new Morris.Line({
 
 
  var q_data = [
-  {"dia":"2020-04-03", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
+  {"dia":"2020-04-04", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
   "Loja": <%= loja %>,"Bolívar": <%= bolívar %>,"Cañar": <%= cañar %>,"Morona Santiago": <%= morona %>,"Chimborazo": <%= chimborazo %>,"Sucumbios": <%= sucumbios %>,"El Oro": <%= oro %>,
    "Imbabura": <%= imbabura %>, "Sto Domingo de los Tsáchilas": <%= tsachilas %>,"Santa Elena": <%= elena %>,"Cotopaxi": <%= cotopaxi %>,"Tungurahua": <%= tungurahua %>,
    "Galápagos": <%= galapagos %>,"Esmeraldas": <%= esmeraldas %>,"Carchi": <%= carchi %>,"Napo": <%= napo %>,"Orellana": <%= orellana %>,"Pastaza": <%= pastaza %>,"Zamora Chinchipe": <%= zamora %>, counter:21},
+   
+{"dia":"2020-04-03", "Guayas": 2388,"Pichincha": 285,"Los Ríos": 138,"Azuay": 99,"Manabí": 67,
+  "Loja": 27,"Cañar": 56,"Morona Santiago": 10,"Chimborazo": 25,"Sucumbios": 27,"Bolívar": 26,"El Oro": 56,
+   "Imbabura": 18, "Sto Domingo de los Tsáchilas": 26,"Carchi": 9,"Cotopaxi": 13,"Tungurahua": 13,
+   "Galápagos": 10,"Esmeraldas": 14,"Santa Elena": 48,"Napo": 1,"Orellana": 1,"Pastaza": 9,"Zamora Chinchipe": 2, counter:21},
    
 {"dia":"2020-04-02", "Guayas": 2243,"Pichincha": 259,"Los Ríos": 131,"Azuay": 99,"Manabí": 61,
   "Loja": 27,"Cañar": 53,"Morona Santiago": 10,"Chimborazo": 24,"Sucumbios": 27,"Bolívar": 26,"El Oro": 56,
