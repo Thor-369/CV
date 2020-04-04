@@ -40,20 +40,21 @@ router.post("/new-message", async (req, res) => {
 
 
 
-var cases= "3368";
+var cases= "3465";
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: cases+' casos de Covid-19 Ecuador',
   	
   	casos:cases, 
-  	muertos:"145",
-  	recuperados:"71",
-  	descartados:"3288",
+  	muertos:"172",
+  	muertosP:"146",
+  	recuperados:"100",
+  	descartados:"3369",
   	sospechosos:"3661",
   	pruebas:"10317",
-  	aislamiento:"2912",
-  	estables:"112",
-  	reservado:"128",
+  	aislamiento:"2666",
+  	estables:"527",
+  	reservado:"139",
 
   	guayas:"2388",
   	pichincha:"285",
