@@ -10,25 +10,31 @@
 
     </div>
     
-      <div class="card bg-dark col-md-3 mx-auto text-center">
+      <div class="card bg-transparent col-md-3 mx-auto text-center text-dark">
 
  <!-- CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///NEXT///NEXT///NEXT///NEXT///NEXT///NEXT///NEXT -->
- <form class="">
-        	          <h4 class="mx-auto">Total de casos </h6>
-        	          <h3 style="color: #1885FF " class="mx-auto"><%= casos %></h4>
-        	          	
+ 	<form class="row ">
+        	          <h4 class="mr-auto">Total de casos </h6>
+        	          <h3 class="ml-auto" style="color: #1885FF "><%= casos %></h4></form>
 
-        	          <h4 class="mx-auto">Alta Hospitalaria </h6>
-        	          <h3 class="mx-auto" style="color: green "><%= recuperados %></h4>
-        			
-        	          <h4 class="mx-auto">Muertes confirmadas por Covid-19 </h6>
-        	          <h3 class="mx-auto" style="color: red " ><%= muertos %></h4>
+ 	<form class="row ">
+        	          <h4 class="mr-auto">Alta Hospitalaria </h6>
+        	          <h3 class="ml-auto" style="color: green "><%= recuperados %></h4></form>
 
-        	          	<h4 class="mx-auto">Muertes por sospecha de Covid-19 </h6>
-        	          <h3 class="mx-auto" style="color: red " ><%= muertosP %></h4>
-        	          	</form>
+    <form class="row ">
+        	          <h4 class="mr-auto">Muertes confirmadas por Covid-19 </h6>
+        	          <h3 class="ml-auto" style="color: red " ><%= muertos %></h4></form>
+
+    <form class="row ">
+        	          <h4 class="mr-auto">Sospecha de muerte por Covid-19 </h6>
+        	          <h3 class="ml-auto" style="color: red " ><%= muertosP %></h4></form>
        </div>
-    <div class="card  col-md-8 mx-auto" >
+
+
+
+
+
+    <div class="card  col-md-9 mx-auto" >
               <!--  GRAFICO 1 - LINEAS   -->
 
 <div class="card bg-transparent" >
