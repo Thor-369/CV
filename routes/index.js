@@ -40,7 +40,7 @@ router.post("/new-message", async (req, res) => {
 
 
 
-var cases= "3465";
+var cases= "3646";
 /* GET home page. */
 
 router.get('/disco', function(req, res, next) {
@@ -51,40 +51,40 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: cases+' casos de Covid-19 Ecuador',
   	
   	casos:cases, 
-  	muertos:"172",
-  	muertosP:"146",
+  	muertos:"180",
+  	muertosP:"159",
   	recuperados:"100",
-  	descartados:"3369",
-  	sospechosos:"4475",
-  	pruebas:"11309",
-  	aislamiento:"2666",
-  	estables:"388",
-  	reservado:"139",
+  	descartados:"3603",
+  	sospechosos:"5137",
+  	pruebas:"12386",
+  	aislamiento:"2687",
+  	estables:"521",
+  	reservado:"158",
 
-  	guayas:"2402",
-  	pichincha:"321",
-  	rios:"153",
+  	guayas:"2524",
+  	pichincha:"345",
+  	rios:"158",
   	azuay:"99",
-  	manabí:"71",
+  	manabí:"77",
   	loja:"27",
-  	chimborazo:"31",
-  	bolívar:"26",
-  	cañar:"56",
+  	chimborazo:"32",
+  	bolívar:"27",
+  	cañar:"59",
   	morona:"10",
-  	sucumbios:"27",
+  	sucumbios:"30",
   	imbabura:"20",
-  	tsachilas:"31",
+  	tsachilas:"34",
   	oro:"56",
-  	esmeraldas:"14",
-  	elena:"48",
-    cotopaxi:"16",
+  	esmeraldas:"16",
+  	elena:"52",
+    cotopaxi:"17",
   	tungurahua:"22",
   	galapagos:"11",
-  	carchi:"9",
-  	pastaza:"9",
+  	carchi:"12",
+  	pastaza:"11",
   	zamora:"2",
   	napo:"2",
-  	orellana:"2",
+  	orellana:"3",
   	
   	 });
 });

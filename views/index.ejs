@@ -48,7 +48,7 @@
       <br><br><br>
         <form class="card  bg-transparent text-center" >
               <!--  GRAFICO 2 - PROVINCIAS   -->
-        <h5 class="text-dark">Casos por provincia de domicilio: </h5>
+        <h5 class="text-dark">Casos por provincia:</h5>
         <div id="provincias" class="bg-transparent img-fluid resize mx-auto" style="width: 100%"></div>
         <br>
         <br>
@@ -56,29 +56,20 @@
         <br>
         <div id="graphb" class="img-fluid"></div>
         </form>
-        <br>
-        <br>
         <div class="row text-center"> 
 
         <br>
         <form class="col-md-6 mx-auto">
-        <br>
-        <br>
         <div class="card bg-transparent">
-        <h4 class="text-center text-dark">Estado de los infectados</h5>
+        <h4 class="text-center text-dark">Estado de los infectados:</h5>
         <div id="extra" class=" img-fluid text-white mx-auto text-white" style="width: 100%"></div></div>
         </form>
         <form class="col-md-6 mx-auto">
-        <br>
-        <br>
         <div class="card bg-transparent">
         <h4 class="text-center text-dark">Sospechosos</h5>
         <div id="extra2" class="img-fluid mx-auto" style="width: 100%"></div></div>
         </form>
         <form class="col-md-6 mx-auto">
-        <br>
-        <br>
-
         <div class="card bg-transparent">
         <h4 class="text-center text-dark">Población total comparada con los casos confirmados</h6>
         <div id="extra3" class="img-fluid mx-auto" style="width: 100%"></div><a href="https://countrymeters.info/es/Ecuador">Fuente</a></div>
@@ -155,7 +146,8 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
 
 
   var q_data = [
-  {"dia":"2020-04-04", "muertosP": <%= muertosP %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:28},
+  {"dia":"2020-04-05", "muertosP": <%= muertosP %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:28},
+  {"dia":"2020-04-04", "muertosP": 146, "muertes": 172, "recuperados": 100, counter:30},  
   {"dia":"2020-04-03", "muertosP": null, "muertes": 145, "recuperados": 71, counter:30},  
   {"dia":"2020-04-02", "muertosP": null, "muertes": 120, "recuperados": 65, counter:30},  
   {"dia":"2020-04-01", "muertosP": null, "muertes": 98, "recuperados": 58, counter:30},  
@@ -204,7 +196,8 @@ new Morris.Line({
 
 
   var q_data = [
-  {"dia":"2020-04-04", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:28},
+  {"dia":"2020-04-05", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:28},
+  {"dia":"2020-04-04", "casos": 3465, "muertes": 172, "recuperados": 100, counter:30},  
   {"dia":"2020-04-03", "casos": 3368, "muertes": 145, "recuperados": 71, counter:30},  
   {"dia":"2020-04-02", "casos": 3163, "muertes": 120, "recuperados": 65, counter:30},  
   {"dia":"2020-04-01", "casos": 2758, "muertes": 98, "recuperados": 58, counter:30},  
@@ -257,10 +250,15 @@ new Morris.Line({
 
 
  var q_data = [
-  {"dia":"2020-04-04", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
+  {"dia":"2020-04-05", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
   "Loja": <%= loja %>,"Bolívar": <%= bolívar %>,"Cañar": <%= cañar %>,"Morona Santiago": <%= morona %>,"Chimborazo": <%= chimborazo %>,"Sucumbios": <%= sucumbios %>,"El Oro": <%= oro %>,
    "Imbabura": <%= imbabura %>, "Sto Domingo de los Tsáchilas": <%= tsachilas %>,"Santa Elena": <%= elena %>,"Cotopaxi": <%= cotopaxi %>,"Tungurahua": <%= tungurahua %>,
    "Galápagos": <%= galapagos %>,"Esmeraldas": <%= esmeraldas %>,"Carchi": <%= carchi %>,"Napo": <%= napo %>,"Orellana": <%= orellana %>,"Pastaza": <%= pastaza %>,"Zamora Chinchipe": <%= zamora %>, counter:21},
+   
+{"dia":"2020-04-04", "Guayas": 2402,"Pichincha": 321,"Los Ríos": 153,"Azuay": 99,"Manabí": 71,
+  "Loja": 27,"Cañar": 56,"Morona Santiago": 10,"Chimborazo": 31,"Sucumbios": 27,"Bolívar": 26,"El Oro": 56,
+   "Imbabura": 20, "Sto Domingo de los Tsáchilas": 31,"Carchi": 9,"Cotopaxi": 16,"Tungurahua": 22,
+   "Galápagos": 11,"Esmeraldas": 14,"Santa Elena": 48,"Napo": 2,"Orellana": 2,"Pastaza": 9,"Zamora Chinchipe": 2, counter:21},
    
 {"dia":"2020-04-03", "Guayas": 2388,"Pichincha": 285,"Los Ríos": 138,"Azuay": 99,"Manabí": 67,
   "Loja": 27,"Cañar": 56,"Morona Santiago": 10,"Chimborazo": 25,"Sucumbios": 27,"Bolívar": 26,"El Oro": 56,
