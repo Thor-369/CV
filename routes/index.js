@@ -42,6 +42,11 @@ router.post("/new-message", async (req, res) => {
 
 var cases= "3465";
 /* GET home page. */
+
+router.get('/disco', function(req, res, next) {
+  res.render('datos', { title:'Welcome to the discotec'});});
+
+
 router.get('/', function(req, res, next) {
   res.render('index', { title: cases+' casos de Covid-19 Ecuador',
   	
@@ -54,7 +59,7 @@ router.get('/', function(req, res, next) {
   	pruebas:"11309",
   	aislamiento:"2666",
   	estables:"388",
-  	reservado:"172",
+  	reservado:"139",
 
   	guayas:"2402",
   	pichincha:"321",

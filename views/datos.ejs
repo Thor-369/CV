@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
+  <%- include('fragmentos/head'); %> 
+  <body>
+<div id="fb-root"></div>
 
-<body>
-<div class="container">
-	<div class="card text-center">
-		<h2>Mapa de casos</h2>
-	</div>
-</div>
-<div id="map-template"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v6.0"></script>
 
-  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+  <!-- Your embedded video player code -->
+  <div class="row card mx-auto col-md-8">
+
+  <div class="fb-video mx-auto" data-href="https://www.facebook.com/djyamilpr/videos/2547977968798487/"  data-show-text="false">
+    <div class="fb-xfbml-parse-ignore">
+      <blockquote cite="https://www.facebook.com/facebook/videos/10153231379946729/">
+        
+        <p>How to share with just friends.</p>
+        Posteado por <a href="https://www.facebook.com/facebook/">Facebook</a> on Friday, December 5, 2014
+      </blockquote>
+    </div>
+  </div>
+
+<div class="fb-comments  mx-auto text-center" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="" data-numposts=""></div>
+
+
+  </div>
 </body>
 
 </html>
