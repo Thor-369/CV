@@ -2,42 +2,6 @@
 var express = require('express');
 var router = express.Router();
 
-//web push
-const webpush = require("../controller/webpushC");
- let pushSubscription;
-
-router.post("/subscription", async (req, res)=> {
-	pushSubscription = req.body;
-	res.status(200).json();
-
-	const payload = JSON.stringfy({
-		title: "Notificación de Pablo",
-		message: "Hello Nigga"+" son: "+cases+" casos confirmados"
-	})
-	try{
-	webpush.sendNotification(pushSubscription, payload)
-}catch(error){
-	console.log(error)
-}
-});
-
-
-
-router.post("/new-message", async (req, res) => {
-  const { message } = req.body;
-  // Payload Notification
-  const payload = JSON.stringify({
-    title: "My Custom Notification",
-    message 
-  });
-  res.status(200).json();
-  try {
-    await webpush.sendNotification(pushSubscripton, payload);
-  } catch (error) {
-    console.log(error);
-  }
-});
-
 
 
 var cases= "3747";
@@ -85,6 +49,31 @@ router.get('/', function(req, res, next) {
   	zamora:"2",
   	napo:"2",
   	orellana:"4",
+
+  	mguayas:"2534",
+  	mpichincha:"395",
+  	mrios:"158",
+  	mazuay:"100",
+  	mmanabí:"88",
+  	mloja:"27",
+  	mchimborazo:"46",
+  	mbolívar:"27",
+  	mcañar:"59",
+  	mmorona:"11",
+  	msucumbios:"30",
+  	mimbabura:"21",
+  	mtsachilas:"36",
+  	moro:"58",
+  	mesmeraldas:"17",
+  	melena:"52",
+    mcotopaxi:"23",
+  	mtungurahua:"22",
+  	mgalapagos:"11",
+  	mcarchi:"12",
+  	mpastaza:"12",
+  	mzamora:"2",
+  	mnapo:"2",
+  	morellana:"4",
   	
   	 });
 });
