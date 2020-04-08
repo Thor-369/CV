@@ -3,7 +3,7 @@
   <%- include('fragmentos/head'); %> 
   <body>
   <%- include('fragmentos/navbar'); %> 
-  <script type="text/javascript" src="/main.js"></script>
+  <script type="text/javascript" src="../main.js"></script>
     <div class="col-md-6 mx-auto text-center">
 	   <h2 class="text-center "><%= title %></h2>
 
@@ -240,13 +240,13 @@ new Morris.Line({
   {"dia":"2020-03-02", "casos": 7, "muertes": null, "recuperados": null, counter:3},
   {"dia":"2020-03-01", "casos": 6, "muertes": null, "recuperados": null, counter:2},
   {"dia":"2020-02-29", "casos": 1, "muertes": null, "recuperados": null, counter:1},];
-new Morris.Line({
+new Morris.Area({
   element: 'graph',
-  lineColors: ["#1885FF","green","#FF3333"],
+  lineColors: ["green","#FF3333","#1885FF"],
   data: q_data,
   xkey: 'dia',
-  ykeys: ['casos', 'recuperados','muertes'],
-  labels: ['Casos', "Alta Hospitalaria", 'Muertes'],
+  ykeys: ['recuperados','muertes','casos'],
+  labels: ["Alta Hospitalaria", 'Muertes','Casos'],
 });
 
 

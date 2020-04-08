@@ -4,7 +4,7 @@ var router = express.Router();
 
 
 
-var cases= "3995";
+var cases= "4450";
 /* GET home page. */
 
 router.get('/disco', function(req, res, next) {
@@ -15,34 +15,34 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: cases+' casos de Covid-19 Ecuador',
   	
   	casos:cases, 
-  	muertos:"220",
-  	muertosP:"182",
+  	muertos:"242",
+  	muertosP:"240",
   	recuperados:"140",
-  	descartados:"3956",
+  	descartados:"4208",
   	sospechosos:"5137",
-  	pruebas:"14406",
-  	aislamiento:"3333",
-  	estables:"156",
+  	pruebas:"15526",
+  	aislamiento:"3744",
+  	estables:"178",
   	reservado:"146",
 
-  	guayas:"2706",
-  	pichincha:"418",
-  	rios:"159",
-  	azuay:"100",
-  	manabí:"115",
-  	loja:"27",
-  	chimborazo:"50",
+  	guayas:"3047",
+  	pichincha:"440",
+  	rios:"175",
+  	azuay:"107",
+  	manabí:"132",
+  	loja:"34",
+  	chimborazo:"51",
   	bolívar:"27",
-  	cañar:"59",
-  	morona:"12",
+  	cañar:"64",
+  	morona:"17",
   	sucumbios:"33",
   	imbabura:"21",
-  	tsachilas:"43",
-  	oro:"58",
-  	esmeraldas:"20",
-  	elena:"52",
+  	tsachilas:"44",
+  	oro:"82",
+  	esmeraldas:"25",
+  	elena:"55",
     cotopaxi:"28",
-  	tungurahua:"22",
+  	tungurahua:"23",
   	galapagos:"11",
   	carchi:"14",
   	pastaza:"12",
