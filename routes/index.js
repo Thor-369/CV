@@ -19,7 +19,6 @@ router.get('/', function(req, res, next) {
   	muertosP:"436",
   	recuperados:"696",
   	descartados:"7495",
-  	sospechosos: pruebas-descartados-cases,
   	pruebas:"25347",
   	aislamiento:"6212",
   	estables:"197",
