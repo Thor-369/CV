@@ -4,7 +4,7 @@ var router = express.Router();
 
 
 
-var cases= "7603";
+var cases= "7858";
 /* GET home page. */
 
 router.get('/disco', function(req, res, next) {
@@ -15,14 +15,14 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: cases+' casos de Covid-19 Ecuador',
   	
   	casos:cases, 
-  	muertos:"369",
-  	muertosP:"436",
-  	recuperados:"696",
+  	muertos:"388",
+  	muertosP:"582",
+  	recuperados:"780",
   	descartados:"7495",
-  	pruebas:"25347",
-  	aislamiento:"6212",
-  	estables:"197",
-  	reservado:"129",
+  	pruebas:"26093",
+  	aislamiento:"6335",
+  	estables:"220",
+  	reservado:"135",
 
   	guayas:"5395",
   	pichincha:"634",
