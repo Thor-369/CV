@@ -4,7 +4,6 @@ var router = express.Router();
 
 
 
-var cases= "10850";
 /* GET home page. */
 
 router.get('/disco', function(req, res, next) {
@@ -14,6 +13,7 @@ router.get('/disco', function(req, res, next) {
 router.get('/', function(req, res, next) {
   res.render('index', { title: cases+' casos de Covid-19 Ecuador',
   	
+var cases= "10850";
   	casos:cases, 
   	muertos:"537",
   	muertosP:"952",
@@ -49,31 +49,6 @@ router.get('/', function(req, res, next) {
   	napo:"10",
   	orellana:"12",
 
-  	mguayas:"2534",
-  	mpichincha:"395",
-  	mrios:"158",
-  	mazuay:"100",
-  	mmanabí:"88",
-  	mloja:"27",
-  	mchimborazo:"46",
-  	mbolívar:"27",
-  	mcañar:"59",
-  	mmorona:"11",
-  	msucumbios:"30",
-  	mimbabura:"21",
-  	mtsachilas:"36",
-  	moro:"58",
-  	mesmeraldas:"17",
-  	melena:"52",
-    mcotopaxi:"23",
-  	mtungurahua:"22",
-  	mgalapagos:"11",
-  	mcarchi:"12",
-  	mpastaza:"12",
-  	mzamora:"2",
-  	mnapo:"2",
-  	morellana:"4",
-  	
   	 });
 });
 

@@ -161,6 +161,7 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
 
 
   var q_data = [
+  {"dia":"2020-04-23", "muertosP": <%= muertosP %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:40},
   {"dia":"2020-04-22", "muertosP": 952, "muertes": 537, "recuperados": 1207, counter:53},
   {"dia":"2020-04-21", "muertosP": 902, "muertes": 520, "recuperados": 1207, counter:53},
   {"dia":"2020-04-20", "muertosP": 826, "muertes": 507, "recuperados": 1150, counter:52},
@@ -228,6 +229,7 @@ new Morris.Line({
 
 
   var q_data = [
+  {"dia":"2020-04-23", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:41},
   {"dia":"2020-04-22", "casos": 10850, "muertes": 537, "recuperados": 1262, counter:52},
   {"dia":"2020-04-21", "casos": 10398, "muertes": 520, "recuperados": 1207, counter:52},
   {"dia":"2020-04-20", "casos": 10128, "muertes": 507, "recuperados": 1150, counter:52},
@@ -301,10 +303,16 @@ new Morris.Area({
  var q_data = [
 
    
- {"dia":"2020-04-22", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
+ {"dia":"2020-04-23", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
   "Loja": <%= loja %>,"Bolívar": <%= bolívar %>,"Cañar": <%= cañar %>,"Morona Santiago": <%= morona %>,"Chimborazo": <%= chimborazo %>,"Sucumbios": <%= sucumbios %>,"El Oro": <%= oro %>,
    "Imbabura": <%= imbabura %>, "Sto Domingo de los Tsáchilas": <%= tsachilas %>,"Santa Elena": <%= elena %>,"Cotopaxi": <%= cotopaxi %>,"Tungurahua": <%= tungurahua %>,
    "Galápagos": <%= galapagos %>,"Esmeraldas": <%= esmeraldas %>,"Carchi": <%= carchi %>,"Napo": <%= napo %>,"Orellana": <%= orellana %>,"Pastaza": <%= pastaza %>,"Zamora Chinchipe": <%= zamora %>, counter:21},
+
+   
+{"dia":"2020-04-22", "Guayas": 7108,"Pichincha": 868,"Los Ríos": 382,"Azuay": 247,"Manabí": 296,
+  "Loja": 132,"Cañar": 149,"Morona Santiago": 30,"Chimborazo": 121,"Sucumbios": 34,"Bolívar": 55,"El Oro": 276,
+   "Imbabura": 51, "Sto Domingo de los Tsáchilas": 94,"Carchi": 35,"Cotopaxi": 57,"Tungurahua": 81,
+   "Galápagos": 54,"Esmeraldas": 102,"Santa Elena": 165,"Napo": 9,"Orellana": 12,"Pastaza": 20,"Zamora Chinchipe": 20, counter:21},
 
    
 {"dia":"2020-04-21", "Guayas": 7108,"Pichincha": 868,"Los Ríos": 382,"Azuay": 247,"Manabí": 296,
