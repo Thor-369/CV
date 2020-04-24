@@ -161,8 +161,9 @@ CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDATA///CHANGINDAT
 
 
   var q_data = [
-  {"dia":"2020-04-23", "muertosP": <%= muertosP %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:40},
-  {"dia":"2020-04-22", "muertosP": 952, "muertes": 537, "recuperados": 1262, counter:53},
+  {"dia":"2020-04-24", "muertosP": <%= muertosP %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:56},
+  {"dia":"2020-04-23", "muertosP": 1028, "muertes": 560, "recuperados": 1328, counter:55},
+  {"dia":"2020-04-22", "muertosP": 952, "muertes": 537, "recuperados": 1262, counter:54},
   {"dia":"2020-04-21", "muertosP": 902, "muertes": 520, "recuperados": 1207, counter:53},
   {"dia":"2020-04-20", "muertosP": 826, "muertes": 507, "recuperados": 1150, counter:52},
   {"dia":"2020-04-19", "muertosP": 817, "muertes": 474, "recuperados": 1061, counter:51},
@@ -229,9 +230,10 @@ new Morris.Line({
 
 
   var q_data = [
-  {"dia":"2020-04-23", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:41},
-  {"dia":"2020-04-22", "casos": 10850, "muertes": 537, "recuperados": 1262, counter:52},
-  {"dia":"2020-04-21", "casos": 10398, "muertes": 520, "recuperados": 1207, counter:52},
+  {"dia":"2020-04-24", "casos": <%= casos %>, "muertes": <%= muertos %>, "recuperados": <%= recuperados %>, counter:41},
+  {"dia":"2020-04-23", "casos": 11183, "muertes": 560, "recuperados": 1328, counter:55},
+  {"dia":"2020-04-22", "casos": 10850, "muertes": 537, "recuperados": 1262, counter:54},
+  {"dia":"2020-04-21", "casos": 10398, "muertes": 520, "recuperados": 1207, counter:53},
   {"dia":"2020-04-20", "casos": 10128, "muertes": 507, "recuperados": 1150, counter:52},
   {"dia":"2020-04-19", "casos": 9468, "muertes": 474, "recuperados": 1061, counter:51},
   {"dia":"2020-04-18", "casos": 9022, "muertes": 456, "recuperados": 1008, counter:50},
@@ -303,10 +305,17 @@ new Morris.Area({
  var q_data = [
 
    
- {"dia":"2020-04-23", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
+ {"dia":"2020-04-24", "Guayas": <%= guayas %>,"Pichincha": <%= pichincha %>,"Los Ríos": <%= rios %>,"Azuay": <%= azuay %>,"Manabí": <%= manabí %>,
   "Loja": <%= loja %>,"Bolívar": <%= bolívar %>,"Cañar": <%= cañar %>,"Morona Santiago": <%= morona %>,"Chimborazo": <%= chimborazo %>,"Sucumbios": <%= sucumbios %>,"El Oro": <%= oro %>,
    "Imbabura": <%= imbabura %>, "Sto Domingo de los Tsáchilas": <%= tsachilas %>,"Santa Elena": <%= elena %>,"Cotopaxi": <%= cotopaxi %>,"Tungurahua": <%= tungurahua %>,
    "Galápagos": <%= galapagos %>,"Esmeraldas": <%= esmeraldas %>,"Carchi": <%= carchi %>,"Napo": <%= napo %>,"Orellana": <%= orellana %>,"Pastaza": <%= pastaza %>,"Zamora Chinchipe": <%= zamora %>, counter:21},
+
+   
+{"dia":"2020-04-23", "Guayas": 7502,"Pichincha": 991,"Los Ríos": 402,"Azuay": 285,"Manabí": 330,
+  "Loja": 136,"Cañar": 166,"Morona Santiago": 31,"Chimborazo": 130,"Sucumbios": 35,"Bolívar": 66,"El Oro": 300,
+   "Imbabura": 58, "Sto Domingo de los Tsáchilas": 123,"Carchi": 38,"Cotopaxi": 68,"Tungurahua": 96,
+   "Galápagos": 54,"Esmeraldas": 115,"Santa Elena": 182,"Napo": 12,"Orellana": 14,"Pastaza": 25,"Zamora Chinchipe": 24, counter:21},
+
 
    
 {"dia":"2020-04-22", "Guayas": 7391,"Pichincha": 926,"Los Ríos": 390,"Azuay": 273,"Manabí": 316,
