@@ -23,7 +23,7 @@ router.get('/', function(req, res, next) {
   	aislamiento:"19498",
   	estables:"273",
   	reservado:"146",
-  	
+
 
   	azuay:"314",
   	bolívar:"124",
@@ -43,7 +43,7 @@ router.get('/', function(req, res, next) {
   	napo: "15",
   	orellana:"28",
   	pastaza:"32",
-  	pichincha:"1194"
+  	pichincha:"1194",
   	elena:"343",
   	tsachilas:"138",
   	sucumbios:"36",
