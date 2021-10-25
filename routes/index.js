@@ -11,5 +11,9 @@ router.get('/', function(req, res, next) {
   	 });
 });
 
+router.get('/desarrollo/deber', function(req, res, next) {
+  res.render('deber', { title: 'Deber - Juan Pablo Torres',
+  	 });
+}); 
 
 module.exports = router;
