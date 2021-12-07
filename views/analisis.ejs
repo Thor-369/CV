@@ -38,7 +38,7 @@
       
       <div class="row mx-auto   " style="border-radius: 30px;  padding-bottom: 10px; margin: 10px;">
         
-        <div  class="carta cartas" >
+        <div  class="carta cartas"id="1" onclick="detectarclick1()" style="cursor:pointer">
           <div class="cara card bg-danger text-center text-white mx-auto " >
             <p style="padding-top: 30px;padding-bottom: 30px;">Puerta 1  </p>
           </div>
@@ -46,7 +46,7 @@
             <a id="p1">  <h1><i class=" fa fa-car"></i></h1></a>
           </div>
         </div>
-        <div  class="carta2 cartas" >
+        <div  class="carta2 cartas" id="2" onclick="detectarclick2()" style="cursor:pointer">
           <div class="cara2 card bg-danger text-center text-white mx-auto " >
             <p style="padding-top: 30px;padding-bottom: 30px;" >Puerta 2  </p>
           </div>
@@ -54,7 +54,7 @@
             <a id="p2">  <h1><i class=" fa fa-remove"></i></h1></a>
           </div>
         </div>
-        <div  class="carta3 cartas" >
+        <div  class="carta3 cartas" id="3" onclick="detectarclick3()"  style="cursor:pointer">
           <div class="cara3 card bg-danger text-center text-white mx-auto " >
             <p style="padding-top: 30px;padding-bottom: 30px;" >Puerta 3  </p>
           </div>
@@ -100,10 +100,8 @@
   .carta-box { 
   position: relative;
   perspective: 1000px;
-}
-.carta:hover {
-    transform: rotateY(180deg);
-}
+} 
+
 .carta {
   transform-style: preserve-3d;
   transition: all 0.5s linear;
@@ -117,9 +115,7 @@
 }
  
 
-.carta2:hover {
-    transform: rotateY(180deg);
-}
+ 
 .carta2 {
   transform-style: preserve-3d;
   transition: all 0.5s linear; 
@@ -155,18 +151,27 @@
 
 
 <script>
-  //
-  addEventListener('click', function (event) {
-    
-  })
-  detectarclick = () =>{
-
+  // 
+   
+  var click=0;
+  detectarclick1 = () =>{
+   document.getElementById("1").style.color='blue'; 
+   click=1;
+   alert("Click: "+click)
+  }
+  detectarclick2 = () =>{
+   click=2
+   alert("Click: "+click)
+  }
+  detectarclick3 = () =>{
+   click=3
+   alert("Click: "+click)
   }
   // Variables iniciales para escribir datos de la simulación
   var numWin = 0;
   var numLoss = 0;
   var ratioValue = 0;
-  var win = document.getElementById('gana');win.innerHTML = numWin;
+  var win = document.getElementById('gana');win.innerHTML = click;
   var loss = document.getElementById('pierde');loss.innerHTML = numLoss;
   var ratio = document.getElementById('prop');ratio.innerHTML = (ratioValue * 100).toFixed(1);
  
@@ -226,10 +231,7 @@
       ++turn;
     } else {
       if (turn == 0) { // Check clicked door
-        check = 0;
-        if (x < 200 && x > 0) { check = 0; }
-        if (x < 400 && x > 200) { check = 1; }
-        if (x < 600 && x > 400) { check = 2; }
+        check = click; 
 
         openDoor = Math.floor(Math.random() * 3);
         while (openDoor == check || openDoor == carDoor) {

@@ -16,7 +16,7 @@ router.get('/desarrollo/deber', function(req, res, next) {
   	 });
 }); 
 router.get('/analisis', function(req, res, next) {
-  res.render('analisis', { title: 'Monty Hall - Simulador',
+  res.render('analisis', { title: 'Simulador Monty Hall',
   	 });
 }); 
 
