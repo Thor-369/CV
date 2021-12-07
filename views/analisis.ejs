@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta name="keywords" content="Simulador de Monty Hall, Simulador, Monty,  Hall, Puertas, Carro, Cabra, Análisis, Numérico, numerico, unl, universidad, javascript, matemáticas"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
     name='viewport' />
@@ -34,18 +35,37 @@
       style="border-radius: 30px;box-shadow: 0 6px 9px rgba(0,0,0,0.25),0 9px 8px rgba(0,0,0,0.22); background-color: rgba(0,0,0,0.25);">
 
       <p class="h5 mx-auto text-white" id="estado">Elige una puerta</p>
-      <div class="row mx-auto container" style="border-radius: 30px">
-        <a class="card bg-dark text-center text-white col-md-3 mx-auto" id="p1"
-          style="padding-top: 100px;padding-bottom: 100px; margin: 10px;">Puerta 1 <h1><i class=" fa fa-car"></i></h1></a>
-        <a class="card bg-dark text-center text-white col-md-3 mx-auto" id="p2"
-          style="padding-top: 100px;padding-bottom: 100px; margin: 10px;">Puerta 2 <h1><i class=" fa fa-remove"></i></h1></a>
-        <a class="card bg-dark text-center text-white col-md-3 mx-auto" id="p3"
-          style="padding-top: 100px;padding-bottom: 100px; margin: 10px;">Puerta 3 <h1><i class=" fa fa-remove"></i></h1></a>
-      </div><br>
-      <div class="card  row " style="padding: 30px; 
-            border-radius: 30px;
-              box-shadow: 0 6px 9px rgba(0,0,0,0.25), 
-                0 9px 8px rgba(0,0,0,0.22);">
+      
+      <div class="row mx-auto   " style="border-radius: 30px;  padding-bottom: 10px; margin: 10px;">
+        
+        <div  class="carta cartas" >
+          <div class="cara card bg-danger text-center text-white mx-auto " >
+            <p style="padding-top: 30px;padding-bottom: 30px;">Puerta 1  </p>
+          </div>
+          <div class="cara detras" >
+            <a id="p1">  <h1><i class=" fa fa-car"></i></h1></a>
+          </div>
+        </div>
+        <div  class="carta2 cartas" >
+          <div class="cara2 card bg-danger text-center text-white mx-auto " >
+            <p style="padding-top: 30px;padding-bottom: 30px;" >Puerta 2  </p>
+          </div>
+          <div class="cara2 detras2" >
+            <a id="p2">  <h1><i class=" fa fa-remove"></i></h1></a>
+          </div>
+        </div>
+        <div  class="carta3 cartas" >
+          <div class="cara3 card bg-danger text-center text-white mx-auto " >
+            <p style="padding-top: 30px;padding-bottom: 30px;" >Puerta 3  </p>
+          </div>
+          <div class="cara3 detras3" >
+            <a id="p3">  <h1><i class=" fa fa-remove"></i></h1></a>
+          </div>
+        </div>
+
+      </div>
+      <br>
+      <div class="card bg-dark text-white row " style="padding: 30px; border-radius: 30px; box-shadow: 0 6px 9px rgba(0,0,0,0.25), 0 9px 8px rgba(0,0,0,0.22);">
         <table class="col-md-4 mx-auto " style="padding: 30px; border-radius: 30px; ">
           <h3 class="mx-auto">Resultados:</h3>
           <tr style="background-color: rgba(0,0,0,0.25);">
@@ -62,51 +82,97 @@
           </tr>
         </table>
         <div class="container text-center mx-auto"><img class="img-fluid " style="width: 12%; padding-top: 30px;"
-            src="/images/Tow-W.png"> </div>
+            src="/images/Tow-D.png"> </div>
       </div>
+      <p class="text-white ml-auto">autor: Pablo Torres</p>
     </div>
 </body>
 
 
+<style>
+  .cartas{ 
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-left: 30px;
+  margin-right: 60px;
+  background-color: rgba(0,0,0,0.25);
+  }
+  .carta-box { 
+  position: relative;
+  perspective: 1000px;
+}
+.carta:hover {
+    transform: rotateY(180deg);
+}
+.carta {
+  transform-style: preserve-3d;
+  transition: all 0.5s linear;
+}
+.cara {
+  position: absolute;
+  backface-visibility: hidden;
+}
+.cara.detras {
+  transform: rotateY(180deg);
+}
+ 
 
+.carta2:hover {
+    transform: rotateY(180deg);
+}
+.carta2 {
+  transform-style: preserve-3d;
+  transition: all 0.5s linear; 
+}
+.cara2 {
+  position: absolute;
+  backface-visibility: hidden;
+}
+.cara2.detras2 {
+  transform: rotateY(180deg);
+}
+
+
+
+.carta3:hover {
+    transform: rotateY(180deg);
+}
+.carta3 {
+  transform-style: preserve-3d;
+  transition: all 0.5s linear; 
+}
+.cara3 {
+  position: absolute;
+  backface-visibility: hidden;
+}
+.cara3.detras3 {
+  transform: rotateY(180deg);
+}
+
+
+</style>
 
 
 
 <script>
-  // Variables to keep track of score
+  //
+  addEventListener('click', function (event) {
+    
+  })
+  detectarclick = () =>{
+
+  }
+  // Variables iniciales para escribir datos de la simulación
   var numWin = 0;
   var numLoss = 0;
   var ratioValue = 0;
+  var win = document.getElementById('gana');win.innerHTML = numWin;
+  var loss = document.getElementById('pierde');loss.innerHTML = numLoss;
+  var ratio = document.getElementById('prop');ratio.innerHTML = (ratioValue * 100).toFixed(1);
+ 
+  var stats = document.getElementById('estado');  stats.innerHTML = 'Elige una puerta.';
+ 
 
-  // Html element to write messages to player
-  var stats = document.getElementById('estado');
-  stats.innerHTML = 'Elige una puerta.';
-
-  // Html documents to write the scores
-  var win = document.getElementById('gana');
-  win.innerHTML = numWin;
-
-  var loss = document.getElementById('pierde');
-  loss.innerHTML = numLoss;
-
-  var ratio = document.getElementById('prop');
-  ratio.innerHTML = (ratioValue * 100).toFixed(1);
-
-  var canvas = document.getElementById('myCanvas');
-  var context = canvas.getContext('2d');
-
-  var imageOpenDoor = new Image();
-  var imageCloseDoor = new Image();
-  var imageCheck = new Image();
-  var imageGoat = new Image();
-  var imageCar = new Image();
-
-  // I have to figure out copyright of images. I'll put the sources on the front of each oen
-  imageOpenDoor.src = 'img/open_door.png' // http://th08.deviantart.net/fs71/PRE/i/2012/109/8/d/open_door_png_by_glammgramma-d4wy185.png
-  imageCloseDoor.src = 'img/closed_door.png' // http://th01.deviantart.net/fs71/PRE/i/2012/109/6/f/closed_door_png_by_glammgramma-d4wy1cv.png
-  imageCheck.src = 'img/check.png' // http://www.come4news.com/images/users/5454/check.png
-  imageGoat.src = 'img/goat.png' //
-  imageCar.src = 'img/car.png' // http://www.wpclipart.com/transportation/car/classic_cars/purple_muscle_car.png
 
   // Random choose doors for car and goats
   var carDoor = Math.floor(Math.random() * 3); // Door with car
