@@ -15,5 +15,9 @@ router.get('/desarrollo/deber', function(req, res, next) {
   res.render('deber', { title: 'Deber - Juan Pablo Torres',
   	 });
 }); 
+router.get('/analisis/deber', function(req, res, next) {
+  res.render('deber', { title: 'Monty Hall - Simulador',
+  	 });
+}); 
 
 module.exports = router;
