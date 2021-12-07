@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="keywords" content="Juego, juego de monty hall,Simulador de Monty Hall, Simulador, Monty,  Hall, Puertas, Carro, Cabra, Análisis, Numérico, numerico, unl, universidad, javascript, matemáticas"/>
+  <meta name="keywords"
+    content="Juego, juego de monty hall,Simulador de Monty Hall, Simulador, Monty,  Hall, Puertas, Carro, Cabra, Análisis, Numérico, numerico, unl, universidad, javascript, matemáticas" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
     name='viewport' />
@@ -35,37 +36,44 @@
       style="border-radius: 30px;box-shadow: 0 6px 9px rgba(0,0,0,0.25),0 9px 8px rgba(0,0,0,0.22); background-color: rgba(0,0,0,0.25);">
 
       <p class="h5 mx-auto text-white" id="estado">Elige una puerta</p>
-      
+
       <div class="row mx-auto   " style="border-radius: 30px;  padding-bottom: 10px; margin: 10px;">
-        
-        <div  class="carta cartas"id="1" onclick="detectarclick1()" style="cursor:pointer">
-          <div class="cara card bg-danger text-center text-white mx-auto " >
-            <p style="padding-top: 30px;padding-bottom: 30px;">Puerta 1  </p>
+
+        <div class="carta cartas" id="1" onclick="detectarclick1()" style="cursor:pointer">
+          <div class="cara card bg-danger text-center text-white mx-auto ">
+            <p style="padding-top: 30px;padding-bottom: 30px;">Puerta 1 </p>
           </div>
-          <div class="cara detras" >
-            <a id="p1">  <h1><i class=" fa fa-car"></i></h1></a>
-          </div>
-        </div>
-        <div  class="carta2 cartas" id="2" onclick="detectarclick2()" style="cursor:pointer">
-          <div class="cara2 card bg-danger text-center text-white mx-auto " >
-            <p style="padding-top: 30px;padding-bottom: 30px;" >Puerta 2  </p>
-          </div>
-          <div class="cara2 detras2" >
-            <a id="p2">  <h1><i class=" fa fa-remove"></i></h1></a>
+          <div class="cara detras">
+            <a id="p1">
+              <h1><i class=" fa fa-remove"></i></h1>
+            </a>
           </div>
         </div>
-        <div  class="carta3 cartas" id="3" onclick="detectarclick3()"  style="cursor:pointer">
-          <div class="cara3 card bg-danger text-center text-white mx-auto " >
-            <p style="padding-top: 30px;padding-bottom: 30px;" >Puerta 3  </p>
+        <div class="carta2 cartas" id="2" onclick="detectarclick2()" style="cursor:pointer">
+          <div class="cara2 card bg-danger text-center text-white mx-auto ">
+            <p style="padding-top: 30px;padding-bottom: 30px;">Puerta 2 </p>
           </div>
-          <div class="cara3 detras3" >
-            <a id="p3">  <h1><i class=" fa fa-remove"></i></h1></a>
+          <div class="cara2 detras2">
+            <a id="p2">
+              <h1><i class=" fa fa-remove"></i></h1>
+            </a>
+          </div>
+        </div>
+        <div class="carta3 cartas" id="3" onclick="detectarclick3()" style="cursor:pointer">
+          <div class="cara3 card bg-danger text-center text-white mx-auto ">
+            <p style="padding-top: 30px;padding-bottom: 30px;">Puerta 3 </p>
+          </div>
+          <div class="cara3 detras3">
+            <a id="p3">
+              <h1><i class=" fa fa-remove"></i></h1>
+            </a>
           </div>
         </div>
 
       </div>
       <br>
-      <div class="card bg-dark text-white row " style="padding: 30px; border-radius: 30px; box-shadow: 0 6px 9px rgba(0,0,0,0.25), 0 9px 8px rgba(0,0,0,0.22);">
+      <div class="card bg-dark text-white row "
+        style="padding: 30px; border-radius: 30px; box-shadow: 0 6px 9px rgba(0,0,0,0.25), 0 9px 8px rgba(0,0,0,0.22);">
         <table class="col-md-4 mx-auto " style="padding: 30px; border-radius: 30px; ">
           <h3 class="mx-auto">Resultados:</h3>
           <tr style="background-color: rgba(0,0,0,0.25);">
@@ -90,93 +98,227 @@
 
 
 <style>
-  .cartas{ 
-  padding-top: 60px;
-  padding-bottom: 60px;
-  margin-left: 30px;
-  margin-right: 60px;
-  background-color: rgba(0,0,0,0.25);
+  .cartas {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-left: 30px;
+    margin-right: 60px;
+    background-color: rgba(0, 0, 0, 0.25);
   }
-  .carta-box { 
-  position: relative;
-  perspective: 1000px;
-} 
 
-.carta {
-  transform-style: preserve-3d;
-  transition: all 0.5s linear;
-}
-.cara {
-  position: absolute;
-  backface-visibility: hidden;
-}
-.cara.detras {
-  transform: rotateY(180deg);
-}
- 
+  .carta-box {
+    position: relative;
+    perspective: 1000px;
+  }
 
- 
-.carta2 {
-  transform-style: preserve-3d;
-  transition: all 0.5s linear; 
-}
-.cara2 {
-  position: absolute;
-  backface-visibility: hidden;
-}
-.cara2.detras2 {
-  transform: rotateY(180deg);
-}
+  .carta {
+    transform-style: preserve-3d;
+    transition: all 0.5s linear;
+  }
 
+  .cara {
+    position: absolute;
+    backface-visibility: hidden;
+  }
 
-
-.carta3:hover {
+  .cara.detras {
     transform: rotateY(180deg);
-}
-.carta3 {
-  transform-style: preserve-3d;
-  transition: all 0.5s linear; 
-}
-.cara3 {
-  position: absolute;
-  backface-visibility: hidden;
-}
-.cara3.detras3 {
-  transform: rotateY(180deg);
-}
+  }
 
 
+
+  .carta2 {
+    transform-style: preserve-3d;
+    transition: all 0.5s linear;
+  }
+
+  .cara2 {
+    position: absolute;
+    backface-visibility: hidden;
+  }
+
+  .cara2.detras2 {
+    transform: rotateY(180deg);
+  }
+
+
+ 
+
+  .carta3 {
+    transform-style: preserve-3d;
+    transition: all 0.5s linear;
+  }
+
+  .cara3 {
+    position: absolute;
+    backface-visibility: hidden;
+  }
+
+  .cara3.detras3 {
+    transform: rotateY(180deg);
+  }
+
+  div {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
 </style>
 
 
 
 <script>
-  // 
-   
-  var click=0;
-  detectarclick1 = () =>{
-   document.getElementById("1").style.color='blue'; 
-   click=1;
-   alert("Click: "+click)
+
+function boolean() { 
+    if (Math.random() < 0.5) {
+        return false
+    }   else {
+        return true
+    }
+}
+
+
+// Sorteo de la puerta ganadora
+  // FUNCION RANDOM CON RANGO 
+  function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+/*Genero la puerta ganadora */        
+  var winner = getRandomInt(1, 4)
+document.getElementById("p"+winner).innerHTML =" <h1><i class=' fa fa-car'></i></h1>"
+
+
+  var click = 0;
+  detectarclick1 = () => {
+    if(click==0){                       //SI NO HICE NINGUN CLICK  - click primera puerta
+      click = 1;    
+      var perdedora = 0;
+      if(winner==1){      //Puerta 1 ganadora entonces abre random entre 2 o 3
+        perdedora=getRandomInt(2, 4)
+      }else if(winner==2){//Puerta 2 ganadora entonces abre 3
+        perdedora=3;
+      } else{           //Puerta 3 ganadora entonces abre 2
+        perdedora=2;
+      } 
+      var div = document.getElementById(perdedora);
+      div.style.webkitTransform = 'rotateY(180deg)';
+      div.style.mozTransform = 'rotateY(180deg)';
+      div.style.msTransform = 'rotateY(180deg)';
+      div.style.oTransform = 'rotateY(180deg)';
+      div.style.transform = 'rotateY(180deg)'; 
+    stats.innerHTML = "Buena elección!"
+    setTimeout(function(){stats.innerHTML=' <h4 style="text-align:center" class="nav navbar navbar-danger">Seguro que quieres esa puerta? vuelve a elegir</h4>'},1200);
+ 
+    }else{                              //SI YA HICE CLICK    - click primera puerta por segunda vez
+      
+    if(winner==1){ 
+    stats.innerHTML = 'Felicidades!'
+    setTimeout(function(){stats.innerHTML='Has ganado un vehículo 0Km'},900);
+      }else{ 
+        stats.innerHTML = 'Perdiste!'
+    setTimeout(function(){stats.innerHTML='Solo te ganaste una cabra xD'},900);
+      }
+      var div = document.getElementById(1);
+    div.style.webkitTransform = 'rotateY(180deg)';
+    div.style.mozTransform = 'rotateY(180deg)';
+    div.style.msTransform = 'rotateY(180deg)';
+    div.style.oTransform = 'rotateY(180deg)';
+    div.style.transform = 'rotateY(180deg)';
+    }
   }
-  detectarclick2 = () =>{
-   click=2
-   alert("Click: "+click)
+  detectarclick2 = () => {
+    if(click==0){                       //SI NO HICE NINGUN CLICK  - click primera puerta
+      click = 1;    
+      var perdedora = 0;
+      if(winner==1){      //Puerta 1 ganadora entonces abre 3
+        perdedora=3;
+      }else if(winner==2){//Puerta 2 ganadora entonces abre random 1 o 3
+        if(boolean()==true){
+        perdedora=1;}else{perdedora=3}
+      } else{           //Puerta 3 ganadora entonces abre 1
+        perdedora=1;
+      } 
+      var div = document.getElementById(perdedora);
+      div.style.webkitTransform = 'rotateY(180deg)';
+      div.style.mozTransform = 'rotateY(180deg)';
+      div.style.msTransform = 'rotateY(180deg)';
+      div.style.oTransform = 'rotateY(180deg)';
+      div.style.transform = 'rotateY(180deg)'; 
+    stats.innerHTML = "Buena elección!"
+    setTimeout(function(){stats.innerHTML=' <h4 style="text-align:center" class="nav navbar navbar-danger">Seguro que quieres esa puerta? vuelve a elegir</h4>'},1200);
+ 
+    }else{                              //SI YA HICE CLICK    - click primera puerta por segunda vez
+      
+    if(winner==2){ 
+    stats.innerHTML = 'Felicidades!'
+    setTimeout(function(){stats.innerHTML='Has ganado un vehículo 0Km'},900);
+      }else{ 
+        stats.innerHTML = 'Perdiste!'
+    setTimeout(function(){stats.innerHTML='Solo te ganaste una cabra xD'},900);
+      }
+      var div = document.getElementById(2);
+    div.style.webkitTransform = 'rotateY(180deg)';
+    div.style.mozTransform = 'rotateY(180deg)';
+    div.style.msTransform = 'rotateY(180deg)';
+    div.style.oTransform = 'rotateY(180deg)';
+    div.style.transform = 'rotateY(180deg)';
+    }
   }
-  detectarclick3 = () =>{
-   click=3
-   alert("Click: "+click)
+  detectarclick3 = () => {
+    if(click==0){                       //SI NO HICE NINGUN CLICK  - click primera puerta
+      click = 1;    
+      var perdedora = 0;
+      if(winner==1){      //Puerta 1 ganadora entonces abre 2
+        perdedora=2
+      }else if(winner==2){//Puerta 2 ganadora entonces abre 3
+        perdedora=1;
+      } else{           //Puerta 3 ganadora entonces abre 1 o 2
+        perdedora=getRandomInt(1, 3);
+      } 
+      var div = document.getElementById(perdedora);
+      div.style.webkitTransform = 'rotateY(180deg)';
+      div.style.mozTransform = 'rotateY(180deg)';
+      div.style.msTransform = 'rotateY(180deg)';
+      div.style.oTransform = 'rotateY(180deg)';
+      div.style.transform = 'rotateY(180deg)'; 
+    stats.innerHTML = "Buena elección!"
+    setTimeout(function(){stats.innerHTML=' <h4 style="text-align:center" class="nav navbar navbar-danger">Seguro que quieres esa puerta? vuelve a elegir</h4>'},1200);
+ 
+    }else{                              //SI YA HICE CLICK    - click primera puerta por segunda vez
+      
+    if(winner==3){ 
+    stats.innerHTML = 'Felicidades!'
+    setTimeout(function(){stats.innerHTML='Has ganado un vehículo 0Km'},900);
+      }else{ 
+        stats.innerHTML = 'Perdiste!'
+    setTimeout(function(){stats.innerHTML='Solo te ganaste una cabra xD'},900);
+      }
+      var div = document.getElementById(3);
+    div.style.webkitTransform = 'rotateY(180deg)';
+    div.style.mozTransform = 'rotateY(180deg)';
+    div.style.msTransform = 'rotateY(180deg)';
+    div.style.oTransform = 'rotateY(180deg)';
+    div.style.transform = 'rotateY(180deg)';
+    }
   }
   // Variables iniciales para escribir datos de la simulación
-  var numWin = 0;
+  var numWin = 3;
   var numLoss = 0;
   var ratioValue = 0;
-  var win = document.getElementById('gana');win.innerHTML = click;
-  var loss = document.getElementById('pierde');loss.innerHTML = numLoss;
-  var ratio = document.getElementById('prop');ratio.innerHTML = (ratioValue * 100).toFixed(1);
- 
-  var stats = document.getElementById('estado');  stats.innerHTML = 'Elige una puerta.';
- 
+        sessionStorage.setItem("wins", numWin);
+        sessionStorage.setItem("loses", numLoss);
+        var g = sessionStorage.getItem("Nombre");
+        var p = sessionStorage.getItem("Apellido");
+        /*Mostrar datos almacenados*/      
+        document.getElementById("gana").innerHTML = g;
+        document.getElementById("pierde").innerHTML = p;
+  var win = document.getElementById('gana'); win.innerHTML = numWin;
+  var loss = document.getElementById('pierde'); loss.innerHTML = numLoss;
+  var ratio = document.getElementById('prop'); ratio.innerHTML = (ratioValue * 100).toFixed(1);
+
+  var stats = document.getElementById('estado'); stats.innerHTML = 'Elige una puerta.';
+
 
 
   // Random choose doors for car and goats
@@ -231,7 +373,7 @@
       ++turn;
     } else {
       if (turn == 0) { // Check clicked door
-        check = click; 
+        check = click;
 
         openDoor = Math.floor(Math.random() * 3);
         while (openDoor == check || openDoor == carDoor) {
