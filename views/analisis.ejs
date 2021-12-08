@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
     name='viewport' />
-    <script src="assets/js/analisis.js"></script>
+  <script src="assets/js/analisis.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 
@@ -89,6 +89,7 @@
             <td id="prop">0%</td>
           </tr>
         </table>
+        <p onclick="limpiarSession()" class="mx-auto">Limpiar Score</p>
         <div class="container text-center mx-auto"><img class="img-fluid " style="width: 12%; padding-top: 30px;"
             src="/images/Tow-D.png"> </div>
       </div>
@@ -125,8 +126,6 @@
     transform: rotateY(180deg);
   }
 
-
-
   .carta2 {
     transform-style: preserve-3d;
     transition: all 0.5s linear;
@@ -140,9 +139,6 @@
   .cara2.detras2 {
     transform: rotateY(180deg);
   }
-
-
- 
 
   .carta3 {
     transform-style: preserve-3d;
@@ -170,52 +166,56 @@
 
 <script>
 
-function boolean() { 
+  function limpiarSession() {
+    Storage.clear()
+  }
+
+  function boolean() {
     if (Math.random() < 0.5) {
-        return false
-    }   else {
-        return true
+      return false
+    } else {
+      return true
     }
-}
+  }
 
 
-// Sorteo de la puerta ganadora
   // FUNCION RANDOM CON RANGO 
   function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
-}
-/*Genero la puerta ganadora */        
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+  // Sorteo de la puerta ganadora
+  /*Genero la puerta ganadora */
   var winner = getRandomInt(1, 4)
-document.getElementById("p"+winner).innerHTML =" <h1><i class=' fa fa-car'></i></h1>"
+  document.getElementById("p" + winner).innerHTML = " <h1><i class=' fa fa-car'></i></h1>"
 
- // Variables iniciales para escribir datos de la simulación
+  // Variables iniciales para escribir datos de la simulación
+    /*numWin Almacena las veces q se ha ganado
+      numLoss Almacena las veces perdidas
+      ratioValue Almacena la proporción, o el porcentaje de victorias
+      click Almacena el número de la puerta seleccionada
+      jugado Almacena si ya hemos culminado la partida
+    */
   var numWin = 0;
   var numLoss = 0;
   var ratioValue = 0;
+  ///////////////////////////////////////////////
+  var click = 0;
+  var jugado = false;
   numWin = sessionStorage.getItem("wins");
   numLoss = sessionStorage.getItem("loses");
   ratioValue = sessionStorage.getItem("ratio");
-        
-        var g = numWin;
-        var p = numLoss;
-        /*Mostrar datos almacenados*/      
-        document.getElementById("gana").innerHTML = g;
-        document.getElementById("pierde").innerHTML = p; 
-
-  var stats = document.getElementById('estado'); stats.innerHTML = 'Elige una puerta.';
-
-  var click = 0; 
-  var jugado=false;
-  var win = document.getElementById('gana'); 
-  var loss = document.getElementById('pierde'); 
-  var ratio = document.getElementById('prop'); 
-  win.innerHTML = numWin; loss.innerHTML = numLoss;ratio.innerHTML = (ratioValue * 100).toFixed(1);
-          win.innerHTML = numWin;
-          loss.innerHTML = numLoss;
-          ratio.innerHTML = (ratioValue * 100).toFixed(1);
-
-          turn = -1;
-  
+ 
+  /*Mostrar datos almacenados*/ 
+//TextosIds asignados a variables
+  var stats = document.getElementById('estado'); 
+  var win = document.getElementById('gana');
+  var loss = document.getElementById('pierde');
+  var ratio = document.getElementById('prop');
+//Envío de valores a los TextosIds
+  stats.innerHTML = 'Elige una puerta.'; 
+  win.innerHTML = numWin; 
+  loss.innerHTML = numLoss; 
+  ratio.innerHTML = (ratioValue * 100).toFixed(1); 
 </script>
 
 </html>
