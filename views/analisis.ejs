@@ -196,26 +196,36 @@
       jugado Almacena si ya hemos culminado la partida
     */
   var numWin = 0;
-  var numLoss = 0;
-  var ratioValue = 0;
+  var numLoss =document.getElementById('pierde').value;
+  var ratioValue = document.getElementById('prop').value;
   ///////////////////////////////////////////////
   var click = 0;
   var jugado = false;
-  numWin = sessionStorage.getItem("wins");
-  numLoss = sessionStorage.getItem("loses");
-  ratioValue = sessionStorage.getItem("ratio");
- 
+
+  window.onload = function() {
+    if (sessionStorage.getItem("wins")!=undefined&&sessionStorage.getItem("loses")!=undefined&&sessionStorage.getItem("prop")!=undefined) {
+      numWin =  0;
+    numLoss =  0;
+    ratioValue = 0;
+    } else {
+      numWin =  sessionStorage.getItem("wins");
+    numLoss =  sessionStorage.getItem("loses");
+    ratioValue = sessionStorage.getItem("ratio");
+    }
+    //Envío de valores a los TextosIds
+  stats.innerHTML = 'Elige una puerta.'; 
+  win.innerHTML = numWin; 
+  loss.innerHTML = numLoss; 
+  ratio.innerHTML = (ratioValue * 100).toFixed(1); 
+};
   /*Mostrar datos almacenados*/ 
+
+    
 //TextosIds asignados a variables
   var stats = document.getElementById('estado'); 
   var win = document.getElementById('gana');
   var loss = document.getElementById('pierde');
   var ratio = document.getElementById('prop');
-//Envío de valores a los TextosIds
-  stats.innerHTML = 'Elige una puerta.'; 
-  win.innerHTML = numWin; 
-  loss.innerHTML = numLoss; 
-  ratio.innerHTML = (ratioValue * 100).toFixed(1); 
 </script>
 
 </html>
