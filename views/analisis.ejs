@@ -188,10 +188,37 @@ function boolean() {
   var winner = getRandomInt(1, 4)
 document.getElementById("p"+winner).innerHTML =" <h1><i class=' fa fa-car'></i></h1>"
 
+ // Variables iniciales para escribir datos de la simulación
+        
+  var numWin = sessionStorage.getItem("wins");
+  var numLoss = sessionStorage.getItem("loses");
+  var ratioValue = sessionStorage.getItem("ratio");
+  sessionStorage.setItem("wins", numWin);
+  sessionStorage.setItem("loses", numLoss);
+  sessionStorage.setItem("ratio", ratioValue);
+        
+        var g = sessionStorage.getItem("wins");
+        var p = sessionStorage.getItem("loses");
+        /*Mostrar datos almacenados*/      
+        document.getElementById("gana").innerHTML = g;
+        document.getElementById("pierde").innerHTML = p; 
 
-  var click = 0;
+  var stats = document.getElementById('estado'); stats.innerHTML = 'Elige una puerta.';
+
+  var click = 0; 
+  var jugado=false;
+  var win = document.getElementById('gana'); 
+  var loss = document.getElementById('pierde'); 
+  var ratio = document.getElementById('prop'); 
+  win.innerHTML = numWin; loss.innerHTML = numLoss;ratio.innerHTML = (ratioValue * 100).toFixed(1);
+          win.innerHTML = numWin;
+          loss.innerHTML = numLoss;
+          ratio.innerHTML = (ratioValue * 100).toFixed(1);
+
+          turn = -1;
   detectarclick1 = () => {
-    if(click==0){                       //SI NO HICE NINGUN CLICK  - click primera puerta
+    if(click==0){ 
+      jugado=false;                      //SI NO HICE NINGUN CLICK  - click en primera puerta
       click = 1;    
       var perdedora = 0;
       if(winner==1){      //Puerta 1 ganadora entonces abre random entre 2 o 3
@@ -208,16 +235,18 @@ document.getElementById("p"+winner).innerHTML =" <h1><i class=' fa fa-car'></i><
       div.style.oTransform = 'rotateY(180deg)';
       div.style.transform = 'rotateY(180deg)'; 
     stats.innerHTML = "Buena elección!"
-    setTimeout(function(){stats.innerHTML=' <h4 style="text-align:center" class="nav navbar navbar-danger">Seguro que quieres esa puerta? vuelve a elegir</h4>'},1200);
+    setTimeout(function(){stats.innerHTML='Seguro que quieres esa puerta? vuelve a elegir '},800);
  
-    }else{                              //SI YA HICE CLICK    - click primera puerta por segunda vez
+    }else{                              //SI YA HICE CLICK    - click en primera puerta por segunda vez
       
     if(winner==1){ 
-    stats.innerHTML = 'Felicidades!'
-    setTimeout(function(){stats.innerHTML='Has ganado un vehículo 0Km'},900);
+      stats.innerHTML = 'Felicidades!'
+      setTimeout(function(){stats.innerHTML='Has ganado un vehículo 0Km'},800);
+      numWin=numWin+1;jugado=true;
       }else{ 
         stats.innerHTML = 'Perdiste!'
-    setTimeout(function(){stats.innerHTML='Solo te ganaste una cabra xD'},900);
+        numLoss=numLoss+1;jugado=true;
+    setTimeout(function(){stats.innerHTML='Solo te ganaste una cabra xD'},800);
       }
       var div = document.getElementById(1);
     div.style.webkitTransform = 'rotateY(180deg)';
@@ -228,7 +257,8 @@ document.getElementById("p"+winner).innerHTML =" <h1><i class=' fa fa-car'></i><
     }
   }
   detectarclick2 = () => {
-    if(click==0){                       //SI NO HICE NINGUN CLICK  - click primera puerta
+    if(click==0){ 
+      jugado=false;                      //SI NO HICE NINGUN CLICK  - en click segunda puerta
       click = 1;    
       var perdedora = 0;
       if(winner==1){      //Puerta 1 ganadora entonces abre 3
@@ -239,23 +269,21 @@ document.getElementById("p"+winner).innerHTML =" <h1><i class=' fa fa-car'></i><
       } else{           //Puerta 3 ganadora entonces abre 1
         perdedora=1;
       } 
-      var div = document.getElementById(perdedora);
-      div.style.webkitTransform = 'rotateY(180deg)';
-      div.style.mozTransform = 'rotateY(180deg)';
-      div.style.msTransform = 'rotateY(180deg)';
-      div.style.oTransform = 'rotateY(180deg)';
-      div.style.transform = 'rotateY(180deg)'; 
+      var div = document.getElementById(perdedora); //Le doy la vuelta a la puerta perdedora RANDOM
+      div.style.webkitTransform = 'rotateY(180deg)'; div.style.mozTransform = 'rotateY(180deg)';div.style.msTransform = 'rotateY(180deg)';div.style.oTransform = 'rotateY(180deg)'; div.style.transform = 'rotateY(180deg)'; 
     stats.innerHTML = "Buena elección!"
-    setTimeout(function(){stats.innerHTML=' <h4 style="text-align:center" class="nav navbar navbar-danger">Seguro que quieres esa puerta? vuelve a elegir</h4>'},1200);
+    setTimeout(function(){stats.innerHTML='Seguro que quieres esa puerta? vuelve a elegir '},800);
  
-    }else{                              //SI YA HICE CLICK    - click primera puerta por segunda vez
+    }else{                              //SI YA HICE CLICK    - click en segunda puerta por segunda vez
       
     if(winner==2){ 
     stats.innerHTML = 'Felicidades!'
-    setTimeout(function(){stats.innerHTML='Has ganado un vehículo 0Km'},900);
+    setTimeout(function(){stats.innerHTML='Has ganado un vehículo 0Km'},800);
+    numWin=numWin+1;jugado=true;
       }else{ 
         stats.innerHTML = 'Perdiste!'
-    setTimeout(function(){stats.innerHTML='Solo te ganaste una cabra xD'},900);
+        numLoss=numLoss+1;jugado=true;
+    setTimeout(function(){stats.innerHTML='Solo te ganaste una cabra xD'},800);
       }
       var div = document.getElementById(2);
     div.style.webkitTransform = 'rotateY(180deg)';
@@ -266,7 +294,8 @@ document.getElementById("p"+winner).innerHTML =" <h1><i class=' fa fa-car'></i><
     }
   }
   detectarclick3 = () => {
-    if(click==0){                       //SI NO HICE NINGUN CLICK  - click primera puerta
+    if(click==0){
+      jugado=false;                       //SI NO HICE NINGUN CLICK  - click en tercera puerta
       click = 1;    
       var perdedora = 0;
       if(winner==1){      //Puerta 1 ganadora entonces abre 2
@@ -283,16 +312,18 @@ document.getElementById("p"+winner).innerHTML =" <h1><i class=' fa fa-car'></i><
       div.style.oTransform = 'rotateY(180deg)';
       div.style.transform = 'rotateY(180deg)'; 
     stats.innerHTML = "Buena elección!"
-    setTimeout(function(){stats.innerHTML=' <h4 style="text-align:center" class="nav navbar navbar-danger">Seguro que quieres esa puerta? vuelve a elegir</h4>'},1200);
+    setTimeout(function(){stats.innerHTML='Seguro que quieres esa puerta? vuelve a elegir '},800);
  
-    }else{                              //SI YA HICE CLICK    - click primera puerta por segunda vez
+    }else{                              //SI YA HICE CLICK    - click en tercera puerta por segunda vez
       
     if(winner==3){ 
     stats.innerHTML = 'Felicidades!'
-    setTimeout(function(){stats.innerHTML='Has ganado un vehículo 0Km'},900);
+    setTimeout(function(){stats.innerHTML='Has ganado un vehículo 0Km'},800);
+    numWin=numWin+1;jugado=true;
       }else{ 
         stats.innerHTML = 'Perdiste!'
-    setTimeout(function(){stats.innerHTML='Solo te ganaste una cabra xD'},900);
+        numLoss=numLoss+1;jugado=true;
+    setTimeout(function(){stats.innerHTML='Solo te ganaste una cabra xD'},800);
       }
       var div = document.getElementById(3);
     div.style.webkitTransform = 'rotateY(180deg)';
@@ -301,150 +332,7 @@ document.getElementById("p"+winner).innerHTML =" <h1><i class=' fa fa-car'></i><
     div.style.oTransform = 'rotateY(180deg)';
     div.style.transform = 'rotateY(180deg)';
     }
-  }
-  // Variables iniciales para escribir datos de la simulación
-  var numWin = 3;
-  var numLoss = 0;
-  var ratioValue = 0;
-        sessionStorage.setItem("wins", numWin);
-        sessionStorage.setItem("loses", numLoss);
-        var g = sessionStorage.getItem("Nombre");
-        var p = sessionStorage.getItem("Apellido");
-        /*Mostrar datos almacenados*/      
-        document.getElementById("gana").innerHTML = g;
-        document.getElementById("pierde").innerHTML = p;
-  var win = document.getElementById('gana'); win.innerHTML = numWin;
-  var loss = document.getElementById('pierde'); loss.innerHTML = numLoss;
-  var ratio = document.getElementById('prop'); ratio.innerHTML = (ratioValue * 100).toFixed(1);
-
-  var stats = document.getElementById('estado'); stats.innerHTML = 'Elige una puerta.';
-
-
-
-  // Random choose doors for car and goats
-  var carDoor = Math.floor(Math.random() * 3); // Door with car
-  var goatDoors = []; // Doors with goats
-  i = -1
-  while (++i < 3) {
-    if (i != carDoor) { goatDoors.push(i) };
-  }
-
-  imageCloseDoor.onload = function () {
-    context.drawImage(imageCloseDoor, 0, 0, 200, 350);
-    context.drawImage(imageCloseDoor, 200, 0, 200, 350);
-    context.drawImage(imageCloseDoor, 400, 0, 200, 350);
-  };
-
-  // Initialize loop variables (the loop is a click event listener)
-  var doors = [false, false, false]; // Open doors
-  var turn = 0; // Game state (details below)
-  var check = 0; // First door choosen
-  var openDoor = 0; // Door choosen after stay or switch
-
-  canvas.addEventListener('click', function (event) {
-    var rect = canvas.getBoundingClientRect();
-    var x = event.pageX - rect.left;
-    var y = event.pageY - rect.top;
-
-    /* Game states (turn):
-      -1: Game is finished
-       0: Player chose a door
-       1: Player chose to stay or switch
-    */
-    if (turn == -1) { // Reset game
-      doors = [false, false, false];
-      check = 0;
-      openDoor = 0;
-      carDoor = Math.floor(Math.random() * 3);
-      goatDoors = [];
-      i = -1
-      while (++i < 3) {
-        if (i != carDoor) { goatDoors.push(i) };
-      }
-      context.clearRect(0, 0, canvas.width, canvas.height)
-      context.drawImage(imageCar, carDoor * 200 + 46, 200, 120, 80);
-      goatDoors.forEach(function (d) {
-        context.drawImage(imageGoat, d * 200 + 68, 180, 101, 100);
-      });
-      context.drawImage(imageCloseDoor, 0, 0, 200, 350);
-      context.drawImage(imageCloseDoor, 200, 0, 200, 350);
-      context.drawImage(imageCloseDoor, 400, 0, 200, 350);
-      stats.innerHTML = 'Otra vez? Escoge una puerta.';
-      ++turn;
-    } else {
-      if (turn == 0) { // Check clicked door
-        check = click;
-
-        openDoor = Math.floor(Math.random() * 3);
-        while (openDoor == check || openDoor == carDoor) {
-          openDoor = Math.floor(Math.random() * 3);
-        }
-        doors[openDoor] = true;
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        context.drawImage(imageCar, carDoor * 200 + 46, 200, 120, 80);
-        goatDoors.forEach(function (d) {
-          context.drawImage(imageGoat, d * 200 + 68, 180, 101, 100);
-        });
-        i = -1;
-        while (++i < 3) {
-          if (!doors[i]) {
-            context.drawImage(imageCloseDoor, i * 200, 0, 200, 350);
-          }
-          else {
-            context.drawImage(imageOpenDoor, i * 200 - 2, 0, 212, 370);
-          }
-        }
-        context.drawImage(imageCheck, check * 200 + 75, 350, 50, 50);
-        stats.innerHTML = 'Cambias la puerta o te la quedas?'
-        ++turn;
-      }
-      else {
-        if (turn > 0) { // Open final door
-          open = 0;
-          if (x < 200 && x > 0) { open = 0; }
-          if (x < 400 && x > 200) { open = 1; }
-          if (x < 600 && x > 400) { open = 2; }
-
-          if (open == openDoor) {
-            return;
-          }
-          doors[open] = true;
-          context.clearRect(0, 0, canvas.width, canvas.height)
-          context.drawImage(imageCar, carDoor * 200 + 46, 200, 120, 80);
-          goatDoors.forEach(function (d) {
-            context.drawImage(imageGoat, d * 200 + 68, 180, 101, 100);
-          });
-          i = -1;
-          while (++i < 3) {
-            if (!doors[i]) {
-              context.drawImage(imageCloseDoor, i * 200, 0, 200, 350);
-            }
-            else {
-              context.drawImage(imageOpenDoor, i * 200 - 2, 0, 212, 370);
-            }
-          }
-          context.drawImage(imageCheck, check * 200 + 75, 350, 50, 50);
-
-          if (open == carDoor) {
-            ++numWin;
-            stats.innerHTML = 'Enhorabuena!';
-          }
-          else {
-            ++numLoss;
-            stats.innerHTML = 'Perdedor...';
-          }
-          ratioValue = 1.0 * numWin / (numWin + numLoss);
-
-          // Update results
-          win.innerHTML = numWin;
-          loss.innerHTML = numLoss;
-          ratio.innerHTML = (ratioValue * 100).toFixed(1);
-
-          turn = -1;
-        };
-      }
-    }
-  }, false);
+  } 
 </script>
 
 </html>
