@@ -20,7 +20,7 @@ detectarclick1 = () => {
       if(jugado==true){ 
         sessionStorage.wins = numWin;
         sessionStorage.loses = numLoss;
-        sessionStorage.ratio = ratioValue;
+        sessionStorage.ratio = parseInt(numWin)/(parseInt(numLoss)+parseInt(numWin));
         location.reload();}else{
     if(winner==1){ 
       numWin=(parseInt(1)+parseInt(numWin))*1;jugado=true;
@@ -57,7 +57,7 @@ detectarclick1 = () => {
       if(jugado==true){ 
         sessionStorage.wins = numWin;
         sessionStorage.loses = numLoss;
-        sessionStorage.ratio = ratioValue;
+        sessionStorage.ratio = parseInt(numWin)/(parseInt(numLoss)+parseInt(numWin));
         location.reload();}else{
     if(winner==2){ 
     stats.innerHTML = 'Felicidades!'
@@ -95,7 +95,7 @@ detectarclick1 = () => {
       if(jugado==true){ 
         sessionStorage.wins = numWin;
         sessionStorage.loses = numLoss;
-        sessionStorage.ratio = ratioValue;
+        sessionStorage.ratio = parseInt(numWin)/(parseInt(numLoss)+parseInt(numWin));
         location.reload();}else{
     if(winner==3){ 
     stats.innerHTML = 'Felicidades!'

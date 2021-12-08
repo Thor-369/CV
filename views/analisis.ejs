@@ -203,7 +203,7 @@
   var jugado = false;
 
   window.onload = function() {
-    if (sessionStorage.getItem("wins")!=undefined&&sessionStorage.getItem("loses")!=undefined&&sessionStorage.getItem("prop")!=undefined) {
+    if (!sessionStorage.getItem("wins") ) {
       numWin =  0;
     numLoss =  0;
     ratioValue = 0;
