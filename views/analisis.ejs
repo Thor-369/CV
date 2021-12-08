@@ -190,15 +190,15 @@ document.getElementById("p"+winner).innerHTML =" <h1><i class=' fa fa-car'></i><
 
  // Variables iniciales para escribir datos de la simulación
         
-  var numWin = sessionStorage.getItem("wins");
-  var numLoss = sessionStorage.getItem("loses");
-  var ratioValue = sessionStorage.getItem("ratio");
-  sessionStorage.setItem("wins", numWin);
-  sessionStorage.setItem("loses", numLoss);
-  sessionStorage.setItem("ratio", ratioValue);
+  var numWin = 0;
+  var numLoss = 0;
+  var ratioValue = 0;
+  numWin = sessionStorage.getItem("wins");
+  numLoss = sessionStorage.getItem("loses");
+  ratioValue = sessionStorage.getItem("ratio");
         
-        var g = sessionStorage.getItem("wins");
-        var p = sessionStorage.getItem("loses");
+        var g = numWin;
+        var p = numLoss;
         /*Mostrar datos almacenados*/      
         document.getElementById("gana").innerHTML = g;
         document.getElementById("pierde").innerHTML = p; 
@@ -238,16 +238,17 @@ document.getElementById("p"+winner).innerHTML =" <h1><i class=' fa fa-car'></i><
     setTimeout(function(){stats.innerHTML='Seguro que quieres esa puerta? vuelve a elegir '},800);
  
     }else{                              //SI YA HICE CLICK    - click en primera puerta por segunda vez
-      
+      if(jugado==true){location.reload();}else{
     if(winner==1){ 
       stats.innerHTML = 'Felicidades!'
       setTimeout(function(){stats.innerHTML='Has ganado un vehículo 0Km'},800);
       numWin=numWin+1;jugado=true;
       }else{ 
         stats.innerHTML = 'Perdiste!'
-        numLoss=numLoss+1;jugado=true;
+        numLoss=numLoss+1;
+        jugado=true;
     setTimeout(function(){stats.innerHTML='Solo te ganaste una cabra xD'},800);
-      }
+      }}
       var div = document.getElementById(1);
     div.style.webkitTransform = 'rotateY(180deg)';
     div.style.mozTransform = 'rotateY(180deg)';
@@ -275,7 +276,7 @@ document.getElementById("p"+winner).innerHTML =" <h1><i class=' fa fa-car'></i><
     setTimeout(function(){stats.innerHTML='Seguro que quieres esa puerta? vuelve a elegir '},800);
  
     }else{                              //SI YA HICE CLICK    - click en segunda puerta por segunda vez
-      
+      if(jugado==true){location.reload();}else{
     if(winner==2){ 
     stats.innerHTML = 'Felicidades!'
     setTimeout(function(){stats.innerHTML='Has ganado un vehículo 0Km'},800);
@@ -284,7 +285,7 @@ document.getElementById("p"+winner).innerHTML =" <h1><i class=' fa fa-car'></i><
         stats.innerHTML = 'Perdiste!'
         numLoss=numLoss+1;jugado=true;
     setTimeout(function(){stats.innerHTML='Solo te ganaste una cabra xD'},800);
-      }
+      }}
       var div = document.getElementById(2);
     div.style.webkitTransform = 'rotateY(180deg)';
     div.style.mozTransform = 'rotateY(180deg)';
@@ -315,7 +316,7 @@ document.getElementById("p"+winner).innerHTML =" <h1><i class=' fa fa-car'></i><
     setTimeout(function(){stats.innerHTML='Seguro que quieres esa puerta? vuelve a elegir '},800);
  
     }else{                              //SI YA HICE CLICK    - click en tercera puerta por segunda vez
-      
+      if(jugado==true){location.reload();}else{
     if(winner==3){ 
     stats.innerHTML = 'Felicidades!'
     setTimeout(function(){stats.innerHTML='Has ganado un vehículo 0Km'},800);
@@ -324,7 +325,7 @@ document.getElementById("p"+winner).innerHTML =" <h1><i class=' fa fa-car'></i><
         stats.innerHTML = 'Perdiste!'
         numLoss=numLoss+1;jugado=true;
     setTimeout(function(){stats.innerHTML='Solo te ganaste una cabra xD'},800);
-      }
+      }}
       var div = document.getElementById(3);
     div.style.webkitTransform = 'rotateY(180deg)';
     div.style.mozTransform = 'rotateY(180deg)';
