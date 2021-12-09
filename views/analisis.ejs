@@ -89,7 +89,7 @@
             <td id="prop">0%</td>
           </tr>
         </table>
-        <button onclick="limpiarSession()" class="mx-auto">Limpiar Score</button>
+        <a onclick="limpiarSession()" style="cursor: pointer;" class="mx-auto"><h1 class="text-danger"><i class="fa fa-trash"></i></h1></a>
         <div class="container text-center mx-auto"><img class="img-fluid " style="width: 12%; padding-top: 30px;"
             src="/images/Tow-D.png"> </div>
       </div>
@@ -167,12 +167,9 @@
 <script>
 
   function limpiarSession() {
-    sessionStorage.clear()
-    localStorage.clear()
-    Storage.clear()
-    window.open("#");
-    location.href = "#";
-    window.location.href = "#"
+    sessionStorage.clear();
+    localStorage.clear(); 
+    window.open('?','_self');
   }
 
   function boolean() {
