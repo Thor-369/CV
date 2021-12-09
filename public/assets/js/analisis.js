@@ -33,6 +33,11 @@ detectarclick1 = () => {
       }}
       var div = document.getElementById(1);
       div.style.webkitTransform = 'rotateY(180deg)';div.style.mozTransform = 'rotateY(180deg)';div.style.msTransform = 'rotateY(180deg)';div.style.oTransform = 'rotateY(180deg)';div.style.transform = 'rotateY(180deg)';
+      var div2 = document.getElementById(2);
+      div2.style.webkitTransform = 'rotateY(180deg)';div2.style.mozTransform = 'rotateY(180deg)';div2.style.msTransform = 'rotateY(180deg)';div2.style.oTransform = 'rotateY(180deg)';div2.style.transform = 'rotateY(180deg)';
+      var div2 = document.getElementById(3);
+      div2.style.webkitTransform = 'rotateY(180deg)';div2.style.mozTransform = 'rotateY(180deg)';div2.style.msTransform = 'rotateY(180deg)';div2.style.oTransform = 'rotateY(180deg)';div2.style.transform = 'rotateY(180deg)';
+      setTimeout(function(){window.open('?','_self')}, 20000);
     }
   }
   detectarclick2 = () => {
@@ -68,9 +73,13 @@ detectarclick1 = () => {
         numLoss=(parseInt(1)+parseInt(numLoss))*1;jugado=true;
     setTimeout(function(){stats.innerHTML='Solo te ganaste una cabra xD'},800);
       }}
-      var div = document.getElementById(2);
+      var div = document.getElementById(1);
       div.style.webkitTransform = 'rotateY(180deg)';div.style.mozTransform = 'rotateY(180deg)';div.style.msTransform = 'rotateY(180deg)';div.style.oTransform = 'rotateY(180deg)';div.style.transform = 'rotateY(180deg)';
-
+      var div2 = document.getElementById(2);
+      div2.style.webkitTransform = 'rotateY(180deg)';div2.style.mozTransform = 'rotateY(180deg)';div2.style.msTransform = 'rotateY(180deg)';div2.style.oTransform = 'rotateY(180deg)';div2.style.transform = 'rotateY(180deg)';
+      var div2 = document.getElementById(3);
+      div2.style.webkitTransform = 'rotateY(180deg)';div2.style.mozTransform = 'rotateY(180deg)';div2.style.msTransform = 'rotateY(180deg)';div2.style.oTransform = 'rotateY(180deg)';div2.style.transform = 'rotateY(180deg)';
+      setTimeout(function(){window.open('?','_self')}, 20000);
     }
   }
   detectarclick3 = () => {
@@ -106,7 +115,11 @@ detectarclick1 = () => {
         numLoss=(parseInt(1)+parseInt(numLoss))*1;jugado=true;
     setTimeout(function(){stats.innerHTML='Solo te ganaste una cabra xD'},800);
       }}
-      var div = document.getElementById(3); 
-    div.style.webkitTransform = 'rotateY(180deg)';div.style.mozTransform = 'rotateY(180deg)';div.style.msTransform = 'rotateY(180deg)';div.style.oTransform = 'rotateY(180deg)';div.style.transform = 'rotateY(180deg)';
-    }
+      var div = document.getElementById(1);
+      div.style.webkitTransform = 'rotateY(180deg)';div.style.mozTransform = 'rotateY(180deg)';div.style.msTransform = 'rotateY(180deg)';div.style.oTransform = 'rotateY(180deg)';div.style.transform = 'rotateY(180deg)';
+      var div2 = document.getElementById(2);
+      div2.style.webkitTransform = 'rotateY(180deg)';div2.style.mozTransform = 'rotateY(180deg)';div2.style.msTransform = 'rotateY(180deg)';div2.style.oTransform = 'rotateY(180deg)';div2.style.transform = 'rotateY(180deg)';
+      var div2 = document.getElementById(3);
+      div2.style.webkitTransform = 'rotateY(180deg)';div2.style.mozTransform = 'rotateY(180deg)';div2.style.msTransform = 'rotateY(180deg)';div2.style.oTransform = 'rotateY(180deg)';div2.style.transform = 'rotateY(180deg)';
+      setTimeout(function(){window.open('?','_self')}, 20000); }
   } 
