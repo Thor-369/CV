@@ -108,8 +108,9 @@ detectarclick1 = () => {
         location.reload();}else{
     if(winner==3){ 
     stats.innerHTML = 'Felicidades!'
-    setTimeout(function(){stats.innerHTML='Has ganado un vehículo 0Km'},800);
-    numWin=(parseInt(1)+parseInt(numWin))*1;jugado=true;
+    setTimeout(function(){stats.innerHTML='Has ganado un vehículo 0Km';
+  win.innerHTML(""+numWin)},800);
+    numWin=(parseInt(1)+parseInt(numWin))*1;jugado=true; 
       }else{ 
         stats.innerHTML = 'Perdiste!'
         numLoss=(parseInt(1)+parseInt(numLoss))*1;jugado=true;

@@ -36,9 +36,8 @@
     <div class="card mx-auto"
       style="border-radius: 30px;box-shadow: 0 6px 9px rgba(0,0,0,0.25),0 9px 8px rgba(0,0,0,0.22); background-color: rgba(0,0,0,0.25);">
 
-      <p class="h5 mx-auto text-white" id="estado">Elige una puerta</p>
-
-      <div class="row mx-auto   " style="border-radius: 30px;  padding-bottom: 10px; margin: 10px;">
+      <p class="h5 mx-auto text-white" id="estado" style="margin-bottom: -30px;">Elige una puerta</p>
+      <div class="row mx-auto   " style="border-radius: 30px;  padding-bottom: 10px; ">
 
         <div class="carta cartas" id="1" onclick="detectarclick1()" style="cursor:pointer">
           <div class="cara card bg-danger text-center text-white mx-auto ">
@@ -75,8 +74,8 @@
       <br>
       <div class="card bg-dark text-white row "
         style="padding: 30px; border-radius: 30px; box-shadow: 0 6px 9px rgba(0,0,0,0.25), 0 9px 8px rgba(0,0,0,0.22);">
+       
         <table class="col-md-4 mx-auto " style="padding: 30px; border-radius: 30px; ">
-          <h3 class="mx-auto">Resultados:</h3>
           <tr style="background-color: rgba(0,0,0,0.25);">
             <td>Ganadas</td>
             <td id="gana">0</td>
@@ -89,12 +88,14 @@
             <td>Éxito total: </td>
             <td id="prop">0%</td>
           </tr>
-        </table>
+        </table> 
         <a onclick="limpiarSession()" style="cursor: pointer;" class="mx-auto"><h1 class="text-danger"><i class="fa fa-trash"></i></h1></a>
         <div class="container text-center mx-auto"><img class="img-fluid " style="width: 12%; padding-top: 30px;"
             src="/images/Tow-D.png"> </div>
-      </div>
-      <p class="text-white ml-auto">autor: Pablo Torres</p>
+      </div><br>
+      <p class="col-md-6 text-white mx-auto">El juego comienza con las tres puertas cerradas. Solamente en una se oculta un choche nuevo, mientras que en las otras no hay nada. Después de que elijas una puerta, se abre una de las puertas vacias. Puedes elegir quedarte con tu primera selección o elegir la otra puerta que queda.</p>
+
+      <p class=" ml-auto">autor: Pablo Torres</p>
     </div>
 </body>
 
