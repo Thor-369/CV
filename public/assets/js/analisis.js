@@ -1,3 +1,5 @@
+
+
 var numeros= 1234567890;
 detectarclick1 = () => {
     if(click==0){ 
@@ -14,8 +16,9 @@ detectarclick1 = () => {
       var div = document.getElementById(perdedora);
       div.style.webkitTransform = 'rotateY(180deg)';div.style.mozTransform = 'rotateY(180deg)';div.style.msTransform = 'rotateY(180deg)';div.style.oTransform = 'rotateY(180deg)';div.style.transform = 'rotateY(180deg)';
     stats.innerHTML = "Buena elección!"
-    setTimeout(function(){stats.innerHTML='Seguro que quieres esa puerta? vuelve a elegir '},800);
- 
+    setTimeout(function(){stats.innerHTML='Seguro que quieres esa puerta? vuelve a elegir '},800); 
+    
+  
     }else{                              //SI YA HICE CLICK    - click en primera puerta por segunda vez
       if(jugado==true){ 
         sessionStorage.wins = numWin;
@@ -24,10 +27,12 @@ detectarclick1 = () => {
         location.reload();}else{
     if(winner==1){ 
       numWin=(parseInt(1)+parseInt(numWin))*1;jugado=true;
+      accionBlink(); 
       stats.innerHTML = 'Felicidades!'
       setTimeout(function(){stats.innerHTML='Has ganado un vehículo 0Km'},800);
       }else{ 
-        stats.innerHTML = 'Perdiste!'
+        stats.innerHTML = 'Perdiste!';
+        accionMee(); 
         numLoss=(parseInt(1)+parseInt(numLoss))*1;jugado=true;
     setTimeout(function(){stats.innerHTML='Solo te ganaste una cabra xD'},800);
       }}
@@ -40,6 +45,10 @@ detectarclick1 = () => {
       setTimeout(function(){window.open('?','_self')}, 20000);
     }
   }
+
+
+
+
   detectarclick2 = () => {
     if(click==0){ 
       jugado=false;                      //SI NO HICE NINGUN CLICK  - en click segunda puerta
@@ -65,11 +74,13 @@ detectarclick1 = () => {
         sessionStorage.ratio = parseInt(numWin)/(parseInt(numLoss)+parseInt(numWin));
         location.reload();}else{
     if(winner==2){ 
+      accionBlink(); 
     stats.innerHTML = 'Felicidades!'
     setTimeout(function(){stats.innerHTML='Has ganado un vehículo 0Km'},800);
     numWin=(parseInt(1)+parseInt(numWin))*1;jugado=true;
       }else{ 
-        stats.innerHTML = 'Perdiste!'
+        stats.innerHTML = 'Perdiste!';
+        accionMee(); 
         numLoss=(parseInt(1)+parseInt(numLoss))*1;jugado=true;
     setTimeout(function(){stats.innerHTML='Solo te ganaste una cabra xD'},800);
       }}
@@ -82,6 +93,10 @@ detectarclick1 = () => {
       setTimeout(function(){window.open('?','_self')}, 20000);
     }
   }
+
+
+
+
   detectarclick3 = () => {
     if(click==0){
       jugado=false;                       //SI NO HICE NINGUN CLICK  - click en tercera puerta
@@ -107,12 +122,14 @@ detectarclick1 = () => {
         sessionStorage.ratio = parseInt(numWin)/(parseInt(numLoss)+parseInt(numWin));
         location.reload();}else{
     if(winner==3){ 
+      accionBlink(); 
     stats.innerHTML = 'Felicidades!'
     setTimeout(function(){stats.innerHTML='Has ganado un vehículo 0Km';
   win.innerHTML(""+numWin)},800);
     numWin=(parseInt(1)+parseInt(numWin))*1;jugado=true; 
       }else{ 
-        stats.innerHTML = 'Perdiste!'
+        stats.innerHTML = 'Perdiste!';
+        accionMee(); 
         numLoss=(parseInt(1)+parseInt(numLoss))*1;jugado=true;
     setTimeout(function(){stats.innerHTML='Solo te ganaste una cabra xD'},800);
       }}
