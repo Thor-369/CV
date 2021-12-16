@@ -15,8 +15,12 @@ router.get('/desarrollo/deber', function(req, res, next) {
   res.render('deber', { title: 'Deber - Juan Pablo Torres',
   	 });
 }); 
-router.get('/analisis', function(req, res, next) {
+router.get('/simulador', function(req, res, next) {
   res.render('analisis', { title: 'Simulador Monty Hall',
+  	 });
+}); 
+router.get('/baraja', function(req, res, next) {
+  res.render('analisis2', { title: 'Baraja Random',
   	 });
 }); 
 
