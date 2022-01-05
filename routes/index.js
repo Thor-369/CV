@@ -23,5 +23,9 @@ router.get('/baraja', function(req, res, next) {
   res.render('analisis2', { title: 'Baraja Random',
   	 });
 }); 
+router.get('/oraculo', function(req, res, next) {
+  res.render('analisis3', { title: 'Prueba Tu suerte - Towerz Art',
+  	 });
+}); 
 
 module.exports = router;
