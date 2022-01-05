@@ -221,11 +221,111 @@ function accionBaraja() {
     var array= ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K','A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K','A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K','A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
   return {array:array, tipos:tipos}
 } 
-tour = () =>{
-  for (let i = 0; i < 13; i++) {
-    document.getElementById(id[i+1]).style.backgroundImage = "url('images/diamanteb.png')"; 
-  }
-  document.getElementById(id[i]).style.backgroundImage = "url('images/diamanteb.png')";
+tour = () =>{ 
+  document.getElementById(14).style.backgroundImage = "url('images/diamante.png')";
+  document.getElementById(18).style.backgroundImage = "url('images/diamante.png')";
+  document.getElementById(112).style.backgroundImage = "url('images/diamante.png')";
+  document.getElementById(23).style.backgroundImage = "url('images/diamante.png')";
+  document.getElementById(27).style.backgroundImage = "url('images/diamante.png')";
+  document.getElementById(211).style.backgroundImage = "url('images/diamante.png')";
+  document.getElementById(32).style.backgroundImage = "url('images/diamante.png')";
+  document.getElementById(36).style.backgroundImage = "url('images/diamante.png')";
+  document.getElementById(310).style.backgroundImage = "url('images/diamante.png')";
+  document.getElementById(41).style.backgroundImage = "url('images/diamante.png')";
+  document.getElementById(45).style.backgroundImage = "url('images/diamante.png')";
+  document.getElementById(49).style.backgroundImage = "url('images/diamante.png')";
+  document.getElementById(413).style.backgroundImage = "url('images/diamante.png')";
+
+  document.getElementById(14).innerHTML ="<h4 class='text-dark' style='padding-top:10px'>"+1+"</h4>"
+  document.getElementById(18).innerHTML ="<h4 class='text-dark' style='padding-top:10px'>"+2+"</h4>"
+  document.getElementById(112).innerHTML ="<h4 class='text-dark' style='padding-top:10px'>"+3+"</h4>"
+  document.getElementById(23).innerHTML ="<h4 class='text-dark' style='padding-top:10px'>"+4+"</h4>"
+  document.getElementById(27).innerHTML ="<h4 class='text-dark' style='padding-top:10px'>"+5+"</h4>"
+  document.getElementById(211).innerHTML ="<h4 class='text-dark' style='padding-top:10px'>"+6+"</h4>"
+  document.getElementById(32).innerHTML ="<h4 class='text-dark' style='padding-top:10px'>"+7+"</h4>"
+  document.getElementById(36).innerHTML ="<h4 class='text-dark' style='padding-top:10px'>"+8+"</h4>"
+  document.getElementById(310).innerHTML ="<h4 class='text-dark' style='padding-top:10px'>"+9+"</h4>"
+  document.getElementById(41).innerHTML ="<h4 class='text-dark' style='padding-top:10px'>"+10+"</h4>"
+  document.getElementById(45).innerHTML ="<h4 class='text-dark' style='padding-top:10px'>"+11+"</h4>"
+  document.getElementById(49).innerHTML ="<h4 class='text-dark' style='padding-top:10px'>"+12+"</h4>"
+  document.getElementById(413).innerHTML ="<h4 class='text-dark' style='padding-top:10px'>"+13+"</h4>"
+  setTimeout(function(){
+    document.getElementById(14).style.backgroundImage = "url('images/trebol.png')";
+    document.getElementById(18).style.backgroundImage = "url('images/trebol.png')";
+    document.getElementById(112).style.backgroundImage = "url('images/trebol.png')";
+    document.getElementById(23).style.backgroundImage = "url('images/trebol.png')";
+    document.getElementById(27).style.backgroundImage = "url('images/trebol.png')";
+    document.getElementById(211).style.backgroundImage = "url('images/trebol.png')";
+    document.getElementById(32).style.backgroundImage = "url('images/trebol.png')";
+    document.getElementById(36).style.backgroundImage = "url('images/trebol.png')";
+    document.getElementById(310).style.backgroundImage = "url('images/trebol.png')";
+    document.getElementById(41).style.backgroundImage = "url('images/trebol.png')";
+    document.getElementById(45).style.backgroundImage = "url('images/trebol.png')";
+    document.getElementById(49).style.backgroundImage = "url('images/trebol.png')";
+    document.getElementById(413).style.backgroundImage = "url('images/trebol.png')";
+  },1000)
+  setTimeout(function(){
+    
+    document.getElementById(14).style.backgroundImage = "url('images/corazon.png')";
+    document.getElementById(18).style.backgroundImage = "url('images/corazon.png')";
+    document.getElementById(112).style.backgroundImage = "url('images/corazon.png')";
+    document.getElementById(23).style.backgroundImage = "url('images/corazon.png')";
+    document.getElementById(27).style.backgroundImage = "url('images/corazon.png')";
+    document.getElementById(211).style.backgroundImage = "url('images/corazon.png')";
+    document.getElementById(32).style.backgroundImage = "url('images/corazon.png')";
+    document.getElementById(36).style.backgroundImage = "url('images/corazon.png')";
+    document.getElementById(310).style.backgroundImage = "url('images/corazon.png')";
+    document.getElementById(41).style.backgroundImage = "url('images/corazon.png')";
+    document.getElementById(45).style.backgroundImage = "url('images/corazon.png')";
+    document.getElementById(49).style.backgroundImage = "url('images/corazon.png')";
+    document.getElementById(413).style.backgroundImage = "url('images/corazon.png')";
+  },2000)
+  
+  setTimeout(function(){
+    document.getElementById(14).style.backgroundImage = "url('images/negras.png')";
+    document.getElementById(18).style.backgroundImage = "url('images/negras.png')";
+    document.getElementById(112).style.backgroundImage = "url('images/negras.png')";
+    document.getElementById(23).style.backgroundImage = "url('images/negras.png')";
+    document.getElementById(27).style.backgroundImage = "url('images/negras.png')";
+    document.getElementById(211).style.backgroundImage = "url('images/negras.png')";
+    document.getElementById(32).style.backgroundImage = "url('images/negras.png')";
+    document.getElementById(36).style.backgroundImage = "url('images/negras.png')";
+    document.getElementById(310).style.backgroundImage = "url('images/negras.png')";
+    document.getElementById(41).style.backgroundImage = "url('images/negras.png')";
+    document.getElementById(45).style.backgroundImage = "url('images/negras.png')";
+    document.getElementById(49).style.backgroundImage = "url('images/negras.png')";
+    document.getElementById(413).style.backgroundImage = "url('images/negras.png')";
+  },3000)
+  setTimeout(function(){  
+    document.getElementById(14).style.backgroundImage = "url('images/back.png')";
+    document.getElementById(18).style.backgroundImage = "url('images/back.png')";
+    document.getElementById(112).style.backgroundImage = "url('images/back.png')";
+    document.getElementById(23).style.backgroundImage = "url('images/back.png')";
+    document.getElementById(27).style.backgroundImage = "url('images/back.png')";
+    document.getElementById(211).style.backgroundImage = "url('images/back.png')";
+    document.getElementById(32).style.backgroundImage = "url('images/back.png')";
+    document.getElementById(36).style.backgroundImage = "url('images/back.png')";
+    document.getElementById(310).style.backgroundImage = "url('images/back.png')";
+    document.getElementById(41).style.backgroundImage = "url('images/back.png')";
+    document.getElementById(45).style.backgroundImage = "url('images/back.png')";
+    document.getElementById(49).style.backgroundImage = "url('images/back.png')";
+    document.getElementById(413).style.backgroundImage = "url('images/back.png')";
+  document.getElementById(14).innerHTML =" "
+  document.getElementById(18).innerHTML=" "
+  document.getElementById(112).innerHTML=" "
+  document.getElementById(23).innerHTML=" "
+  document.getElementById(27).innerHTML=" "
+  document.getElementById(211).innerHTML=" "
+  document.getElementById(32).innerHTML=" "
+  document.getElementById(36).innerHTML=" "
+  document.getElementById(310).innerHTML=" "
+  document.getElementById(41).innerHTML=" "
+  document.getElementById(45).innerHTML=" "
+  document.getElementById(49).innerHTML=" "
+  document.getElementById(413).innerHTML =" "
+  
+  
+},5000);
 } 
 llenarpilas = () =>{
   var g1=[], g2=[], g3=[], g4=[], g5=[], g6=[], g7=[], g8=[], g9=[], g10=[], g11=[], g12=[], g13=[];
