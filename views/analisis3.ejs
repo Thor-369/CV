@@ -27,26 +27,29 @@
   <title>
     <%= title %>
   </title>
+<script>
+  
+</script>
+
 </head>
 
-<body onload="tour()" id="top" style="background-image: linear-gradient(to right,rgb(41, 35, 35), rgb(43, 43, 51));">
+<body   id="top" style="background-image: linear-gradient(to right,rgb(41, 35, 35), rgb(43, 43, 51));">
   <div class=" container row   mx-auto"
     style="padding-left: 30px; border-radius: 15px;  box-shadow: 0 6px 9px rgba(0,0,0,0.25),0 9px 8px rgba(0,0,0,0.22); background-color: rgba(0,0,0,0.25);">
     <div class="container bg-dark text-white row col-md-4 mx-auto"
       style="padding-right: 15px; padding-left: 15px; border-radius: 30px; box-shadow: 0 6px 9px rgba(0,0,0,0.25), 0 9px 8px rgba(0,0,0,0.22);">
       <div class="" style="position: relative;background-color:000; opacity: 0.97" color-on-scroll="300">
         <h3>El Oráculo</h3>
-        <p> <a class="text-warning" style="cursor: pointer;" onclick="tour()"><i class="fa fa-lightbulb-o"></i></a> Este
-          minijuego pone a prueba tu suerte, empieza <i class="fa fa-play text-success"></i>con las cartas barajadas y
+        <p> Este
+          minijuego pone a prueba tu suerte. Consiste en ordenar todas las cartas, empieza <i class="fa fa-play text-success"></i>con las cartas barajadas y
           repartidas en 13 pilas, de las cuales se empieza dando la vuelta a la carta de en medio, colocando la carta
-          debajo del grupo al que pertenece y levantando la primera de la pila siguiente de acuerdo al número de la
-          carta. <br> Mientras menos ejecuciones necesites para completar un juego es porque más suerte tienes. <i
-            class="fa fa-smile-o text-warning"></i> <br>
-          -Los pasos del juego son automáticos <br>
+          debajo del grupo al que pertenece y levantando la primera de la pila siguiente de acuerdo al <a class="text-warning" style="cursor: pointer;" onclick="tour()">número<i class="fa fa-lightbulb-o"></i></a>  de la
+          carta. <br> Mientras menos ejecuciones necesites para completar un juego, es porque más suerte tienes. <i
+            class="fa fa-smile-o text-warning"></i> <br> 
           -Las cartas se generan aleatoriamente en cada juego <br>
           -Forzar Ganada <i class="fa fa-magic text-warning"></i> </p>
       </div>
-      <table class="col-md-4 mx-auto " style="padding: 20px; border-radius: 15px; ">
+      <table class="col-md-4 mx-auto " style="padding: 20px; border-radius: 15px; "> 
         <tbody>
           <tr style="background-color: rgba(0,0,0,0.25);">
             <td style=" border-radius: 15px; padding-left: 15px;padding-right: 15px;">Ejecuciones</td>
@@ -67,11 +70,14 @@
             </td>
           </tr>
         </tbody>
+        
+      <h3 class="h3 text-warning " style="position: relative; align-self: center; " id="dialogo"></h3>
       </table>
 
     </div>
     <div class="  mx-auto cards" style="border-radius: 30px;  padding-bottom: 10px;   position: relative;">
-      <div style="position: sticky; margin-left: 50px;" class="row">
+      
+      <div style="position: sticky; margin-left: 50px;" class="row" id="g1">
         <div class="carta">
           <div class="cara cardx  text-center text-white mx-auto img-fluid " id="11" name="1">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -95,7 +101,7 @@
       </div>
 
 
-      <div style="position: sticky;margin-left: 150px; margin-top: -120px; " class="row">
+      <div style="position: sticky;margin-left: 150px; margin-top: -120px; " class="row" id="g2">
         <div class="carta ">
           <div class="cara cardx text-center text-white mx-auto " id="15" name="5">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -119,7 +125,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 250px; margin-top: -120px;" class="row">
+      <div style="position: sticky; margin-left: 250px; margin-top: -120px;" class="row"id="g3">
         <div class="carta">
           <div class="cara cardx  text-center text-white mx-auto " id="19" name="9">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -143,7 +149,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 350px; margin-top: -120px;" class="row">
+      <div style="position: sticky; margin-left: 350px; margin-top: -120px;" class="row"id="g4">
         <div class="carta">
           <div class="cara cardx  text-center text-white mx-auto " id="113" name="13">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -167,7 +173,7 @@
       </div>
 
 
-      <div class="row" style="position: sticky; margin-left: 350px;">
+      <div class="row" style="position: sticky; margin-left: 350px;" id="g5">
         <div class="carta">
           <div class="cara cardx text-center text-white mx-auto " id="24" name="17">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -191,7 +197,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 350px;" class="row">
+      <div style="position: sticky; margin-left: 350px;" class="row" id="g6">
         <div class="carta">
           <div class="cara cardx text-center text-white mx-auto " id="28" name="21">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -215,7 +221,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 350px;" class="row">
+      <div style="position: sticky; margin-left: 350px;" class="row"id="g7">
         <div class="carta">
           <div class="cara cardx text-center text-white mx-auto " id="212" name="25">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -239,7 +245,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 250px; margin-top: -120px;" class="row">
+      <div style="position: sticky; margin-left: 250px; margin-top: -120px;" class="row"id="g8">
         <div class="carta">
           <div class="cara cardx text-center text-white mx-auto " id="33" name="29">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -263,7 +269,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 150px; margin-top: -120px;" class="row">
+      <div style="position: sticky; margin-left: 150px; margin-top: -120px;" class="row"id="g9">
         <div class="carta">
           <div class="cara cardx text-center text-white mx-auto " id="37" name="33">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -287,7 +293,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 50px; margin-top: -120px;" class="row">
+      <div style="position: sticky; margin-left: 50px; margin-top: -120px;" class="row"id="g10">
         <div class="carta">
           <div class="cara cardx text-center text-white mx-auto " id="311" name="37">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -311,7 +317,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 50px; margin-top: -240px;" class="row">
+      <div style="position: sticky; margin-left: 50px; margin-top: -240px;" class="row"id="g11">
         <div class="carta">
           <div class="cara cardx text-center text-white mx-auto " id="42" name="41">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -335,7 +341,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 50px; margin-top: -240px;" class="row">
+      <div style="position: sticky; margin-left: 50px; margin-top: -240px;" class="row"id="g12">
         <div class="carta">
           <div class="cara cardx text-center text-white mx-auto " id="46" name="45">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -359,7 +365,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 200px; margin-top: -80px; padding-bottom: 200px; " class="row">
+      <div style="position: sticky; margin-left: 200px; margin-top: -80px; padding-bottom: 200px; " class="row"id="g13">
         <div class="carta ">
           <div class="cara cardx text-center text-white mx-auto " id="410" name="49">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -379,54 +385,23 @@
           <div class="cara cardx text-center text-white mx-auto" id="413" name="52">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
           </div>
-        </div>
-      </div>
-      <br>
-    </div>
+        </div> 
+      </div> 
+      <br><div class="  row mx-auto"  style=" padding-left: 95px; "><a class="col-md-3" href=""><i class="fa fa-arrow-left"></i></a><a class="col-md-3" href=""><i class="fa fa-play" id="play"></i> </a><a class="col-md-3" href=""><i class="fa fa-arrow-right"></i></a> </div>
+       </div>
     <audio id="cards" style="opacity: 0%;" src="/media/cards.mp3"></audio>
 
 
-
-    <style>
-      .carta {
-        margin-left: 5px;
-        width: 80px;
-        padding: 5px;
-        height: 120px;
-      }
-
-      .cardx {
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-        background-image: url('images/back.png');
-      }
-
-      .ultima:hover {
-        transform: scale(1.5);
-      }
-
-      .cards {
-        margin-top: 30px;
-      }
-
-      div {
-        -webkit-transition: all 0.5s ease-in-out;
-        -moz-transition: all 0.5s ease-in-out;
-        -o-transition: all 0.5s ease-in-out;
-        transition: all 0.5s ease-in-out;
-      }
-    </style>
+ 
 
   </div>
-</body>
-
+</body> 
 <style>
   .carta {
     margin-left: 3px;
-    width: 80px;
+    width: 77px;
     padding-right: 2px;
-    margin-left: -75px;
+    margin-left: -71px;
     height: 120px;
   }
 
@@ -440,9 +415,12 @@
   .ultima:hover {
     transform: scale(1.5);
   }
+  .carta:hover {
+    transform: scale(1.5);
+  }
 
   .cards {
-    margin-top: 0px;
+    margin-top: 0px; 
   }
 
   div {
