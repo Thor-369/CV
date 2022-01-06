@@ -269,62 +269,62 @@ find = () => {
       n1.push(auxNum); 
       t1.push(auxTp);  
 
-    }  if (between(q, 3, 7)) {
+    }  if (between(q, 4, 7)) {
       id2.push(auxid);  
       n2.push(auxNum); 
       t2.push(auxTp);  
 
-    } if (between(q, 7, 11)) {
+    } if (between(q, 8, 11)) {
       id3.push(auxid);  
       n3.push(auxNum); 
       t3.push(auxTp);  
       
-    } if (between(q, 11, 15)) {
+    } if (between(q, 12, 15)) {
       id4.push(auxid);  
       n4.push(auxNum); 
       t4.push(auxTp);  
       
-    } if (between(q, 15,19 )) {
+    } if (between(q, 16,19 )) {
       id5.push(auxid);  
       n5.push(auxNum); 
       t5.push(auxTp);  
       
-    } if (between(q, 19, 23)) {
+    } if (between(q, 20, 23)) {
       id6.push(auxid);  
       n6.push(auxNum); 
       t6.push(auxTp);  
       
-    } if (between(q, 23, 27)) {
+    } if (between(q, 24, 27)) {
       id7.push(auxid);  
       n7.push(auxNum); 
       t7.push(auxTp);  
       
-    } if (between(q, 27, 31)) {
+    } if (between(q, 28, 31)) {
       id8.push(auxid);  
       n8.push(auxNum); 
       t8.push(auxTp);  
       
-    } if (between(q, 31, 35)) {
+    } if (between(q, 32, 35)) {
       id9.push(auxid);  
       n9.push(auxNum); 
       t9.push(auxTp);  
       
-    } if (between(q, 35, 39)) {
+    } if (between(q, 36, 39)) {
       id10.push(auxid);  
       n10.push(auxNum); 
       t10.push(auxTp);  
       
-    } if (between(q, 39, 43)) {
+    } if (between(q, 40, 43)) {
       id11.push(auxid);  
       n11.push(auxNum); 
       t11.push(auxTp);  
       
-    } if (between(q, 43, 47)) {
+    } if (between(q, 44, 47)) {
       id12.push(auxid);  
       n12.push(auxNum); 
       t12.push(auxTp);  
       
-    } if (between(q, 47, 51)) {
+    } if (between(q, 48, 51)) {
       id13.push(auxid);  
       n13.push(auxNum); 
       t13.push(auxTp);   
