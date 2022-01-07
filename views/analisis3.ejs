@@ -31,7 +31,7 @@
 <script>
   $(function () {
         $(document).on('click', '.cara', function () {
-               alert($(this).attr('id'));
+               console.log($(this).attr('id'));
                idarranque=$(this).attr('id');
             });
         }); 
@@ -75,14 +75,12 @@
                 onclick="ordenar()"> <i class="fa fa-magic"></i> </a>
             </td>
           </tr>
-        </tbody>
-        
-      <h3 class="h3 text-warning " style="position: relative; align-self: center; " id="dialogo"></h3>
+        </tbody> 
       </table>
 
     </div>
     <div class="  mx-auto cards" style="border-radius: 30px;  padding-bottom: 10px;   position: relative;">
-      
+      <p  id="dialogo"></p>
       <div style="position: static; margin-left: 30px;" class="row" id="g1">
         <div class="carta">
           <div class="cara cardx  text-center text-white mx-auto img-fluid " id="11" name="1">
@@ -393,7 +391,7 @@
           </div>
         </div> 
       </div> 
-      <br><div class="  row mx-auto"  style=" padding-left: 30px; "> <a class="a col-md-3" style="cursor: pointer;" onclick="next()"><i class="fa fa-play" id="play"></i> </a><a class="col-md-3" href=""><i class="fa fa-arrow-right"></i></a> </div>
+      <br>  
        </div>
     <audio id="cards" style="opacity: 0%;" src="/media/cards.mp3"></audio>
 

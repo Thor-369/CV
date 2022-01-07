@@ -94,6 +94,9 @@ ordenar = () => {
 var auxNumber="";
 var idarranque="11";
 next =()=>{
+  
+  document.getElementById("dialogo").innerHTML="<h5   class='container nav navbar bg-warning  '>Selecciona la primera carta del siguiente monton<h5>"; 
+  
 ///Funcion para las cartas 
 //document.getElementById("12").style.scale = "150%";  
 auxNumber=document.getElementById(idarranque).textContent;
@@ -252,7 +255,9 @@ show =()=>{
       html=""; 
      }
   }
-  document.getElementById("dialogo").innerHTML="Ahora, selecciona la carta de en medio para continuar"; 
+  
+  document.getElementById("dialogo").innerHTML="<h5   class='container nav navbar bg-success  '>Selecciona la carta del medio para continuar<h5>"; 
+   
    n1 = [], n2 = [], n3 = [], n4 = [], n5 = [], n6 = [], n7 = [], n8 = [], n9 = [], n10 = [], n11 = [], n12 = [], n13 = [];
    t1 = [], t2 = [], t3 = [], t4 = [], t5 = [], t6 = [], t7 = [], t8 = [], t9 = [], t10 = [], t11 = [], t12 = [], t13 = [];
 }
