@@ -28,13 +28,27 @@
   <title>
     <%= title %>
   </title>
-<script>
-  $(function () {
+<script> 
+ var one=0
+  triger =()=>{
+    if (one==1) {
+      
+    } else {
+      one=1;
+    $(function () {
         $(document).on('click', '.cara', function () {
                console.log($(this).attr('id'));
                idarranque=$(this).attr('id');
+              
+               setTimeout(function(){   
+                 idarranque==$(this).attr('id'); 
+                 siguiente(idarranque);
+              },5);
             });
         }); 
+    }
+     
+  } 
 </script>
 
 </head>
@@ -370,8 +384,8 @@
 
 
       <div style="position: static; margin-left: 170px; margin-top: -80px; padding-bottom: 200px; " class="row"id="g13">
-        <div class="carta ">
-          <div class="cara cardx text-center text-white mx-auto " id="410" name="49">
+        <div class="carta " id="410" >
+          <div class="cara cardx text-center text-white mx-auto "name="49">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
           </div>
         </div>
@@ -406,7 +420,7 @@
     width: 76px;
     padding-right: 2px;
     margin-left: -71px;
-    height: 120px;
+    height: 120px; 
   }
 
   .cardx {
