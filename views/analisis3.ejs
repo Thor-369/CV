@@ -14,6 +14,7 @@
   <link rel="icon" href="\images\icons\Kingdom.png" type="image/x-icon">
   <link href="assets/css/bootstrap.min.css?ver=1.1.0" rel="stylesheet">
   <link href="stylesheets/kit.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <noscript>
     <style type="text/css">
@@ -28,7 +29,12 @@
     <%= title %>
   </title>
 <script>
-  
+  $(function () {
+        $(document).on('click', '.cara', function () {
+               alert($(this).attr('id'));
+               idarranque=$(this).attr('id');
+            });
+        }); 
 </script>
 
 </head>
@@ -77,7 +83,7 @@
     </div>
     <div class="  mx-auto cards" style="border-radius: 30px;  padding-bottom: 10px;   position: relative;">
       
-      <div style="position: sticky; margin-left: 50px;" class="row" id="g1">
+      <div style="position: static; margin-left: 30px;" class="row" id="g1">
         <div class="carta">
           <div class="cara cardx  text-center text-white mx-auto img-fluid " id="11" name="1">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -101,7 +107,7 @@
       </div>
 
 
-      <div style="position: sticky;margin-left: 150px; margin-top: -120px; " class="row" id="g2">
+      <div style="position: static;margin-left: 120px; margin-top: -120px; " class="row" id="g2">
         <div class="carta ">
           <div class="cara cardx text-center text-white mx-auto " id="15" name="5">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -125,7 +131,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 250px; margin-top: -120px;" class="row"id="g3">
+      <div style="position: static; margin-left: 210px; margin-top: -120px;" class="row"id="g3">
         <div class="carta">
           <div class="cara cardx  text-center text-white mx-auto " id="19" name="9">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -149,7 +155,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 350px; margin-top: -120px;" class="row"id="g4">
+      <div style="position: static; margin-left: 300px; margin-top: -120px;" class="row"id="g4">
         <div class="carta">
           <div class="cara cardx  text-center text-white mx-auto " id="113" name="13">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -173,7 +179,7 @@
       </div>
 
 
-      <div class="row" style="position: sticky; margin-left: 350px;" id="g5">
+      <div class="row" style="position: static; margin-left: 300px;" id="g5">
         <div class="carta">
           <div class="cara cardx text-center text-white mx-auto " id="24" name="17">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -197,7 +203,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 350px;" class="row" id="g6">
+      <div style="position: static; margin-left: 300px;" class="row" id="g6">
         <div class="carta">
           <div class="cara cardx text-center text-white mx-auto " id="28" name="21">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -221,7 +227,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 350px;" class="row"id="g7">
+      <div style="position: static; margin-left: 300px;" class="row"id="g7">
         <div class="carta">
           <div class="cara cardx text-center text-white mx-auto " id="212" name="25">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -245,7 +251,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 250px; margin-top: -120px;" class="row"id="g8">
+      <div style="position: static; margin-left: 210px; margin-top: -120px;" class="row"id="g8">
         <div class="carta">
           <div class="cara cardx text-center text-white mx-auto " id="33" name="29">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -269,7 +275,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 150px; margin-top: -120px;" class="row"id="g9">
+      <div style="position: static; margin-left: 120px; margin-top: -120px;" class="row"id="g9">
         <div class="carta">
           <div class="cara cardx text-center text-white mx-auto " id="37" name="33">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -293,7 +299,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 50px; margin-top: -120px;" class="row"id="g10">
+      <div style="position: static; margin-left: 30px; margin-top: -120px;" class="row"id="g10">
         <div class="carta">
           <div class="cara cardx text-center text-white mx-auto " id="311" name="37">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -317,7 +323,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 50px; margin-top: -240px;" class="row"id="g11">
+      <div style="position: static; margin-left: 30px; margin-top: -240px;" class="row"id="g11">
         <div class="carta">
           <div class="cara cardx text-center text-white mx-auto " id="42" name="41">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -341,7 +347,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 50px; margin-top: -240px;" class="row"id="g12">
+      <div style="position: static; margin-left: 30px; margin-top: -240px;" class="row"id="g12">
         <div class="carta">
           <div class="cara cardx text-center text-white mx-auto " id="46" name="45">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -365,7 +371,7 @@
       </div>
 
 
-      <div style="position: sticky; margin-left: 200px; margin-top: -80px; padding-bottom: 200px; " class="row"id="g13">
+      <div style="position: static; margin-left: 170px; margin-top: -80px; padding-bottom: 200px; " class="row"id="g13">
         <div class="carta ">
           <div class="cara cardx text-center text-white mx-auto " id="410" name="49">
             <p style="padding-top: 30px;padding-bottom: 30px;"> </p>
@@ -387,7 +393,7 @@
           </div>
         </div> 
       </div> 
-      <br><div class="  row mx-auto"  style=" padding-left: 95px; "><a class="col-md-3" href=""><i class="fa fa-arrow-left"></i></a><a class="col-md-3" href=""><i class="fa fa-play" id="play"></i> </a><a class="col-md-3" href=""><i class="fa fa-arrow-right"></i></a> </div>
+      <br><div class="  row mx-auto"  style=" padding-left: 30px; "> <a class="a col-md-3" style="cursor: pointer;" onclick="next()"><i class="fa fa-play" id="play"></i> </a><a class="col-md-3" href=""><i class="fa fa-arrow-right"></i></a> </div>
        </div>
     <audio id="cards" style="opacity: 0%;" src="/media/cards.mp3"></audio>
 
@@ -399,7 +405,7 @@
 <style>
   .carta {
     margin-left: 3px;
-    width: 77px;
+    width: 76px;
     padding-right: 2px;
     margin-left: -71px;
     height: 120px;
@@ -407,8 +413,8 @@
 
   .cardx {
     background-size: cover;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     background-image: url('images/back.png');
   }
 
