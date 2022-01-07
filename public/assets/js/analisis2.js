@@ -454,7 +454,7 @@ tour = () => {
   document.getElementById(49).style.backgroundImage = "url('images/diamanteb.png')";
   document.getElementById(413).style.backgroundImage = "url('images/diamanteb.png')";
 
-  document.getElementById(14).innerHTML = "<h4 class='text-dark' style='padding-top:10px'>" + 1 + "</h4>"
+  document.getElementById(14).innerHTML = "<h4 class='text-dark' style='padding-top:10px'>" + "A" + "</h4>"
   document.getElementById(18).innerHTML = "<h4 class='text-dark' style='padding-top:10px'>" + 2 + "</h4>"
   document.getElementById(112).innerHTML = "<h4 class='text-dark' style='padding-top:10px'>" + 3 + "</h4>"
   document.getElementById(23).innerHTML = "<h4 class='text-dark' style='padding-top:10px'>" + 4 + "</h4>"
