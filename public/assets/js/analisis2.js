@@ -92,7 +92,12 @@ ordenar = () => {
   }
 }
  var score=0;
+ var contador=0;
 siguiente=(idarranque)=>{ 
+  contador=contador+1;
+  if (contador>=54) {
+    alert("Ganaste")
+  }  
   var auxNumber=document.getElementById(idarranque).textContent; 
   var carta="";  
   var ultimonumero=0; 
