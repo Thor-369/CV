@@ -123,67 +123,67 @@ siguiente=(idarranque)=>{
   //document.getElementById("12").style.scale = "150%";   
   grupo1 = document.getElementById("g1");  grupo2 = document.getElementById("g2");  grupo3 = document.getElementById("g3");  grupo4 = document.getElementById("g4");  grupo5 = document.getElementById("g5");  grupo6 = document.getElementById("g6");  grupo7 = document.getElementById("g7");  grupo8 = document.getElementById("g8");  grupo9 = document.getElementById("g9");  grupo10 = document.getElementById("g10");  grupo11 = document.getElementById("g11");  grupo12 = document.getElementById("g12");  grupo13 = document.getElementById("g13"); 
     if (auxNumber == "A ") {  
-    carta = "<div class=\"carta\" > <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage+"'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='triger()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" + auxNumber + " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>A</p></div></div>";
+    carta = "<div class=\"carta\" > <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage+"'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='perdiste()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" + auxNumber + " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>A</p></div></div>";
     grupo1.innerHTML = carta + grupo1.innerHTML;  
     var el = document.getElementsByName(idarranque)[0];el.parentNode.removeChild(el); //BORRAR CARTA SELECCIONADA
     contador=contador+1; 
   }  else if(auxNumber == "2 ") {
-    carta = "<div class='carta' > <div style='background-image: "+document.getElementById(idarranque).style.backgroundImage+"'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='triger()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" + auxNumber + " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>2</p></div></div>";
+    carta = "<div class='carta' > <div style='background-image: "+document.getElementById(idarranque).style.backgroundImage+"'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='perdiste()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" + auxNumber + " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>2</p></div></div>";
     grupo2.innerHTML = carta + grupo2.innerHTML;
     var el = document.getElementsByName(idarranque)[0];el.parentNode.removeChild(el); //BORRAR CARTA SELECCIONADA
     contador=contador+1;
   } else if (auxNumber == "3 ") {
-    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='triger()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" + auxNumber+ " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>3</p></div></div>";
+    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='perdiste()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" + auxNumber+ " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>3</p></div></div>";
     grupo3.innerHTML = carta + grupo3.innerHTML; 
     var el = document.getElementsByName(idarranque)[0];el.parentNode.removeChild(el); //BORRAR CARTA SELECCIONADA
     contador=contador+1;
   } else if(auxNumber == "4 ") {
-    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='triger()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" + auxNumber + " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>4</p></div></div>";
+    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='perdiste()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" + auxNumber + " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>4</p></div></div>";
     grupo4.innerHTML = carta + grupo4.innerHTML; 
     var el = document.getElementsByName(idarranque)[0];el.parentNode.removeChild(el); //BORRAR CARTA SELECCIONADA
     contador=contador+1;
   } else if (auxNumber == "5 ") {
-    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='triger()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" + auxNumber + " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>5</p></div></div>";
+    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='perdiste()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" + auxNumber + " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>5</p></div></div>";
     grupo5.innerHTML = carta + grupo5.innerHTML; 
     var el = document.getElementsByName(idarranque)[0];el.parentNode.removeChild(el); //BORRAR CARTA SELECCIONADA
     contador=contador+1;
   } else if(auxNumber == "6 ") {
-    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='triger()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" +auxNumber+ " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>6</p></div></div>";
+    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='perdiste()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" +auxNumber+ " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>6</p></div></div>";
     grupo6.innerHTML = carta + grupo6.innerHTML; 
     var el = document.getElementsByName(idarranque)[0];el.parentNode.removeChild(el); //BORRAR CARTA SELECCIONADA 
     contador=contador+1;
   } else if(auxNumber == "7 ") {
-    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='triger()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" +auxNumber + " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>7</p></div></div>";
+    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='perdiste()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" +auxNumber + " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>7</p></div></div>";
     grupo7.innerHTML = carta + grupo7.innerHTML; 
     var el = document.getElementsByName(idarranque)[0];el.parentNode.removeChild(el); //BORRAR CARTA SELECCIONADA
     contador=contador+1;
   } else if(auxNumber == "8 ") {
-    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='triger()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" +auxNumber + " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>8</p></div></div>";
+    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='perdiste()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" +auxNumber + " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>8</p></div></div>";
     grupo8.innerHTML = carta + grupo8.innerHTML; 
     var el = document.getElementsByName(idarranque)[0];el.parentNode.removeChild(el); //BORRAR CARTA SELECCIONADA
     contador=contador+1;
   } else if (auxNumber == "9 ") {
-    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='triger()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" + auxNumber + " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>9</p></div></div>";
+    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='perdiste()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" + auxNumber + " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>9</p></div></div>";
     grupo9.innerHTML = carta + grupo9.innerHTML; 
     var el = document.getElementsByName(idarranque)[0];el.parentNode.removeChild(el); //BORRAR CARTA SELECCIONADA
     contador=contador+1;
   } else if (auxNumber == "10 ") {
-    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='triger()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" +auxNumber+ " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>10</p></div></div>";
+    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='perdiste()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" +auxNumber+ " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>10</p></div></div>";
     grupo10.innerHTML = carta + grupo10.innerHTML; 
     var el = document.getElementsByName(idarranque)[0];el.parentNode.removeChild(el); //BORRAR CARTA SELECCIONADA
     contador=contador+1;
   } else if(auxNumber == "J ") {
-    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='triger()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" +auxNumber + " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>J</p></div></div>";
+    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='perdiste()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>" +auxNumber + " </p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>J</p></div></div>";
     grupo11.innerHTML = carta + grupo11.innerHTML; 
     var el = document.getElementsByName(idarranque)[0];el.parentNode.removeChild(el); //BORRAR CARTA SELECCIONADA
     contador=contador+1;
   } else if(auxNumber == "Q ") {
-    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='triger()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>"+auxNumber+"</p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>Q</p></div></div>";
+    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='perdiste()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>"+auxNumber+"</p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>Q</p></div></div>";
     grupo12.innerHTML = carta + grupo12.innerHTML; 
     var el = document.getElementsByName(idarranque)[0];el.parentNode.removeChild(el); //BORRAR CARTA SELECCIONADA
     contador=contador+1;
   } else if(auxNumber == "K ") {
-    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='triger()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>"+auxNumber+"</p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>K</p></div></div>";
+    carta = "<div class=\"carta\"> <div style='background-image: " + document.getElementById(idarranque).style.backgroundImage + "'; class=\"cara cardx  text-center text-white mx-auto img-fluid\" onclick='perdiste()' id='" + idarranque + "'><p class='text-dark' style='padding-top: 30px;padding-bottom: 30px;'>"+auxNumber+"</p><p class='bg-danger' style='padding-left:30px;padding-top:8px;border-radius: 50px;box-shadow: 0 0 1px #2196F3;'>K</p></div></div>";
     grupo13.innerHTML = carta + grupo13.innerHTML; 
     var el = document.getElementsByName(idarranque)[0];el.parentNode.removeChild(el); //BORRAR CARTA SELECCIONADA
     contador=contador+1;
@@ -361,6 +361,10 @@ var t1 = [], t2 = [], t3 = [], t4 = [], t5 = [], t6 = [], t7 = [], t8 = [], t9 =
 var id1 = [], id2 = [], id3 = [], id4 = [], id5 = [], id6 = [], id7 = [], id8 = [], id9 = [], id10 = [], id11 = [], id12 = [], id13 = [];
 var exe = 0;
 find = () => {
+  if (document.getElementsByName("toast")[0]) {
+    alert("borrao")
+  var el = document.getElementsByName("toast")[0];el.parentNode.removeChild(el); //BORRAR CARTA SELECCIONADA 
+  }  
   contador=0;
   exe = exe + 1;
   document.getElementById("exe").innerHTML = exe;

@@ -49,21 +49,37 @@
     }
      
   } 
+  perdiste=()=>{
+    document.getElementById("top").innerHTML="<div class='toast bg-dark col-md-3 ml-auto' style='border-rounded:30px;  margin-bottom:30px' role='alert' aria-live='assertive' aria-atomic='true'>"+
+    "<div class='toast-header'>"+
+    "<img src='/images/Tow-W.png' style='width:80px; heigth:auto' class='rounded mr-2' alt='...'>"+
+    "<strong class='mr-auto'>Towerz Art</strong>"+
+    " <small>Justo Ahora</small>"+
+    " <button type='button' class='ml-2 mb-1 close' data-dismiss='toast' aria-label='Close'>"+
+    "    <span aria-hidden='true'>&times;</span>"+
+    "  </button>"+
+    "</div>"+
+    "<div class='toast-body text-white'>"+
+    "  Perdiste!  <button class='btn btn-sm btn-success' onclick='find()'>Volver a jugar</button>"+
+    " </div>"+
+    "</div>"+document.getElementById("top").innerHTML; 
+    setTimeout(function(){
+      location.href = "/oraculo";
+    },5000);
+  }
 </script>
 
 </head>
 
 <body   id="top" style="background-image: linear-gradient(to right,rgb(41, 35, 35), rgb(43, 43, 51));">
   <div class=" row  container mx-auto "
-    style="padding-left: 30px; border-radius: 15px;  box-shadow: 0 6px 9px rgba(0,0,0,0.25),0 9px 8px rgba(0,0,0,0.22); background-color: rgba(0,0,0,0.25);">
+    style="padding-left: 30px; border-radius: 15px;  box-shadow: 0 6px 9px rgba(0,0,0,0.25),0 9px 8px rgba(0,0,0,0.22); background-image: linear-gradient(to right,rgb(21, 77, 15), rgb(32, 82, 4));">
     <div class="container bg-dark text-white row col-md-4 mx-auto"
       style="padding-right: 15px; padding-left: 15px; border-radius: 30px; box-shadow: 0 6px 9px rgba(0,0,0,0.25), 0 9px 8px rgba(0,0,0,0.22);">
-      <div class="" style="position: relative;background-color:000; opacity: 0.97" color-on-scroll="300">
+      <div class="" style="position: relative; opacity: 0.97" color-on-scroll="300">
         <h3>El Oráculo</h3>
-        <p class="container"> Este minijuego pone a prueba tu suerte. Consiste en ordenar todas las cartas, empieza <i class="fa fa-play text-success"></i>con las cartas barajadas y
-          repartidas en 13 pilas, de las cuales se empieza dando la vuelta a la carta de en medio, colocando la carta
-          debajo del grupo al que pertenece y levantando la primera de la pila siguiente de acuerdo al <a class="text-warning" style="cursor: pointer;" onclick="tour()">número<i class="fa fa-lightbulb-o"></i></a>  de la
-          carta. <br> Mientras menos ejecuciones necesites para completar un juego, es porque más suerte tienes. <i
+        <p class="container"> Este minijuego pone a prueba tu suerte. Consiste en ordenar todas las cartas, El juego empieza <i style="cursor: pointer;"  onclick="find()" class="fa fa-play text-success"></i>con las cartas barajadas y
+          repartidas en 13 pilas, el jugador inicia tomando la carta de en medio,(se continúa colocando la carta debajo al grupo al que corresponde) de acuerdo al <a class="text-warning" style="cursor: pointer;" onclick="tour()">número<i class="fa fa-lightbulb-o"></i></a> <br> Mientras menos ejecuciones necesites para completar un juego, es porque más suerte tienes. <i
             class="fa fa-smile-o text-warning"></i> <br> 
           -Las cartas se generan aleatoriamente en cada juego <br>
           -Forzar Ganada <i class="fa fa-magic text-warning"></i> </p>
@@ -83,13 +99,9 @@
           </tr>
           <tr>
             <td class=" ">
-              <a style="cursor: pointer;" title="Probar Suerte" class="text-success h3" onclick="find()"> <i
+              <a title="Probar Suerte" class="text-success h3"style="cursor: pointer;"  onclick="find()"> <i
                   class="fa fa-play"></i> </a>
-            </td>
-            <td>
-              <a style="cursor: pointer; margin-left: 12px;" title="Encontrar Victoria" class="text-warning h3"
-                onclick="ordenar()"> <i class="fa fa-magic"></i> </a>
-            </td>
+            </td> 
           </tr>
         </tbody> 
       </table>
